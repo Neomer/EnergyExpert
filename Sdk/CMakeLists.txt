@@ -3,8 +3,11 @@
 project(Sdk  VERSION 0.0.1 DESCRIPTION "EnergyExpert SDK library")
 
 set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
+               Core/Data/IDataStream.cpp Core/Data/IDataStream.h
+               Core/Collections/Collection.h
+               Core/Collections/Iterator.h
+               Core/Collections/Array.h Core/Collections/ArrayIterator.h
                export.h)
-
 
 add_library(Sdk SHARED ${SOURCE_LIB})
 
