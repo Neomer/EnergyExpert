@@ -33,31 +33,36 @@ public:
      * @return
      */
     virtual std::shared_ptr<TIterator> createEndIterator() = 0;
+    virtual void insert(std::shared_ptr<TIterator> &iterator, const TElement &value)
+    {
+        *(iterator.get()) = value;
+    }
     /**
      * @brief each iterates for each element of collection
-     * @param predicate method, that process each element of collection
+     * @param action method, that process each element of collection
      */
-    virtual void each(std::function<void(const TElement &item)> predicate)
+    virtual void each(std::function<void(const TElement &item)> action)
     {
         auto end = createEndIterator()->get();
         for (auto it = createBeginIterator()->get(); it != end; it.next())
         {
-            predicate(it->get_const());
+            action(it->get_const());
         }
     }
     /**
      * @brief where
-     * @param predicate
+     * @param selector
      * @return
      */
-    virtual Collection<TElement, TIterator> &where(std::function<bool(const TElement &item)> predicate)
+    virtual Collection<TElement, TIterator> &where(std::function<bool(const TElement &item)> selector)
     {
         Collection<TElement, TIterator> result;
+        auto end = result.createEndIterator();
         each([=](const TElement &item)
         {
-            if (predicate(item))
+            if (selector(item))
             {
-
+                result.insert(end, item);
             }
         });
         return result;

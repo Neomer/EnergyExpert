@@ -7,6 +7,7 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Collections/Collection.h
                Core/Collections/Iterator.h
                Core/Collections/Array.h Core/Collections/ArrayIterator.h
+               Core/Collections/CollectionExtensions.h
                export.h)
 
 add_library(Sdk SHARED ${SOURCE_LIB})
