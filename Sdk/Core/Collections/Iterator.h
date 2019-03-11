@@ -9,7 +9,7 @@ namespace energy { namespace core { namespace collections {
  * Abstract class of Iterator pattern.
  */
 template<typename TElement>
-class SDKSHARED_EXPORT Iterator
+class Iterator
 {
 public:
     Iterator() {}

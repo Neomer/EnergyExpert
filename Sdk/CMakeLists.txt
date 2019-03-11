@@ -16,9 +16,12 @@ include_directories("/")
 
 set_target_properties(Sdk PROPERTIES VERSION ${PROJECT_VERSION})
 
+set ( CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 # https://cmake.org/cmake/help/latest/prop_tgt/CXX_STANDARD.html
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_compile_definitions(SDK_LIBRARY_EXPORT)
+
+target_link_libraries(${TARGET} Sdk)
