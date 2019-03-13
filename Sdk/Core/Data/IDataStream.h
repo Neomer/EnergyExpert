@@ -4,7 +4,7 @@
 #include <export.h>
 #include <stddef.h>
 
-namespace energy::core::data {
+namespace energy { namespace core { namespace data {
 
 /**
  * @brief IDataStream поток данных
@@ -47,7 +47,7 @@ public:
 
 };
 
-}
+} } }
 
 
 #endif // IDATASTREAM_H

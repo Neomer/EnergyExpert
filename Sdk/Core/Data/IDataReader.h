@@ -5,7 +5,7 @@
 
 #include "IDataStream.h"
 
-namespace energy::core::data {
+namespace energy { namespace core { namespace data {
 
 class SDKSHARED_EXPORT IDataReader
 {
@@ -17,6 +17,6 @@ private:
     IDataStream &_stream;
 };
 
-}
+} } }
 
 #endif // #ifndef IDATAREADER_H

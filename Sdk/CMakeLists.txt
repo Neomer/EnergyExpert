@@ -8,7 +8,15 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Collections/Iterator.h
                Core/Collections/Array.h Core/Collections/ArrayIterator.h
                Core/Collections/CollectionExtensions.h
+               Model/IIdentified.h
+               Core/Types/Uuid.cpp Core/Types/Uuid.h
+               Database/IDatabaseConnection.h
+               Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
+               Database/Exceptions/DatabaseNotOpenException.h
+               Database/PostgreSql/PostgreSqlConnection.cpp Database/PostgreSql/PostgreSqlConnection.h
+               Model/Network/INetworkElement.cpp Model/Network/INetworkElement.h
                export.h)
+
 
 add_library(Sdk SHARED ${SOURCE_LIB})
 
