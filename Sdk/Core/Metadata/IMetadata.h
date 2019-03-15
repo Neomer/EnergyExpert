@@ -6,6 +6,8 @@
 
 namespace energy { namespace core { namespace metadata {
 
+class MetaObject;
+
 /**
  * @brief Абстрактный класс (интерфейс) предоставляющий доступ к метаданным класса-владельца.
  * Должен быть реализован для каждого класса, который наследуется от абстрактного класса MetaObject.
@@ -29,6 +31,11 @@ public:
      * @return
      */
     virtual const char *getFullClassName() const = 0;
+    /**
+     * @brief Возвращает новый экземпляр объекта.
+     * @return
+     */
+    virtual MetaObject *createInstance() const = 0;
     /**
      * @brief Проверяет, что метаданные other принадлежат экземпляру того же класса.
      * Сравнение происходит по TypeUid.

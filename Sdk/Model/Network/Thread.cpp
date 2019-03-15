@@ -33,3 +33,8 @@ const char *Thread::ThreadMetadata::getFullClassName() const
 {
     return "energy::core::metadata::Thread";
 }
+
+MetaObject *Thread::ThreadMetadata::createInstance() const
+{
+    return new Thread();
+}

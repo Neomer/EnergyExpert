@@ -34,3 +34,8 @@ const char *TransformerSubstation::TransformerSubstationMetadata::getFullClassNa
 {
     return "energy::model::network::TransformerSubstation";
 }
+
+MetaObject *TransformerSubstation::TransformerSubstationMetadata::createInstance() const
+{
+    return new TransformerSubstation();
+}

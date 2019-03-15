@@ -33,3 +33,8 @@ const char *Bus::BusMetadata::getFullClassName() const
 {
     return "energy::model::network::Bus";
 }
+
+MetaObject *Bus::BusMetadata::createInstance() const
+{
+    return new Bus();
+}

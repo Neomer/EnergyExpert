@@ -34,3 +34,8 @@ const char *Wire::WireMetadata::getFullClassName() const
 {
     return "energy::model::network::Wire";
 }
+
+MetaObject *Wire::WireMetadata::createInstance() const
+{
+    return new Wire();
+}

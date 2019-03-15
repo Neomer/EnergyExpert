@@ -15,7 +15,9 @@ int main()
     std::cout << "Value: " << json.asString() << std::endl;
 
     auto wire = new Wire();
+    auto newWire = static_cast<Wire *>(wire->getMetadata().createInstance());
     std::cout << "Class [" << wire->getMetadata().getClassName() << "] Type Uuid [" << wire->getMetadata().getTypeUid().toString() << "]\n";
+    std::cout << "Created class [" << newWire->getMetadata().getClassName() << "] Type Uuid [" << newWire->getMetadata().getTypeUid().toString() << "]\n";
 
     auto ts = new TransformerSubstation(wire);
     std::cout << "Class [" << ts->getMetadata().getClassName() << "] Type Uuid [" << ts->getMetadata().getTypeUid().toString() << "]\n";

@@ -24,6 +24,7 @@ public:
         virtual const core::types::Uuid &getTypeUid() const override;
         virtual const char *getClassName() const override;
         virtual const char *getFullClassName() const override;
+        virtual MetaObject *createInstance() const override;
 
     private:
         energy::core::types::Uuid _uuid;
