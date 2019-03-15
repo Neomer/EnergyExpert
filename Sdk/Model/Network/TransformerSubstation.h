@@ -15,11 +15,11 @@ public:
     /**
      * @brief Метаданные для класса трансформаторной подстанции.
      */
-    class TransformerSubstationMetadata : public energy::core::metadata::IMetadata
+    class Metadata : public energy::core::metadata::IMetadata
     {
     public:
-        TransformerSubstationMetadata();
-        virtual ~TransformerSubstationMetadata() override = default;
+        Metadata();
+        virtual ~Metadata() override = default;
 
         // IMetadata interface
     public:
@@ -40,7 +40,7 @@ public:
     virtual const core::metadata::IMetadata &getMetadata() const override;
 
 private:
-    TransformerSubstationMetadata _metadata;
+    Metadata _metadata;
 };
 
 } } }

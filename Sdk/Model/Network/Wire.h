@@ -17,11 +17,11 @@ public:
     /**
      * @brief Метаданные для линии электросети.
      */
-    class WireMetadata : public energy::core::metadata::IMetadata
+    class Metadata : public energy::core::metadata::IMetadata
     {
     public:
-        WireMetadata();
-        virtual ~WireMetadata() override = default;
+        Metadata();
+        virtual ~Metadata() override = default;
 
         // IMetadata interface
     public:
@@ -46,7 +46,7 @@ public:
     virtual const core::metadata::IMetadata &getMetadata() const override;
 
 private:
-    WireMetadata _metadata;
+    Metadata _metadata;
 };
 
 } } }

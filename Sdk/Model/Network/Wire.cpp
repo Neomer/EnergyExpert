@@ -14,28 +14,28 @@ const IMetadata &Wire::getMetadata() const
     return _metadata;
 }
 
-Wire::WireMetadata::WireMetadata() :
+Wire::Metadata::Metadata() :
     _uuid(10, 00, 00, 00)
 {
 
 }
 
-const energy::core::types::Uuid &Wire::WireMetadata::getTypeUid() const
+const energy::core::types::Uuid &Wire::Metadata::getTypeUid() const
 {
     return _uuid;
 }
 
-const char *Wire::WireMetadata::getClassName() const
+const char *Wire::Metadata::getClassName() const
 {
     return "Wire";
 }
 
-const char *Wire::WireMetadata::getFullClassName() const
+const char *Wire::Metadata::getFullClassName() const
 {
     return "energy::model::network::Wire";
 }
 
-MetaObject *Wire::WireMetadata::createInstance() const
+MetaObject *Wire::Metadata::createInstance() const
 {
     return new Wire();
 }

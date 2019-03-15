@@ -2,6 +2,7 @@
 #include <Core/Serialization/Json/JsonObject.h>
 #include <Model/Network/Wire.h>
 #include <Model/Network/TransformerSubstation.h>
+#include <Model/Network/NetworkElementBuilder.h>
 
 using namespace energy::core::serialization::json;
 using namespace energy::model::network;
@@ -21,6 +22,13 @@ int main()
 
     auto ts = new TransformerSubstation(wire);
     std::cout << "Class [" << ts->getMetadata().getClassName() << "] Type Uuid [" << ts->getMetadata().getTypeUid().toString() << "]\n";
+
+    auto element = NetworkElementBuilder::getInstance().createElementByTypeUid(Uuid(10, 00, 00, 03));
+    if (element != nullptr) {
+        std::cout << "Class [" << element->getMetadata().getClassName() << "] Type Uuid [" << element->getMetadata().getTypeUid().toString() << "]\n";
+    } else {
+        std::cout << "Element creation failed!\n";
+    }
 
     std::cout << std::endl << "Press any key" << std::endl;
     int g;

@@ -12,12 +12,12 @@ class SDKSHARED_EXPORT Bus :
         public AbstractNetworkElement
 {
 public:
-    class BusMetadata :
+    class Metadata :
             public energy::core::metadata::IMetadata
     {
     public:
-        BusMetadata();
-        virtual ~BusMetadata() override = default;
+        Metadata();
+        virtual ~Metadata() override = default;
 
         // IMetadata interface
     public:
@@ -38,7 +38,7 @@ public:
     virtual const core::metadata::IMetadata &getMetadata() const override;
 
 private:
-    BusMetadata _metadata;
+    Metadata _metadata;
 };
 
 } } }

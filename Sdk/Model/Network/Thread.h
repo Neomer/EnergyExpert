@@ -12,12 +12,12 @@ class SDKSHARED_EXPORT Thread :
         public AbstractNetworkElement
 {
 public:
-    class ThreadMetadata :
+    class Metadata :
             public energy::core::metadata::IMetadata
     {
     public:
-        ThreadMetadata();
-        virtual ~ThreadMetadata() override = default;
+        Metadata();
+        virtual ~Metadata() override = default;
 
         // IMetadata interface
     public:
@@ -38,7 +38,7 @@ public:
     virtual const core::metadata::IMetadata &getMetadata() const override;
 
 private:
-    ThreadMetadata _metadata;
+    Metadata _metadata;
 };
 
 } } }

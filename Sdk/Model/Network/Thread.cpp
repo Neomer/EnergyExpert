@@ -13,28 +13,28 @@ const IMetadata &Thread::getMetadata() const
     return _metadata;
 }
 
-Thread::ThreadMetadata::ThreadMetadata() :
+Thread::Metadata::Metadata() :
     _uuid(10, 00, 00, 02)
 {
 
 }
 
-const energy::core::types::Uuid &Thread::ThreadMetadata::getTypeUid() const
+const energy::core::types::Uuid &Thread::Metadata::getTypeUid() const
 {
     return _uuid;
 }
 
-const char *Thread::ThreadMetadata::getClassName() const
+const char *Thread::Metadata::getClassName() const
 {
     return "Thread";
 }
 
-const char *Thread::ThreadMetadata::getFullClassName() const
+const char *Thread::Metadata::getFullClassName() const
 {
     return "energy::core::metadata::Thread";
 }
 
-MetaObject *Thread::ThreadMetadata::createInstance() const
+MetaObject *Thread::Metadata::createInstance() const
 {
     return new Thread();
 }

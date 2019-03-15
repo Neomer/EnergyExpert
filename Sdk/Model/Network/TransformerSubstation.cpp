@@ -14,28 +14,28 @@ const IMetadata &TransformerSubstation::getMetadata() const
     return _metadata;
 }
 
-TransformerSubstation::TransformerSubstationMetadata::TransformerSubstationMetadata() :
+TransformerSubstation::Metadata::Metadata() :
     _uuid(10, 00, 00, 01)
 {
 
 }
 
-const energy::core::types::Uuid &TransformerSubstation::TransformerSubstationMetadata::getTypeUid() const
+const energy::core::types::Uuid &TransformerSubstation::Metadata::getTypeUid() const
 {
     return _uuid;
 }
 
-const char *TransformerSubstation::TransformerSubstationMetadata::getClassName() const
+const char *TransformerSubstation::Metadata::getClassName() const
 {
     return "TransformerSubstation";
 }
 
-const char *TransformerSubstation::TransformerSubstationMetadata::getFullClassName() const
+const char *TransformerSubstation::Metadata::getFullClassName() const
 {
     return "energy::model::network::TransformerSubstation";
 }
 
-MetaObject *TransformerSubstation::TransformerSubstationMetadata::createInstance() const
+MetaObject *TransformerSubstation::Metadata::createInstance() const
 {
     return new TransformerSubstation();
 }

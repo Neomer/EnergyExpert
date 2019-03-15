@@ -33,6 +33,7 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Model/Network/Bus.cpp Model/Network/Bus.h
                Model/Network/Thread.cpp Model/Network/Thread.h
                Model/Network/Network.cpp Model/Network/Network.h
+               Model/Network/NetworkElementBuilder.cpp Model/Network/NetworkElementBuilder.h
                export.h
                Core/Metadata/TypeUids.txt
                )
