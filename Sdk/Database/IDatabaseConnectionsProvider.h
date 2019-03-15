@@ -1,6 +1,7 @@
 #ifndef IDATABASECONNECTIONSPROVIDER_H
 #define IDATABASECONNECTIONSPROVIDER_H
 
+#include <export.h>
 #include <vector>
 
 #include "IDatabaseConnection.h"
@@ -11,7 +12,7 @@ namespace energy { namespace database {
  * @brief IDatabaseConnectionsProvider класс для обработки коллекции подключений к базе данных.
  * Должен выполнять функции контроля "подвисших" подключений, распараллеливать запросы между подключениями.
  */
-class IDatabaseConnectionsProvider
+class SDKSHARED_EXPORT IDatabaseConnectionsProvider
 {
 public:
     IDatabaseConnectionsProvider();

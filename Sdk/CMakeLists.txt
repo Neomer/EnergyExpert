@@ -10,11 +10,25 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Collections/CollectionExtensions.h
                Model/IIdentified.h
                Core/Types/Uuid.cpp Core/Types/Uuid.h
+               Core/Types/IStringable.h
+               Core/Types/ICloneable.h
+               Core/Types/IDrawable.h
+               Core/Draws/AbstractViewItem.cpp Core/Draws/AbstractViewItem.h
+               Core/Serialization/IJsonSerializable.h
+               Core/Serialization/Json/JsonObject.cpp Core/Serialization/Json/JsonObject.h
+               Core/Serialization/Json/JsonValue.cpp Core/Serialization/Json/JsonValue.h
+               Core/Serialization/Json/JsonArray.cpp Core/Serialization/Json/JsonArray.h
+               Core/Serialization/Xml/XmlObject.cpp Core/Serialization/Xml/XmlObject.h
+               Core/Metadata/IMetadata.cpp Core/Metadata/IMetadata.h
+               Core/Metadata/MetaObject.cpp Core/Metadata/MetaObject.h
+               Core/Metadata/MetadataClass.h
                Database/IDatabaseConnection.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
                Database/Exceptions/DatabaseNotOpenException.h
                Database/PostgreSql/PostgreSqlConnection.cpp Database/PostgreSql/PostgreSqlConnection.h
-               Model/Network/INetworkElement.cpp Model/Network/INetworkElement.h
+               Model/Network/AbstractNetworkElement.cpp Model/Network/AbstractNetworkElement.h
+               Model/Network/Wire.cpp Model/Network/Wire.h
+               Model/Network/TransformerSubstation.cpp Model/Network/TransformerSubstation.h
                export.h)
 
 

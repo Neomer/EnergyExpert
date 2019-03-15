@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['where',['where',['../classenergy_1_1core_1_1collections_1_1_collection.html#a6d848fdc5c1cc1b1d1bede28cff0d62c',1,'energy::core::collections::Collection']]],
-  ['write',['write',['../classenergy_1_1core_1_1data_1_1_i_data_stream.html#ad187b2b188b66bf6cf56322896dc65cc',1,'energy::core::data::IDataStream']]]
+  ['postgresqlconnection',['PostgreSqlConnection',['../classenergy_1_1database_1_1_postgre_sql_connection.html',1,'energy::database']]],
+  ['prev',['prev',['../classenergy_1_1core_1_1collections_1_1_array_iterator.html#ae1c71341458f1802b7794d0d04b26d46',1,'energy::core::collections::ArrayIterator::prev()'],['../classenergy_1_1core_1_1collections_1_1_iterator.html#a66e05f9c46d24a92dc61eeac6fab541c',1,'energy::core::collections::Iterator::prev()']]]
 ];

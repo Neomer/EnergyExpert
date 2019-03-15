@@ -1,11 +1,12 @@
 #ifndef POSTGRESQLCONNECTION_H
 #define POSTGRESQLCONNECTION_H
 
+#include <export.h>
 #include <Database/IDatabaseConnection.h>
 
 namespace energy { namespace database {
 
-class PostgreSqlConnection : public IDatabaseConnection
+class SDKSHARED_EXPORT PostgreSqlConnection : public IDatabaseConnection
 {
 public:
     PostgreSqlConnection();

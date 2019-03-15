@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['read',['read',['../classenergy_1_1core_1_1data_1_1_i_data_stream.html#ab2059c856dafc51eb9555ce8fee6162d',1,'energy::core::data::IDataStream']]],
-  ['registerconnection',['registerConnection',['../classenergy_1_1database_1_1_i_database_connections_provider.html#aa055d57423110bf0209f34d8ce820487',1,'energy::database::IDatabaseConnectionsProvider']]]
+  ['next',['next',['../classenergy_1_1core_1_1collections_1_1_array_iterator.html#adf39415829a87bea1519c9f6edea7dbd',1,'energy::core::collections::ArrayIterator::next()'],['../classenergy_1_1core_1_1collections_1_1_iterator.html#a3d8c13bc5e0b32b1b3b3e735242a9e25',1,'energy::core::collections::Iterator::next()']]]
 ];

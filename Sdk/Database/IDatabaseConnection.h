@@ -1,13 +1,15 @@
 #ifndef IDATABASECONNECTION_H
 #define IDATABASECONNECTION_H
 
+#include <export.h>
+
 namespace energy { namespace database {
 
 /**
  * @brief IDatabaseConnection абстрактный класс для активного подключения к базе данных.
  * Используется для создания подключения к базе данных. Все активные подключения обслуживаются IDatabaseConnectionsProvider.
  */
-class IDatabaseConnection
+class SDKSHARED_EXPORT IDatabaseConnection
 {
 public:
     IDatabaseConnection() = default;

@@ -1,6 +1,8 @@
 #ifndef IIDENTIFIED_H
 #define IIDENTIFIED_H
 
+#include <export.h>
+
 namespace energy { namespace model {
 
 /**
@@ -8,41 +10,42 @@ namespace energy { namespace model {
  * Тип T - базовый тип или класс, который переопределил оператор сравнения для корректной работы метода IIdentified::isEquals(const IIdentified<T> &other).
  */
 template <typename T>
-class IIdentified
+class SDKSHARED_EXPORT IIdentified
 {
 public:
     /**
-     * @brief IIdentified Инициализирует класс с конструктором типа идентификатора по-умолчанию
+     * @brief Инициализирует класс с конструктором типа идентификатора по-умолчанию
      */
     IIdentified() : _id{} { }
     /**
-     * @brief IIdentified Инициализирует класс с конструктором копирования типа идентификатора. Значение идентификатора передается по константной ссылке.
+     * @brief Инициализирует класс с конструктором копирования типа идентификатора. Значение идентификатора передается по константной ссылке.
      * @param id
      */
     IIdentified(const T &id) : _id { id }  { }
 
     /**
-     * @brief getId_const возвращает идентификатор объекта.
+     * @brief Возвращает идентификатор объекта.
      * @return Константная ссылка на идентификатор.
      */
     const T &getId_const() const { return _id; }
     /**
-     * @brief getId возвращает идентификатор объекта.
+     * @brief Возвращает идентификатор объекта.
      * @return Ссылка на идентификатор.
      */
-    T &getId() const { return _id; }
+    T &getId() { return _id; }
     /**
-     * @brief setId устанавливает идентификатор
+     * @brief Устанавливает идентификатор по константной ссылке
      * @param id константная ссылка на идентификатор
      */
     void setId(const T &id) { _id = id; }
     /**
-     * @brief setId устанавливает идентификатор
+     * @brief Устанавливает идентификатор по значению через конструктор копирования.
+     * Рекомендуется использовать только для простых типов.
      * @param id значение идентификатора
      */
-    void setId(T id) { _id = id; }
+    void setIdByValue(T id) { _id = id; }
     /**
-     * @brief isEquals сравнивает два объекта
+     * @brief Сравнивает два объекта
      * @param other объект для сравнения
      * @return True, если два  объекта имеют одинаковый идентификатор
      */

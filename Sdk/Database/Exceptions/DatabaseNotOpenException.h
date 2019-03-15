@@ -1,11 +1,12 @@
 #ifndef DATABASENOTOPENEXCEPTION_H
 #define DATABASENOTOPENEXCEPTION_H
 
+#include <export.h>
 #include <exception>
 
 namespace energy { namespace exceptions {
 
-class DatabaseNotOpenException : public std::exception
+class SDKSHARED_EXPORT DatabaseNotOpenException : public std::exception
 {
 public:
     virtual const char* what() const throw ()
