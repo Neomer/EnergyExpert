@@ -74,7 +74,6 @@ int main()
     A a;
     B b(&a);
     C c(&a);
-
     a.update(45);
 
     std::cout << std::endl << "Press any key" << std::endl;

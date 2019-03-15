@@ -2,6 +2,10 @@ var hierarchy =
 [
     [ "energy::core::draws::AbstractSurface", "classenergy_1_1core_1_1draws_1_1_abstract_surface.html", null ],
     [ "energy::core::draws::AbstractViewItem", "classenergy_1_1core_1_1draws_1_1_abstract_view_item.html", null ],
+    [ "energy::core::metadata::BaseMetadataClassBuilder< T >", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html", null ],
+    [ "energy::core::metadata::BaseMetadataClassBuilder< AbstractNetworkElement >", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html", [
+      [ "energy::model::network::NetworkElementBuilder", "classenergy_1_1model_1_1network_1_1_network_element_builder.html", null ]
+    ] ],
     [ "energy::core::collections::Collection< TElement, TIterator >", "classenergy_1_1core_1_1collections_1_1_collection.html", null ],
     [ "energy::core::collections::Collection< TElement, ArrayIterator< TElement > >", "classenergy_1_1core_1_1collections_1_1_collection.html", [
       [ "energy::core::collections::Array< TElement >", "classenergy_1_1core_1_1collections_1_1_array.html", null ]
@@ -31,10 +35,19 @@ var hierarchy =
     ] ],
     [ "energy::core::serialization::IJsonSerializable", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html", null ],
     [ "energy::core::metadata::IMetadata", "classenergy_1_1core_1_1metadata_1_1_i_metadata.html", [
-      [ "energy::model::network::Bus::BusMetadata", "classenergy_1_1model_1_1network_1_1_bus_1_1_bus_metadata.html", null ],
-      [ "energy::model::network::Thread::ThreadMetadata", "classenergy_1_1model_1_1network_1_1_thread_1_1_thread_metadata.html", null ],
-      [ "energy::model::network::TransformerSubstation::TransformerSubstationMetadata", "classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_transformer_substation_metadata.html", null ],
-      [ "energy::model::network::Wire::WireMetadata", "classenergy_1_1model_1_1network_1_1_wire_1_1_wire_metadata.html", null ]
+      [ "energy::model::network::Bus::Metadata", "classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html", null ],
+      [ "energy::model::network::Thread::Metadata", "classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html", null ],
+      [ "energy::model::network::TransformerSubstation::Metadata", "classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_metadata.html", null ],
+      [ "energy::model::network::Wire::Metadata", "classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html", null ]
+    ] ],
+    [ "energy::core::types::IObservable< T >", "classenergy_1_1core_1_1types_1_1_i_observable.html", null ],
+    [ "energy::core::types::IObservable< int >", "classenergy_1_1core_1_1types_1_1_i_observable.html", [
+      [ "A", "class_a.html", null ]
+    ] ],
+    [ "energy::core::types::IObserver< T >", "classenergy_1_1core_1_1types_1_1_i_observer.html", null ],
+    [ "energy::core::types::IObserver< int >", "classenergy_1_1core_1_1types_1_1_i_observer.html", [
+      [ "B", "class_b.html", null ],
+      [ "C", "class_c.html", null ]
     ] ],
     [ "energy::core::types::IStringable", "classenergy_1_1core_1_1types_1_1_i_stringable.html", [
       [ "energy::core::serialization::json::JsonValue", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html", [

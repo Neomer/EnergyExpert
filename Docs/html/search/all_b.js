@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['network',['Network',['../classenergy_1_1model_1_1network_1_1_network.html',1,'energy::model::network']]],
-  ['next',['next',['../classenergy_1_1core_1_1collections_1_1_array_iterator.html#adf39415829a87bea1519c9f6edea7dbd',1,'energy::core::collections::ArrayIterator::next()'],['../classenergy_1_1core_1_1collections_1_1_iterator.html#a3d8c13bc5e0b32b1b3b3e735242a9e25',1,'energy::core::collections::Iterator::next()']]]
+  ['metadata',['Metadata',['../classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html',1,'energy::model::network::Thread::Metadata'],['../classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html',1,'energy::model::network::Bus::Metadata'],['../classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_metadata.html',1,'energy::model::network::TransformerSubstation::Metadata'],['../classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html',1,'energy::model::network::Wire::Metadata']]],
+  ['metadataclass',['MetadataClass',['../classenergy_1_1core_1_1metadata_1_1_metadata_class.html',1,'energy::core::metadata']]],
+  ['metaobject',['MetaObject',['../classenergy_1_1core_1_1metadata_1_1_meta_object.html',1,'energy::core::metadata']]]
 ];

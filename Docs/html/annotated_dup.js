@@ -17,6 +17,7 @@ var annotated_dup =
           [ "AbstractViewItem", "classenergy_1_1core_1_1draws_1_1_abstract_view_item.html", "classenergy_1_1core_1_1draws_1_1_abstract_view_item" ]
         ] ],
         [ "metadata", null, [
+          [ "BaseMetadataClassBuilder", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder" ],
           [ "IMetadata", "classenergy_1_1core_1_1metadata_1_1_i_metadata.html", "classenergy_1_1core_1_1metadata_1_1_i_metadata" ],
           [ "MetadataClass", "classenergy_1_1core_1_1metadata_1_1_metadata_class.html", "classenergy_1_1core_1_1metadata_1_1_metadata_class" ],
           [ "MetaObject", "classenergy_1_1core_1_1metadata_1_1_meta_object.html", "classenergy_1_1core_1_1metadata_1_1_meta_object" ]
@@ -35,6 +36,8 @@ var annotated_dup =
         [ "types", null, [
           [ "ICloneable", "classenergy_1_1core_1_1types_1_1_i_cloneable.html", "classenergy_1_1core_1_1types_1_1_i_cloneable" ],
           [ "IDrawable", "classenergy_1_1core_1_1types_1_1_i_drawable.html", "classenergy_1_1core_1_1types_1_1_i_drawable" ],
+          [ "IObservable", "classenergy_1_1core_1_1types_1_1_i_observable.html", "classenergy_1_1core_1_1types_1_1_i_observable" ],
+          [ "IObserver", "classenergy_1_1core_1_1types_1_1_i_observer.html", "classenergy_1_1core_1_1types_1_1_i_observer" ],
           [ "IStringable", "classenergy_1_1core_1_1types_1_1_i_stringable.html", "classenergy_1_1core_1_1types_1_1_i_stringable" ],
           [ "Uuid", "classenergy_1_1core_1_1types_1_1_uuid.html", "classenergy_1_1core_1_1types_1_1_uuid" ]
         ] ]
@@ -52,11 +55,15 @@ var annotated_dup =
           [ "AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html", "classenergy_1_1model_1_1network_1_1_abstract_network_element" ],
           [ "Bus", "classenergy_1_1model_1_1network_1_1_bus.html", "classenergy_1_1model_1_1network_1_1_bus" ],
           [ "Network", "classenergy_1_1model_1_1network_1_1_network.html", "classenergy_1_1model_1_1network_1_1_network" ],
+          [ "NetworkElementBuilder", "classenergy_1_1model_1_1network_1_1_network_element_builder.html", null ],
           [ "Thread", "classenergy_1_1model_1_1network_1_1_thread.html", "classenergy_1_1model_1_1network_1_1_thread" ],
           [ "TransformerSubstation", "classenergy_1_1model_1_1network_1_1_transformer_substation.html", "classenergy_1_1model_1_1network_1_1_transformer_substation" ],
           [ "Wire", "classenergy_1_1model_1_1network_1_1_wire.html", "classenergy_1_1model_1_1network_1_1_wire" ]
         ] ],
         [ "IIdentified", "classenergy_1_1model_1_1_i_identified.html", "classenergy_1_1model_1_1_i_identified" ]
       ] ]
-    ] ]
+    ] ],
+    [ "A", "class_a.html", "class_a" ],
+    [ "B", "class_b.html", "class_b" ],
+    [ "C", "class_c.html", "class_c" ]
 ];

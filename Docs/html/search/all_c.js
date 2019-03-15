@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['open',['open',['../classenergy_1_1core_1_1data_1_1_i_data_stream.html#ae1803d3c8c532ecf567783373c595404',1,'energy::core::data::IDataStream::open()'],['../classenergy_1_1database_1_1_i_database_connection.html#a6e5c6a9b9c3dc484f5622c7a8cfac6f1',1,'energy::database::IDatabaseConnection::open()'],['../classenergy_1_1database_1_1_postgre_sql_connection.html#a40f78093c77a3f8ec07c38cc27d12745',1,'energy::database::PostgreSqlConnection::open()']]],
-  ['operator_3d',['operator=',['../classenergy_1_1core_1_1collections_1_1_iterator.html#a9aec7babb8a2c13d54b8ed8ea535ed7b',1,'energy::core::collections::Iterator']]]
+  ['network',['Network',['../classenergy_1_1model_1_1network_1_1_network.html',1,'energy::model::network']]],
+  ['networkelementbuilder',['NetworkElementBuilder',['../classenergy_1_1model_1_1network_1_1_network_element_builder.html',1,'energy::model::network']]],
+  ['next',['next',['../classenergy_1_1core_1_1collections_1_1_array_iterator.html#adf39415829a87bea1519c9f6edea7dbd',1,'energy::core::collections::ArrayIterator::next()'],['../classenergy_1_1core_1_1collections_1_1_iterator.html#a3d8c13bc5e0b32b1b3b3e735242a9e25',1,'energy::core::collections::Iterator::next()']]]
 ];

@@ -104,10 +104,10 @@ Inheritance diagram for energy::core::metadata::IMetadata:</div>
  <div class="center">
   <img src="classenergy_1_1core_1_1metadata_1_1_i_metadata.png" usemap="#energy::core::metadata::IMetadata_map" alt=""/>
   <map id="energy::core::metadata::IMetadata_map" name="energy::core::metadata::IMetadata_map">
-<area href="classenergy_1_1model_1_1network_1_1_bus_1_1_bus_metadata.html" alt="energy::model::network::Bus::BusMetadata" shape="rect" coords="0,56,459,80"/>
-<area href="classenergy_1_1model_1_1network_1_1_thread_1_1_thread_metadata.html" alt="energy::model::network::Thread::ThreadMetadata" shape="rect" coords="469,56,928,80"/>
-<area href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_transformer_substation_metadata.html" title="Метаданные для класса трансформаторной подстанции. " alt="energy::model::network::TransformerSubstation::TransformerSubstationMetadata" shape="rect" coords="938,56,1397,80"/>
-<area href="classenergy_1_1model_1_1network_1_1_wire_1_1_wire_metadata.html" title="Метаданные для линии электросети. " alt="energy::model::network::Wire::WireMetadata" shape="rect" coords="1407,56,1866,80"/>
+<area href="classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html" alt="energy::model::network::Bus::Metadata" shape="rect" coords="0,56,332,80"/>
+<area href="classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html" alt="energy::model::network::Thread::Metadata" shape="rect" coords="342,56,674,80"/>
+<area href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_metadata.html" title="Метаданные для класса трансформаторной подстанции. " alt="energy::model::network::TransformerSubstation::Metadata" shape="rect" coords="684,56,1016,80"/>
+<area href="classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html" title="Метаданные для линии электросети. " alt="energy::model::network::Wire::Metadata" shape="rect" coords="1026,56,1358,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -123,6 +123,9 @@ virtual const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">en
 <tr class="memitem:a7de8632637b909750c57de90653d9e77"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata.html#a7de8632637b909750c57de90653d9e77">getFullClassName</a> () const =0</td></tr>
 <tr class="memdesc:a7de8632637b909750c57de90653d9e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Полное имя класса, включая namespace.  <a href="#a7de8632637b909750c57de90653d9e77">More...</a><br /></td></tr>
 <tr class="separator:a7de8632637b909750c57de90653d9e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468f8facb52493a08704cfb2303666a0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classenergy_1_1core_1_1metadata_1_1_meta_object.html">MetaObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata.html#a468f8facb52493a08704cfb2303666a0">createInstance</a> () const =0</td></tr>
+<tr class="memdesc:a468f8facb52493a08704cfb2303666a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает новый экземпляр объекта.  <a href="#a468f8facb52493a08704cfb2303666a0">More...</a><br /></td></tr>
+<tr class="separator:a468f8facb52493a08704cfb2303666a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdd4e61ed0e0d3eba893541248680d0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata.html#acdd4e61ed0e0d3eba893541248680d0a">isSame</a> (const <a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata.html">IMetadata</a> &amp;other) const</td></tr>
 <tr class="memdesc:acdd4e61ed0e0d3eba893541248680d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, что метаданные other принадлежат экземпляру того же класса. Сравнение происходит по TypeUid.  <a href="#acdd4e61ed0e0d3eba893541248680d0a">More...</a><br /></td></tr>
 <tr class="separator:acdd4e61ed0e0d3eba893541248680d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,36 @@ virtual const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">en
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Абстрактный класс (интерфейс) предоставляющий доступ к метаданным класса-владельца. Должен быть реализован для каждого класса, который наследуется от абстрактного класса <a class="el" href="classenergy_1_1core_1_1metadata_1_1_meta_object.html" title="Абстрактный класс для предоставления доступа к метаданным класса. Класс, предоставляющий метаданные...">MetaObject</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a468f8facb52493a08704cfb2303666a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468f8facb52493a08704cfb2303666a0">&#9670;&nbsp;</a></span>createInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classenergy_1_1core_1_1metadata_1_1_meta_object.html">MetaObject</a>* energy::core::metadata::IMetadata::createInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает новый экземпляр объекта. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html#aec8301dd5502418a1bbcfc272820b633">energy::model::network::Wire::Metadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_metadata.html#ad5949008b7e8357f8a2e973543ff9550">energy::model::network::TransformerSubstation::Metadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html#a13da587f87747bd3fad6218ae207980d">energy::model::network::Bus::Metadata</a>, and <a class="el" href="classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html#a8c4a8cfc01180085e73b92bef14b7069">energy::model::network::Thread::Metadata</a>.</p>
+
+</div>
+</div>
 <a id="a3e40c2aa8cd2944cb8a6d7d4b3254456"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e40c2aa8cd2944cb8a6d7d4b3254456">&#9670;&nbsp;</a></span>getClassName()</h2>
 
@@ -156,7 +189,7 @@ virtual const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">en
 <p>Имя класса </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classenergy_1_1model_1_1network_1_1_wire_1_1_wire_metadata.html#a50982c3912ccb0e50d6a34c834db46d6">energy::model::network::Wire::WireMetadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_transformer_substation_metadata.html#a09d2427d089655733a194a360894b18b">energy::model::network::TransformerSubstation::TransformerSubstationMetadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_bus_1_1_bus_metadata.html#a153f7079efd37eb594df1744247124f1">energy::model::network::Bus::BusMetadata</a>, and <a class="el" href="classenergy_1_1model_1_1network_1_1_thread_1_1_thread_metadata.html#a1657d5a44aec02702586264b1922edbb">energy::model::network::Thread::ThreadMetadata</a>.</p>
+<p>Implemented in <a class="el" href="classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html#a8b852ebc977798481e6ea634406f56cc">energy::model::network::Wire::Metadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_metadata.html#a35db84ef98d0b50267f446a30d533a50">energy::model::network::TransformerSubstation::Metadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html#a6c75be3f36877cdea77842e4f398d90f">energy::model::network::Bus::Metadata</a>, and <a class="el" href="classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html#a8a375431939fa219dc60005632846bc1">energy::model::network::Thread::Metadata</a>.</p>
 
 </div>
 </div>
@@ -186,7 +219,7 @@ virtual const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">en
 <p>Полное имя класса, включая namespace. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classenergy_1_1model_1_1network_1_1_wire_1_1_wire_metadata.html#a0018f6fd1dbb6dddc7318212e8bdc325">energy::model::network::Wire::WireMetadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_transformer_substation_metadata.html#a284fed5cad359f6632a5792ce94efe1a">energy::model::network::TransformerSubstation::TransformerSubstationMetadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_bus_1_1_bus_metadata.html#a07467e3d3b604fd09ce64cbeb434ddad">energy::model::network::Bus::BusMetadata</a>, and <a class="el" href="classenergy_1_1model_1_1network_1_1_thread_1_1_thread_metadata.html#a17b397aa4f68b6ec85778727801f5604">energy::model::network::Thread::ThreadMetadata</a>.</p>
+<p>Implemented in <a class="el" href="classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html#a6444ed84d8328c8fe08a42647ceed39f">energy::model::network::Wire::Metadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_metadata.html#a6ccf45e19f746db81cf8a9401b04529e">energy::model::network::TransformerSubstation::Metadata</a>, <a class="el" href="classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html#a900018fc741e7ee97b1f77ad2d44fed2">energy::model::network::Bus::Metadata</a>, and <a class="el" href="classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html#a1a033be6ede3d41b69565eec940105e7">energy::model::network::Thread::Metadata</a>.</p>
 
 </div>
 </div>
