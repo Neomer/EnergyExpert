@@ -13,6 +13,7 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Types/IStringable.h
                Core/Types/ICloneable.h
                Core/Types/IDrawable.h
+               Core/Types/IObservable.h
                Core/Draws/AbstractViewItem.cpp Core/Draws/AbstractViewItem.h
                Core/Draws/AbstractSurface.cpp Core/Draws/AbstractSurface.h
                Core/Serialization/IJsonSerializable.h

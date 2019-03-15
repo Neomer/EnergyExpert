@@ -3,10 +3,51 @@
 #include <Model/Network/Wire.h>
 #include <Model/Network/TransformerSubstation.h>
 #include <Model/Network/NetworkElementBuilder.h>
+#include <Core/Types/IObservable.h>
 
 using namespace energy::core::serialization::json;
 using namespace energy::model::network;
 using namespace energy::core::types;
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wweak-vtables"
+
+class A : public IObservable<int>
+{
+public:
+    A() = default;
+    virtual ~A() override = default;
+};
+
+class B : public IObserver<int>
+{
+public:
+    B(IObservable<int> *observable) {
+        observable->registerObserver(this);
+    }
+    virtual ~B() override = default;
+
+    virtual bool onUpdate(const int &value, const IObservable<int> *observable) override
+    {
+        std::cout << "class B: update " << value << std::endl;
+        return false;
+    }
+};
+
+class C : public IObserver<int>
+{
+public:
+    C(IObservable<int> *observable) {
+        observable->registerObserver(this);
+    }
+    virtual ~C() override = default;
+
+    virtual bool onUpdate(const int &value, const IObservable<int> *observable) override
+    {
+        std::cout << "class C: update " << value << std::endl;
+        return false;
+    }
+};
 
 int main()
 {
@@ -29,6 +70,12 @@ int main()
     } else {
         std::cout << "Element creation failed!\n";
     }
+
+    A a;
+    B b(&a);
+    C c(&a);
+
+    a.update(45);
 
     std::cout << std::endl << "Press any key" << std::endl;
     int g;
