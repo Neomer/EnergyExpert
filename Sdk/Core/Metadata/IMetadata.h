@@ -24,7 +24,11 @@ public:
      * @return
      */
     virtual const char *getClassName() const = 0;
-
+    /**
+     * @brief Полное имя класса, включая namespace.
+     * @return
+     */
+    virtual const char *getFullClassName() const = 0;
     /**
      * @brief Проверяет, что метаданные other принадлежат экземпляру того же класса.
      * Сравнение происходит по TypeUid.

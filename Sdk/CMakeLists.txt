@@ -14,6 +14,7 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Types/ICloneable.h
                Core/Types/IDrawable.h
                Core/Draws/AbstractViewItem.cpp Core/Draws/AbstractViewItem.h
+               Core/Draws/AbstractSurface.cpp Core/Draws/AbstractSurface.h
                Core/Serialization/IJsonSerializable.h
                Core/Serialization/Json/JsonObject.cpp Core/Serialization/Json/JsonObject.h
                Core/Serialization/Json/JsonValue.cpp Core/Serialization/Json/JsonValue.h
@@ -29,7 +30,12 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Model/Network/AbstractNetworkElement.cpp Model/Network/AbstractNetworkElement.h
                Model/Network/Wire.cpp Model/Network/Wire.h
                Model/Network/TransformerSubstation.cpp Model/Network/TransformerSubstation.h
-               export.h)
+               Model/Network/Bus.cpp Model/Network/Bus.h
+               Model/Network/Thread.cpp Model/Network/Thread.h
+               Model/Network/Network.cpp Model/Network/Network.h
+               export.h
+               Core/Metadata/TypeUids.txt
+               )
 
 
 add_library(Sdk SHARED ${SOURCE_LIB})

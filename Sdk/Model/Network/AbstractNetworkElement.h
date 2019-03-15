@@ -1,7 +1,6 @@
 #ifndef INETWORKELEMENT_H
 #define INETWORKELEMENT_H
 
-#include <export.h>
 #include <vector>
 
 #include <Model/IIdentified.h>

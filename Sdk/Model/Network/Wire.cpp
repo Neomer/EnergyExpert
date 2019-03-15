@@ -29,3 +29,8 @@ const char *Wire::WireMetadata::getClassName() const
 {
     return "Wire";
 }
+
+const char *Wire::WireMetadata::getFullClassName() const
+{
+    return "energy::model::network::Wire";
+}

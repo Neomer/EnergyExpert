@@ -29,3 +29,8 @@ const char *TransformerSubstation::TransformerSubstationMetadata::getClassName()
 {
     return "TransformerSubstation";
 }
+
+const char *TransformerSubstation::TransformerSubstationMetadata::getFullClassName() const
+{
+    return "energy::model::network::TransformerSubstation";
+}

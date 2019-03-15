@@ -1,14 +1,14 @@
 #ifndef WIRE_H
 #define WIRE_H
 
-#include <export.h>
-#include <Core/Metadata/MetadataClass.h>
 #include <Model/Network/AbstractNetworkElement.h>
 
 namespace energy { namespace model { namespace network {
 
 /**
  * @brief Линия электросети.
+ * Представляет из себя физический провод между двумя излами.
+ * Провод состоит из нескольких жил (как правило от 2х до 4х).
  */
 class SDKSHARED_EXPORT Wire :
         public AbstractNetworkElement
@@ -27,6 +27,7 @@ public:
     public:
         virtual const core::types::Uuid &getTypeUid() const override;
         virtual const char *getClassName() const override;
+        virtual const char *getFullClassName() const override;
 
     private:
         const energy::core::types::Uuid _uuid;
@@ -37,6 +38,7 @@ public:
      * @param parent Родительский элемент электросети.
      */
     Wire(AbstractNetworkElement * parent = nullptr);
+    virtual ~Wire() override = default;
 
     // MetaObject interface
 public:

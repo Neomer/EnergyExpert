@@ -1,9 +1,7 @@
 #ifndef TRANSFORMERSUBSTATION_H
 #define TRANSFORMERSUBSTATION_H
 
-#include <export.h>
 #include <Model/Network/AbstractNetworkElement.h>
-#include <Core/Metadata/MetadataClass.h>
 
 namespace energy { namespace model { namespace network {
 
@@ -27,12 +25,14 @@ public:
     public:
         virtual const core::types::Uuid &getTypeUid() const override;
         virtual const char *getClassName() const override;
+        virtual const char *getFullClassName() const override;
 
     private:
         energy::core::types::Uuid _uuid;
     };
 
     TransformerSubstation(AbstractNetworkElement *parent = nullptr);
+    virtual ~TransformerSubstation() override = default;
 
     // MetaObject interface
 public:

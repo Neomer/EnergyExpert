@@ -1,7 +1,6 @@
 #ifndef METADATACLASS_H
 #define METADATACLASS_H
 
-#include <export.h>
 #include "MetaObject.h"
 
 namespace energy { namespace core { namespace metadata {
