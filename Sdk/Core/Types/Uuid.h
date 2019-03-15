@@ -72,7 +72,7 @@ public:
      * @param other uuid для сравнения
      * @return true, если оба uuid одинаковы
      */
-    inline bool isEquals(const Uuid &other) const;
+    bool isEquals(const Uuid &other) const;
 
     bool operator==(const Uuid &other) const;
     bool operator!=(const Uuid &other) const;

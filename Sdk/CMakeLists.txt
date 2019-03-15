@@ -23,6 +23,7 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Metadata/IMetadata.cpp Core/Metadata/IMetadata.h
                Core/Metadata/MetaObject.cpp Core/Metadata/MetaObject.h
                Core/Metadata/MetadataClass.h
+               Core/Metadata/BaseMetadataClassBuilder.h
                Database/IDatabaseConnection.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
                Database/Exceptions/DatabaseNotOpenException.h

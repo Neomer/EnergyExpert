@@ -5,10 +5,12 @@
 #include <Model/Network/Thread.h>
 #include <Model/Network/Bus.h>
 
+using namespace energy::core::metadata;
 using namespace energy::model::network;
 using namespace energy::core::types;
 
-NetworkElementBuilder::NetworkElementBuilder()
+NetworkElementBuilder::NetworkElementBuilder() :
+    BaseMetadataClassBuilder<AbstractNetworkElement>()
 {
     _metadataList.push_back(new Wire::Metadata());
     _metadataList.push_back(new TransformerSubstation::Metadata());
@@ -21,21 +23,6 @@ NetworkElementBuilder::~NetworkElementBuilder()
     for (auto m : _metadataList) {
         delete m;
     }
-}
-
-AbstractNetworkElement *NetworkElementBuilder::createElementByTypeUid(const Uuid &uid) const
-{
-    for (auto m : _metadataList) {
-        if (m->getTypeUid().isEquals(uid)) {
-            return static_cast<AbstractNetworkElement *>(m->createInstance());
-        }
-    }
-    return nullptr;
-}
-
-const std::vector<energy::core::metadata::IMetadata *> NetworkElementBuilder::getElementTypeList() const
-{
-    return _metadataList;
 }
 
 NetworkElementBuilder &NetworkElementBuilder::getInstance()
