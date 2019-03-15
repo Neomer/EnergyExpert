@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "energy::core::draws::AbstractSurface", "classenergy_1_1core_1_1draws_1_1_abstract_surface.html", null ],
     [ "energy::core::draws::AbstractViewItem", "classenergy_1_1core_1_1draws_1_1_abstract_view_item.html", null ],
     [ "energy::core::collections::Collection< TElement, TIterator >", "classenergy_1_1core_1_1collections_1_1_collection.html", null ],
     [ "energy::core::collections::Collection< TElement, ArrayIterator< TElement > >", "classenergy_1_1core_1_1collections_1_1_collection.html", [
@@ -22,12 +23,16 @@ var hierarchy =
     [ "energy::model::IIdentified< T >", "classenergy_1_1model_1_1_i_identified.html", null ],
     [ "energy::model::IIdentified< energy::core::types::Uuid >", "classenergy_1_1model_1_1_i_identified.html", [
       [ "energy::model::network::AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html", [
+        [ "energy::model::network::Bus", "classenergy_1_1model_1_1network_1_1_bus.html", null ],
+        [ "energy::model::network::Thread", "classenergy_1_1model_1_1network_1_1_thread.html", null ],
         [ "energy::model::network::TransformerSubstation", "classenergy_1_1model_1_1network_1_1_transformer_substation.html", null ],
         [ "energy::model::network::Wire", "classenergy_1_1model_1_1network_1_1_wire.html", null ]
       ] ]
     ] ],
     [ "energy::core::serialization::IJsonSerializable", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html", null ],
     [ "energy::core::metadata::IMetadata", "classenergy_1_1core_1_1metadata_1_1_i_metadata.html", [
+      [ "energy::model::network::Bus::BusMetadata", "classenergy_1_1model_1_1network_1_1_bus_1_1_bus_metadata.html", null ],
+      [ "energy::model::network::Thread::ThreadMetadata", "classenergy_1_1model_1_1network_1_1_thread_1_1_thread_metadata.html", null ],
       [ "energy::model::network::TransformerSubstation::TransformerSubstationMetadata", "classenergy_1_1model_1_1network_1_1_transformer_substation_1_1_transformer_substation_metadata.html", null ],
       [ "energy::model::network::Wire::WireMetadata", "classenergy_1_1model_1_1network_1_1_wire_1_1_wire_metadata.html", null ]
     ] ],
@@ -45,5 +50,6 @@ var hierarchy =
       [ "energy::core::metadata::MetadataClass< T >", "classenergy_1_1core_1_1metadata_1_1_metadata_class.html", null ],
       [ "energy::model::network::AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html", null ]
     ] ],
+    [ "energy::model::network::Network", "classenergy_1_1model_1_1network_1_1_network.html", null ],
     [ "energy::core::serialization::xml::XmlObject", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html", null ]
 ];

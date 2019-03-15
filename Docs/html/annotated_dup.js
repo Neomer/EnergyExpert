@@ -13,6 +13,7 @@ var annotated_dup =
           [ "IDataStream", "classenergy_1_1core_1_1data_1_1_i_data_stream.html", "classenergy_1_1core_1_1data_1_1_i_data_stream" ]
         ] ],
         [ "draws", null, [
+          [ "AbstractSurface", "classenergy_1_1core_1_1draws_1_1_abstract_surface.html", "classenergy_1_1core_1_1draws_1_1_abstract_surface" ],
           [ "AbstractViewItem", "classenergy_1_1core_1_1draws_1_1_abstract_view_item.html", "classenergy_1_1core_1_1draws_1_1_abstract_view_item" ]
         ] ],
         [ "metadata", null, [
@@ -49,6 +50,9 @@ var annotated_dup =
       [ "model", null, [
         [ "network", null, [
           [ "AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html", "classenergy_1_1model_1_1network_1_1_abstract_network_element" ],
+          [ "Bus", "classenergy_1_1model_1_1network_1_1_bus.html", "classenergy_1_1model_1_1network_1_1_bus" ],
+          [ "Network", "classenergy_1_1model_1_1network_1_1_network.html", "classenergy_1_1model_1_1network_1_1_network" ],
+          [ "Thread", "classenergy_1_1model_1_1network_1_1_thread.html", "classenergy_1_1model_1_1network_1_1_thread" ],
           [ "TransformerSubstation", "classenergy_1_1model_1_1network_1_1_transformer_substation.html", "classenergy_1_1model_1_1network_1_1_transformer_substation" ],
           [ "Wire", "classenergy_1_1model_1_1network_1_1_wire.html", "classenergy_1_1model_1_1network_1_1_wire" ]
         ] ],
