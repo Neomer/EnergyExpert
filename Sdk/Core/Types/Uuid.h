@@ -19,18 +19,18 @@ class SDKSHARED_EXPORT Uuid final :
 {
 public:
     /**
-     * @brief Cоздает Uuid по его строковому представлению
+     * @brief Создает Uuid по его строковому представлению
      * @param string Строка с Uuid
      * @throw throw std::invalid_argument не удалось обработать переданную строку. Возможно, что строка неверного формата.
      */
     Uuid(const std::string &string);
     /**
-     * @brief Cоздает Uuid по его строковому представлению
+     * @brief Создает Uuid по его строковому представлению
      * @param data строка с Uuid
      */
     Uuid(const char *data);
     /**
-     * @brief Cоздает Uuid через передачу инициирующих байт.
+     * @brief Создает Uuid через передачу инициирующих байт.
      * @param Первые 4 байта значения
      * @param Вторые 4 байта значения
      * @param Третьи 4 байта значения
@@ -59,7 +59,7 @@ public:
     void clear();
     /**
      * @brief isEmpty проверяет нулевой ли Uuid
-     * @return true, если uuid нулевой
+     * @return true, если Uuid нулевой
      */
     bool isEmpty() const;
     /**
@@ -68,9 +68,9 @@ public:
      */
     constexpr size_t size() const;
     /**
-     * @brief isEquals сравнивает два uuid
-     * @param other uuid для сравнения
-     * @return true, если оба uuid одинаковы
+     * @brief isEquals сравнивает два Uuid
+     * @param other Uuid для сравнения
+     * @return true, если оба Uuid одинаковы
      */
     bool isEquals(const Uuid &other) const;
 

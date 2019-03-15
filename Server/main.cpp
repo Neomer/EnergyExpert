@@ -58,15 +58,15 @@ int main()
 
     auto wire = new Wire();
     auto newWire = static_cast<Wire *>(wire->getMetadata().createInstance());
-    std::cout << "Class [" << wire->getMetadata().getClassName() << "] Type Uuid [" << wire->getMetadata().getTypeUid().toString() << "]\n";
-    std::cout << "Created class [" << newWire->getMetadata().getClassName() << "] Type Uuid [" << newWire->getMetadata().getTypeUid().toString() << "]\n";
+    std::cout << "Class [" << wire->getMetadata().getClassName() << "] Type Uuid {" << wire->getMetadata().getTypeUid().toString() << "}\n";
+    std::cout << "Created class [" << newWire->getMetadata().getClassName() << "] Type Uuid {" << newWire->getMetadata().getTypeUid().toString() << "}\n";
 
     auto ts = new TransformerSubstation(wire);
-    std::cout << "Class [" << ts->getMetadata().getClassName() << "] Type Uuid [" << ts->getMetadata().getTypeUid().toString() << "]\n";
+    std::cout << "Class [" << ts->getMetadata().getClassName() << "] Type Uuid {" << ts->getMetadata().getTypeUid().toString() << "}\n";
 
     auto element = NetworkElementBuilder::getInstance().createElementByTypeUid(Uuid(10, 00, 00, 03));
     if (element != nullptr) {
-        std::cout << "Class [" << element->getMetadata().getClassName() << "] Type Uuid [" << element->getMetadata().getTypeUid().toString() << "]\n";
+        std::cout << "Class [" << element->getMetadata().getClassName() << "] Type Uuid {" << element->getMetadata().getTypeUid().toString() << "}\n";
     } else {
         std::cout << "Element creation failed!\n";
     }
