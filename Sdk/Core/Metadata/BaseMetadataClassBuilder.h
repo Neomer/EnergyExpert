@@ -2,6 +2,7 @@
 #define BASEMETADATACLASSBUILDER_H
 
 #include <vector>
+#include <mutex>
 #include <Core/Metadata/IMetadata.h>
 
 namespace energy { namespace core { namespace metadata {
@@ -16,6 +17,13 @@ public:
     BaseMetadataClassBuilder<T>()
     {
 
+    }
+
+    virtual ~BaseMetadataClassBuilder<T>()
+    {
+        for (auto m : _metadataList) {
+            delete m;
+        }
     }
 
     /**
@@ -42,6 +50,27 @@ public:
     }
 
 protected:
+    /**
+     * @brief Потокобезопасный метод для инициализации списка реализаций метаданных.
+     */
+    void safeLoad()
+    {
+        std::lock_guard<std::mutex> lock(_loadMtx);
+        if (!_loaded) {
+            loadComponents();
+            _loaded = true;
+        }
+    }
+
+protected:
+    /**
+     * @brief Создает список всех реализаций класса метаданных
+     */
+    virtual void loadComponents() = 0;
+
+    bool _loaded;
+    std::mutex _loadMtx;
+
     std::vector<IMetadata *> _metadataList;
 };
 

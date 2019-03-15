@@ -18,12 +18,15 @@ public:
 
 private:
     NetworkElementBuilder();
-    ~NetworkElementBuilder();
+    virtual ~NetworkElementBuilder() override;
 
     NetworkElementBuilder(const NetworkElementBuilder &other) = delete;
     NetworkElementBuilder(NetworkElementBuilder &&other) = delete;
     NetworkElementBuilder &operator=(const NetworkElementBuilder &other) = delete;
     NetworkElementBuilder &operator=(NetworkElementBuilder &&other) = delete;
+
+private:
+    virtual void loadComponents() override;
 };
 
 } } }

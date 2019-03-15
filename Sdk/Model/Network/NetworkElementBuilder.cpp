@@ -12,17 +12,20 @@ using namespace energy::core::types;
 NetworkElementBuilder::NetworkElementBuilder() :
     BaseMetadataClassBuilder<AbstractNetworkElement>()
 {
-    _metadataList.push_back(new Wire::Metadata());
-    _metadataList.push_back(new TransformerSubstation::Metadata());
-    _metadataList.push_back(new Thread::Metadata());
-    _metadataList.push_back(new Bus::Metadata());
+    safeLoad();
 }
 
 NetworkElementBuilder::~NetworkElementBuilder()
 {
-    for (auto m : _metadataList) {
-        delete m;
-    }
+
+}
+
+void NetworkElementBuilder::loadComponents()
+{
+    _metadataList.push_back(new Wire::Metadata());
+    _metadataList.push_back(new TransformerSubstation::Metadata());
+    _metadataList.push_back(new Thread::Metadata());
+    _metadataList.push_back(new Bus::Metadata());
 }
 
 NetworkElementBuilder &NetworkElementBuilder::getInstance()
