@@ -47,7 +47,7 @@ bool XmlNode::hasAttribute(const char *name) const
     return it != _attr.end();
 }
 
-std::vector<const XmlNode *> XmlNode::findChildren(const char *name, bool recursively) const
+std::vector<const XmlNode *> XmlNode::findChildren(const char *name) const
 {
     std::vector<const XmlNode *> ret;
     for (auto it = _children.begin(); it != _children.end(); ++it) {
