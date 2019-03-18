@@ -48,11 +48,18 @@ public:
      * @return true, если атрибут с указанным именем у элемента есть.
      */
     bool hasAttribute(const char *name) const;
+    /**
+     * @brief Найти элементы с заданным именем тэга
+     * @param name Имя тэга
+     * @return Вектор со списком указателей на элементы.
+     */
+    std::vector<const XmlNode *> findChildren(const char *name) const;
 
 private:
     const XmlNode *_parent;
     const char *_name;
     std::vector<XmlAttribute *> _attr;
+    std::vector<XmlNode *> _children;
 };
 
 } } } }

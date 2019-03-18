@@ -29,7 +29,7 @@ void XmlNode::setName(const char *value)
 const XmlAttribute *XmlNode::getAttribute(const char *name) const
 {
     auto it = std::find_if(_attr.begin(), _attr.end(), [name](const XmlAttribute * attr) -> bool {
-        return strcmp(attr->getName(), name) == 0;
+        return !strcmp(attr->getName(), name);
     });
     return it != _attr.end() ? *it : nullptr;
 }
@@ -42,7 +42,18 @@ void XmlNode::addAttribute(XmlAttribute *attribute)
 bool XmlNode::hasAttribute(const char *name) const
 {
     auto it = std::find_if(_attr.begin(), _attr.end(), [name](const XmlAttribute * attr) -> bool {
-        return strcmp(attr->getName(), name) == 0;
+        return !strcmp(attr->getName(), name);
     });
     return it != _attr.end();
+}
+
+std::vector<const XmlNode *> XmlNode::findChildren(const char *name, bool recursively) const
+{
+    std::vector<const XmlNode *> ret;
+    for (auto it = _children.begin(); it != _children.end(); ++it) {
+        if (!strcmp((*it)->getName(), name)) {
+            ret.push_back(*it);
+        }
+    }
+    return ret;
 }
