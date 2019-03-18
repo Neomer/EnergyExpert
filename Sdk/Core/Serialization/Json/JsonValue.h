@@ -25,7 +25,7 @@ public:
     };
 
     JsonValue(ValueType type);
-    virtual ~JsonValue() = default;
+    virtual ~JsonValue() override = default;
 
     ValueType objectType() const { return _type; }
 

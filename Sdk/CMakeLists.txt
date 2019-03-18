@@ -21,6 +21,8 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Serialization/Json/JsonValue.cpp Core/Serialization/Json/JsonValue.h
                Core/Serialization/Json/JsonArray.cpp Core/Serialization/Json/JsonArray.h
                Core/Serialization/Xml/XmlObject.cpp Core/Serialization/Xml/XmlObject.h
+               Core/Serialization/Xml/XmlNode.cpp Core/Serialization/Xml/XmlNode.h
+               Core/Serialization/Xml/XmlAttribute.cpp Core/Serialization/Xml/XmlAttribute.h
                Core/Metadata/IMetadata.cpp Core/Metadata/IMetadata.h
                Core/Metadata/MetaObject.cpp Core/Metadata/MetaObject.h
                Core/Metadata/MetadataClass.h

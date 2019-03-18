@@ -4,6 +4,17 @@ using namespace energy::model;
 using namespace energy::model::network;
 using namespace energy::core::types;
 
+
+
+AbstractNetworkElement::AbstractNetworkElement(const Uuid &uid, AbstractNetworkElement *parent) :
+    IIdentified{ uid },
+    _parentElement{ parent }
+{
+    if (parent != nullptr) {
+        parent->appendChild(this);
+    }
+}
+
 AbstractNetworkElement::AbstractNetworkElement(AbstractNetworkElement *parent) :
     IIdentified(Uuid::Empty()),
     _parentElement{ parent }

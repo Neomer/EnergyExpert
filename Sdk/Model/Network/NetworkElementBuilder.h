@@ -12,7 +12,7 @@ namespace energy { namespace model { namespace network {
 class SDKSHARED_EXPORT NetworkElementBuilder :
         public energy::core::metadata::BaseMetadataClassBuilder<AbstractNetworkElement>
 {
-// Sigleton
+// Singleton
 public:
     static NetworkElementBuilder &getInstance();
 

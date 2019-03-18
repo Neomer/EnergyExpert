@@ -1,17 +1,30 @@
 #ifndef XMLOBJECT_H
 #define XMLOBJECT_H
 
-#include <export.h>
+#include <Core/Serialization/Xml/XmlNode.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 
 /**
- * @brief Xml объект.
+ * @brief XML объект.
  */
 class SDKSHARED_EXPORT XmlObject
 {
 public:
     XmlObject();
+    /**
+     * @brief Корневой узел объекта.
+     * @return Константная ссылка на корневой узел
+     */
+    const XmlNode &getRootNode_const() const;
+    /**
+     * @brief Корневой узел объекта.
+     * @return Ссылка на корневой узел
+     */
+    XmlNode &getRootNode();
+
+private:
+    XmlNode _rootNode;
 };
 
 } } } }

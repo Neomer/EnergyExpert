@@ -4,56 +4,18 @@
 #include <Model/Network/TransformerSubstation.h>
 #include <Model/Network/NetworkElementBuilder.h>
 #include <Core/Types/IObservable.h>
+#include <Core/Serialization/Xml/XmlObject.h>
 
 using namespace energy::core::serialization::json;
+using namespace energy::core::serialization::xml;
 using namespace energy::model::network;
 using namespace energy::core::types;
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wweak-vtables"
-
-class A : public IObservable<int>
-{
-public:
-    A() = default;
-    virtual ~A() override = default;
-};
-
-class B : public IObserver<int>
-{
-public:
-    B(IObservable<int> *observable) {
-        observable->registerObserver(this);
-    }
-    virtual ~B() override = default;
-
-    virtual bool onUpdate(const int &value, const IObservable<int> *observable) override
-    {
-        std::cout << "class B: update " << value << std::endl;
-        return false;
-    }
-};
-
-class C : public IObserver<int>
-{
-public:
-    C(IObservable<int> *observable) {
-        observable->registerObserver(this);
-    }
-    virtual ~C() override = default;
-
-    virtual bool onUpdate(const int &value, const IObservable<int> *observable) override
-    {
-        std::cout << "class C: update " << value << std::endl;
-        return false;
-    }
-};
 
 int main()
 {
     JsonObject json;
     std::cout << "Object type: " << json.objectType() << std::endl;
-    json.value("Testtttet");
+    json.value("Statuette");
     std::cout << "Value: " << json.asString() << std::endl;
 
     auto wire = new Wire();
@@ -70,11 +32,20 @@ int main()
     } else {
         std::cout << "Element creation failed!\n";
     }
+    XmlNode xmlNode;
+    {
+        xmlNode.setName("test me");
+    }
+    xmlNode.addAttribute(new XmlAttribute("attribute name", "value of attribute"));
+    std::cout << "Has attribute " << xmlNode.hasAttribute("attribute name") << std::endl;
 
-    A a;
-    B b(&a);
-    C c(&a);
-    a.update(45);
+    std::cout << "XML node: " << xmlNode.getName() << std::endl;
+    auto attr = xmlNode.getAttribute("attribute name");
+    if (attr != nullptr) {
+        std::cout << "Attribute: " << attr->getTextValue() << std::endl;
+    } else {
+        std::cout << "Attribute not found!" << std::endl;
+    }
 
     std::cout << std::endl << "Press any key" << std::endl;
     int g;

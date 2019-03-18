@@ -21,7 +21,14 @@ class SDKSHARED_EXPORT AbstractNetworkElement :
 public:
     /**
      * @brief Элемент сети.
-     * @param parent Родительский элемент электросети. Если значение отлично от nullptr, то данный экзмепляр
+     * @param uid Идентификатор элемента.
+     * @param parent Родительский элемент электросети. Если значение отлично от nullptr, то данный экземпляр
+     * добавляется в потомки класса родителя через метод AbstractNetworkElement::appendChild(AbstractNetworkElement *).
+     */
+    AbstractNetworkElement(const energy::core::types::Uuid &uid, AbstractNetworkElement *parent = nullptr);
+    /**
+     * @brief Элемент сети.
+     * @param parent Родительский элемент электросети. Если значение отлично от nullptr, то данный экземпляр
      * добавляется в потомки класса родителя через метод AbstractNetworkElement::appendChild(AbstractNetworkElement *).
      */
     AbstractNetworkElement(AbstractNetworkElement *parent = nullptr);
