@@ -2,6 +2,7 @@
 #define XMLOBJECT_H
 
 #include <Core/Serialization/Xml/XmlNode.h>
+#include <Core/Serialization/Xml/IXmlSerializable.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 

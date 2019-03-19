@@ -5,10 +5,37 @@
 
 using namespace energy::core::serialization::xml;
 
-XmlNode::XmlNode(const XmlNode *parent) :
+XmlNode::XmlNode(const char *name, const XmlNode *parent) :
+    _name{ name },
     _parent{ parent }
 {
 
+}
+
+XmlNode::XmlNode(const char *name) :
+    _name{ name },
+    _parent{ nullptr }
+{
+
+}
+
+XmlNode::XmlNode(const char *name, const char *value) :
+    _name{ name },
+    _parent{ nullptr },
+    _value{ value }
+{
+
+}
+
+XmlNode::~XmlNode()
+{
+    std::for_each(_children.begin(), _children.end(), [](XmlNode *item) {
+        delete item;
+    });
+
+    std::for_each(_attr.begin(), _attr.end(), [](XmlAttribute *item) {
+        delete item;
+    });
 }
 
 const XmlNode *XmlNode::getParentNode() const
@@ -47,6 +74,26 @@ bool XmlNode::hasAttribute(const char *name) const
     return it != _attr.end();
 }
 
+bool XmlNode::hasChildren() const
+{
+    return _children.size();
+}
+
+std::vector<XmlNode *> &XmlNode::getChildren()
+{
+    return _children;
+}
+
+std::vector<XmlNode *>::const_iterator XmlNode::getChildrenBeginIterator() const
+{
+    return _children.begin();
+}
+
+std::vector<XmlNode *>::const_iterator XmlNode::getChildrenEndIterator() const
+{
+    return _children.end();
+}
+
 std::vector<const XmlNode *> XmlNode::findChildren(const char *name) const
 {
     std::vector<const XmlNode *> ret;
@@ -70,4 +117,29 @@ const XmlNode *XmlNode::findFirstChild(const char *name, bool recursively) const
         }
     }
     return nullptr;
+}
+
+const std::string &XmlNode::getText_const() const
+{
+    return _value;
+}
+
+void XmlNode::setText(const std::string &data)
+{
+    _value = data;
+}
+
+void XmlNode::setText(const char *data)
+{
+    _value = data;
+}
+
+void XmlNode::setText(const energy::core::types::IStringable &stringable)
+{
+    stringable.toString(_value);
+}
+
+bool XmlNode::isEmpty() const
+{
+    return _children.size() == 0 && _value.empty();
 }

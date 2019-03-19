@@ -5,11 +5,13 @@
 #include <Model/Network/NetworkElementBuilder.h>
 #include <Core/Types/IObservable.h>
 #include <Core/Serialization/Xml/XmlObject.h>
+#include <Core/Serialization/Xml/XmlSerializerImpl.h>
 
 using namespace energy::core::serialization::json;
 using namespace energy::core::serialization::xml;
 using namespace energy::model::network;
 using namespace energy::core::types;
+using namespace energy::core::serialization;
 
 int main()
 {
@@ -32,11 +34,13 @@ int main()
     } else {
         std::cout << "Element creation failed!\n";
     }
-    XmlNode xmlNode;
-    {
-        xmlNode.setName("test me");
-    }
+
+    XmlNode xmlNode(static_cast<const char *>("test me"));
     xmlNode.addAttribute(new XmlAttribute("attribute name", "value of attribute"));
+    xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item1"), static_cast<const char *>("sub_item1_value")));
+    xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item2")));
+    xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item3")));
+
     std::cout << "Has attribute " << xmlNode.hasAttribute("attribute name") << std::endl;
 
     std::cout << "XML node: " << xmlNode.getName() << std::endl;
@@ -46,6 +50,9 @@ int main()
     } else {
         std::cout << "Attribute not found!" << std::endl;
     }
+
+    ISerializer *serializer = new XmlSerializerImpl();
+    std::cout << "XML document: " << serializer->serialize(&xmlNode) << std::endl;
 
     std::cout << std::endl << "Press any key" << std::endl;
     int g;

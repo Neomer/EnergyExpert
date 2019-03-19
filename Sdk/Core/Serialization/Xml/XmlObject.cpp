@@ -2,7 +2,8 @@
 
 using namespace energy::core::serialization::xml;
 
-XmlObject::XmlObject()
+XmlObject::XmlObject() :
+    _rootNode(static_cast<const char *>(""))
 {
 
 }

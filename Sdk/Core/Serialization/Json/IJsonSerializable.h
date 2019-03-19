@@ -1,18 +1,18 @@
 #ifndef IJSONSERIALIZABLE_H
 #define IJSONSERIALIZABLE_H
 
-#include <export.h>
 #include <Core/Serialization/Json/JsonObject.h>
+#include <Core/Serialization/ISerializable.h>
 
 namespace energy { namespace core { namespace serialization {
 
 /**
  * @brief Интерфейс для классов, способных сериализоваться в Json.
  */
-class SDKSHARED_EXPORT IJsonSerializable {
+class SDKSHARED_EXPORT IJsonSerializable : public ISerializable {
 public:
     IJsonSerializable() = default;
-    virtual ~IJsonSerializable() = default;
+    virtual ~IJsonSerializable() override = default;
 
     /**
      * @brief сериализует класс в Json объект.

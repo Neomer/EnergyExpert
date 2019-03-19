@@ -16,13 +16,18 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Types/IObservable.h
                Core/Draws/AbstractViewItem.cpp Core/Draws/AbstractViewItem.h
                Core/Draws/AbstractSurface.cpp Core/Draws/AbstractSurface.h
-               Core/Serialization/IJsonSerializable.h
+               Core/Serialization/Json/IJsonSerializable.h
                Core/Serialization/Json/JsonObject.cpp Core/Serialization/Json/JsonObject.h
                Core/Serialization/Json/JsonValue.cpp Core/Serialization/Json/JsonValue.h
                Core/Serialization/Json/JsonArray.cpp Core/Serialization/Json/JsonArray.h
                Core/Serialization/Xml/XmlObject.cpp Core/Serialization/Xml/XmlObject.h
                Core/Serialization/Xml/XmlNode.cpp Core/Serialization/Xml/XmlNode.h
                Core/Serialization/Xml/XmlAttribute.cpp Core/Serialization/Xml/XmlAttribute.h
+               Core/Serialization/Xml/XmlValue.cpp Core/Serialization/Xml/XmlValue.h
+               Core/Serialization/Xml/IXmlSerializable.cpp Core/Serialization/Xml/IXmlSerializable.h
+               Core/Serialization/Xml/XmlSerializerImpl.cpp Core/Serialization/Xml/XmlSerializerImpl.h
+               Core/Serialization/ISerializer.h
+               Core/Serialization/ISerializable.h
                Core/Metadata/IMetadata.cpp Core/Metadata/IMetadata.h
                Core/Metadata/MetaObject.cpp Core/Metadata/MetaObject.h
                Core/Metadata/MetadataClass.h
