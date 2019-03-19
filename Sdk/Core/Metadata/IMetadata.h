@@ -2,6 +2,8 @@
 #define IMETADATA_H
 
 #include <export.h>
+#include <vector>
+#include <functional>
 #include <Core/Types/Uuid.h>
 
 namespace energy { namespace core { namespace metadata {
@@ -36,6 +38,7 @@ public:
      * @return
      */
     virtual MetaObject *createInstance() const = 0;
+    virtual std::vector<std::function<void(void)>> getMethods() = 0;
     /**
      * @brief Проверяет, что метаданные other принадлежат экземпляру того же класса.
      * Сравнение происходит по TypeUid.
@@ -43,6 +46,7 @@ public:
      * @return true, если метаданные other принадлежат экземпляру того же класса
      */
     bool isSame(const IMetadata &other) const;
+    void invoke(MetaObject *object, const char *methodName) const;
 };
 
 } } }

@@ -5,6 +5,7 @@
 #include <Core/Serialization/Xml/XmlObject.h>
 
 using namespace energy::core::serialization::xml;
+using namespace energy::core::serialization;
 
 XmlSerializerImpl::XmlSerializerImpl(const IXmlDecorator *tagNameDecorator,
                                      const IXmlDecorator *attributeNameDecorator) :
@@ -31,9 +32,9 @@ std::string XmlSerializerImpl::serialize(const energy::core::serialization::ISer
     return std::string(stream.str());
 }
 
-void XmlSerializerImpl::deserialize(energy::core::serialization::ISerializable *object, std::string &data)
+void XmlSerializerImpl::deserialize(ISerializable *object, std::string &data)
 {
-    //TODO: реализовать
+    //TODO: реализовать XmlSerializerImpl::deserialize()
 
 }
 
