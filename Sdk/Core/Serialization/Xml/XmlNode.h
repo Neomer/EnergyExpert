@@ -12,7 +12,7 @@ namespace energy { namespace core { namespace serialization { namespace xml {
 
 /**
  * @brief Класс, представляющий каждый узел XML-объекта.
- * Элемент XML-документа представляет из себя объект ограниченный тэгами <{имя тэга}>{данные}</{имя тэга}>.
+ * Элемент XML-документа представляет из себя объект ограниченный тэгами <{имя тэга} [{имя атрибута}={значение атрибута} ...]>{данные}</{имя тэга}>.
  * Имя тэга - обязательное свойство и задается через конструктор. Получить его можно с помощью метода XmlNode::getName(), а изменить
  * с помощью метода XmlNode::setName(const char *).
  * Данными для элемента могут служить либо вложенные элементы, либо текст. При этом, если для узла одновременно установлен и текст, и имеются
@@ -80,6 +80,19 @@ public:
      */
     void addAttribute(XmlAttribute *attribute);
     /**
+     * @brief Итератор на начало списка атрибутов
+     */
+    std::vector<XmlAttribute *>::const_iterator getAttributesBeginIterator() const;
+    /**
+     * @brief Итератор на конец списка атрибутов
+     */
+    std::vector<XmlAttribute *>::const_iterator getAttributesEndIterator() const;
+    /**
+     * @brief Проверяет наличие у тэга хотя бы одного атрибута
+     * @return
+     */
+    bool hasAnyAttributes() const;
+    /**
      * @brief Проверяет есть ли атрибут с указанным именем у элемента
      * @param name Наименование атрибута
      * @return true, если атрибут с указанным именем у элемента есть.
@@ -88,7 +101,7 @@ public:
     /**
      * @brief Проверяет есть ли у элемента дочерние элементы
      */
-    bool hasChildren() const;
+    bool hasAnyChild() const;
     /**
      * @brief Возвращает список дочерних элементов
      */

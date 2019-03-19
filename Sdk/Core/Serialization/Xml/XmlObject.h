@@ -9,7 +9,7 @@ namespace energy { namespace core { namespace serialization { namespace xml {
 /**
  * @brief XML объект.
  */
-class SDKSHARED_EXPORT XmlObject
+class SDKSHARED_EXPORT XmlObject : public IXmlSerializable
 {
 public:
     XmlObject();

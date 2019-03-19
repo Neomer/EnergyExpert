@@ -26,12 +26,16 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Serialization/Xml/XmlValue.cpp Core/Serialization/Xml/XmlValue.h
                Core/Serialization/Xml/IXmlSerializable.cpp Core/Serialization/Xml/IXmlSerializable.h
                Core/Serialization/Xml/XmlSerializerImpl.cpp Core/Serialization/Xml/XmlSerializerImpl.h
+               Core/Serialization/Xml/XmlTagNameDecorator.cpp Core/Serialization/Xml/XmlTagNameDecorator.h
+               Core/Serialization/Xml/XmlAttributeNameDecorator.cpp Core/Serialization/Xml/XmlAttributeNameDecorator.h
+               Core/Serialization/Xml/IXmlDecorator.h
                Core/Serialization/ISerializer.h
                Core/Serialization/ISerializable.h
                Core/Metadata/IMetadata.cpp Core/Metadata/IMetadata.h
                Core/Metadata/MetaObject.cpp Core/Metadata/MetaObject.h
                Core/Metadata/MetadataClass.h
                Core/Metadata/BaseMetadataClassBuilder.h
+               Core/Helpers/HtmlHelper.cpp Core/Helpers/HtmlHelper.h
                Database/IDatabaseConnection.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
                Database/Exceptions/DatabaseNotOpenException.h
@@ -44,6 +48,7 @@ set(SOURCE_LIB Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Model/Network/Network.cpp Model/Network/Network.h
                Model/Network/NetworkElementBuilder.cpp Model/Network/NetworkElementBuilder.h
                export.h
+               singleton.h
                Core/Metadata/TypeUids.txt
                )
 

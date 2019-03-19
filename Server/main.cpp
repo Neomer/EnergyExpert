@@ -6,6 +6,8 @@
 #include <Core/Types/IObservable.h>
 #include <Core/Serialization/Xml/XmlObject.h>
 #include <Core/Serialization/Xml/XmlSerializerImpl.h>
+#include <Core/Serialization/Xml/XmlTagNameDecorator.h>
+#include <Core/Serialization/Xml/XmlAttributeNameDecorator.h>
 
 using namespace energy::core::serialization::json;
 using namespace energy::core::serialization::xml;
@@ -35,6 +37,7 @@ int main()
         std::cout << "Element creation failed!\n";
     }
 
+    XmlObject xml;
     XmlNode xmlNode(static_cast<const char *>("test me"));
     xmlNode.addAttribute(new XmlAttribute("attribute name", "value of attribute"));
     xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item1"), static_cast<const char *>("sub_item1_value")));
@@ -50,9 +53,13 @@ int main()
     } else {
         std::cout << "Attribute not found!" << std::endl;
     }
+    xml.getRootNode() = xmlNode;
 
-    ISerializer *serializer = new XmlSerializerImpl();
-    std::cout << "XML document: " << serializer->serialize(&xmlNode) << std::endl;
+    XmlTagNameDecorator tagNameDecorator;
+    XmlAttributeNameDecorator attributeNameDecorator;
+    ISerializer *serializer = new XmlSerializerImpl(&tagNameDecorator,
+                                                    &attributeNameDecorator);
+    std::cout << "XML document: " << serializer->serialize(&xml) << std::endl;
 
     std::cout << std::endl << "Press any key" << std::endl;
     int g;

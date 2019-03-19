@@ -66,6 +66,21 @@ void XmlNode::addAttribute(XmlAttribute *attribute)
     _attr.push_back(attribute);
 }
 
+std::vector<XmlAttribute *>::const_iterator XmlNode::getAttributesBeginIterator() const
+{
+    return _attr.begin();
+}
+
+std::vector<XmlAttribute *>::const_iterator XmlNode::getAttributesEndIterator() const
+{
+    _attr.end();
+}
+
+bool XmlNode::hasAnyAttributes() const
+{
+    return _attr.size();
+}
+
 bool XmlNode::hasAttribute(const char *name) const
 {
     auto it = std::find_if(_attr.begin(), _attr.end(), [name](const XmlAttribute * attr) -> bool {
@@ -74,7 +89,7 @@ bool XmlNode::hasAttribute(const char *name) const
     return it != _attr.end();
 }
 
-bool XmlNode::hasChildren() const
+bool XmlNode::hasAnyChild() const
 {
     return _children.size();
 }
