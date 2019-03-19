@@ -16,12 +16,17 @@ XmlSerializerImpl::XmlSerializerImpl(const IXmlDecorator *tagNameDecorator,
 
 std::string XmlSerializerImpl::serialize(const energy::core::serialization::ISerializable *object) const
 {
-    auto xmlObject = const_cast<XmlObject *>(static_cast<const XmlObject *>(object));
-    auto rootNode = xmlObject->getRootNode();
     std::stringstream stream;
+    try {
+        auto xmlObject = const_cast<XmlObject *>(static_cast<const XmlObject *>(object));
+        auto rootNode = xmlObject->getRootNode();
 
-    stream << "<?xml version=\"1.0\"?>";
-    serializeNode(stream, &rootNode);
+        stream << "<?xml version=\"1.0\"?>";
+        serializeNode(stream, &rootNode);
+    }
+    catch (std::bad_alloc ex) {
+
+    }
 
     return std::string(stream.str());
 }
