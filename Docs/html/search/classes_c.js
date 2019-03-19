@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xmlobject',['XmlObject',['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html',1,'energy::core::serialization::xml']]]
+  ['wire',['Wire',['../classenergy_1_1model_1_1network_1_1_wire.html',1,'energy::model::network']]]
 ];

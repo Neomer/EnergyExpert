@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uuid',['Uuid',['../classenergy_1_1core_1_1types_1_1_uuid.html',1,'energy::core::types']]]
+  ['thread',['Thread',['../classenergy_1_1model_1_1network_1_1_thread.html',1,'energy::model::network']]],
+  ['transformersubstation',['TransformerSubstation',['../classenergy_1_1model_1_1network_1_1_transformer_substation.html',1,'energy::model::network']]]
 ];

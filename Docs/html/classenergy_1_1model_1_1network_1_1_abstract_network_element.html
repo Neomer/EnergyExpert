@@ -109,12 +109,15 @@ Inheritance diagram for energy::model::network::AbstractNetworkElement:</div>
 <area href="classenergy_1_1model_1_1network_1_1_bus.html" title="Шина электросети. " alt="energy::model::network::Bus" shape="rect" coords="0,112,314,136"/>
 <area href="classenergy_1_1model_1_1network_1_1_thread.html" title="Жила провода в электросети. " alt="energy::model::network::Thread" shape="rect" coords="324,112,638,136"/>
 <area href="classenergy_1_1model_1_1network_1_1_transformer_substation.html" title="Трансформаторная подстанция " alt="energy::model::network::TransformerSubstation" shape="rect" coords="648,112,962,136"/>
-<area href="classenergy_1_1model_1_1network_1_1_wire.html" title="Линия электросети. Представляет из себя физический провод между двумя излами. Провод состоит из неско..." alt="energy::model::network::Wire" shape="rect" coords="972,112,1286,136"/>
+<area href="classenergy_1_1model_1_1network_1_1_wire.html" title="Линия электросети. Представляет из себя физический провод между двумя узлами. Провод состоит из неско..." alt="energy::model::network::Wire" shape="rect" coords="972,112,1286,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3756b8c25c1be8e2325c98ac0ed1b5d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html#a3756b8c25c1be8e2325c98ac0ed1b5d4">AbstractNetworkElement</a> (const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">energy::core::types::Uuid</a> &amp;uid, <a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html">AbstractNetworkElement</a> *parent=nullptr)</td></tr>
+<tr class="memdesc:a3756b8c25c1be8e2325c98ac0ed1b5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элемент сети.  <a href="#a3756b8c25c1be8e2325c98ac0ed1b5d4">More...</a><br /></td></tr>
+<tr class="separator:a3756b8c25c1be8e2325c98ac0ed1b5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677235df0276bab90adca47b0fca2b0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html#a677235df0276bab90adca47b0fca2b0b">AbstractNetworkElement</a> (<a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html">AbstractNetworkElement</a> *parent=nullptr)</td></tr>
 <tr class="memdesc:a677235df0276bab90adca47b0fca2b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элемент сети.  <a href="#a677235df0276bab90adca47b0fca2b0b">More...</a><br /></td></tr>
 <tr class="separator:a677235df0276bab90adca47b0fca2b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,8 +173,45 @@ virtual const <a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Абстрактный класс, представляющий элемент электрической сети. Все элементы, присутствующие в схеме электрической сети должны реализовать этот класс. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3756b8c25c1be8e2325c98ac0ed1b5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3756b8c25c1be8e2325c98ac0ed1b5d4">&#9670;&nbsp;</a></span>AbstractNetworkElement() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AbstractNetworkElement::AbstractNetworkElement </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">energy::core::types::Uuid</a> &amp;&#160;</td>
+          <td class="paramname"><em>uid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html">AbstractNetworkElement</a> *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Элемент сети. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uid</td><td>Идентификатор элемента. </td></tr>
+    <tr><td class="paramname">parent</td><td>Родительский элемент электросети. Если значение отлично от nullptr, то данный экземпляр добавляется в потомки класса родителя через метод <a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html#aa4c8a4f427479e122f2725f107406d71" title="Добавляет потомка к данному узлу сети ">AbstractNetworkElement::appendChild(AbstractNetworkElement *)</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a677235df0276bab90adca47b0fca2b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a677235df0276bab90adca47b0fca2b0b">&#9670;&nbsp;</a></span>AbstractNetworkElement()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a677235df0276bab90adca47b0fca2b0b">&#9670;&nbsp;</a></span>AbstractNetworkElement() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +229,7 @@ virtual const <a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata
 <p>Элемент сети. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>Родительский элемент электросети. Если значение отлично от nullptr, то данный экзмепляр добавляется в потомки класса родителя через метод <a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html#aa4c8a4f427479e122f2725f107406d71" title="Добавляет потомка к данному узлу сети ">AbstractNetworkElement::appendChild(AbstractNetworkElement *)</a>. </td></tr>
+    <tr><td class="paramname">parent</td><td>Родительский элемент электросети. Если значение отлично от nullptr, то данный экземпляр добавляется в потомки класса родителя через метод <a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html#aa4c8a4f427479e122f2725f107406d71" title="Добавляет потомка к данному узлу сети ">AbstractNetworkElement::appendChild(AbstractNetworkElement *)</a>. </td></tr>
   </table>
   </dd>
 </dl>

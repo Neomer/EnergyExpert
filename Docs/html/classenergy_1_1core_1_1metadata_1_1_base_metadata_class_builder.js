@@ -2,6 +2,8 @@ var classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder =
 [
     [ "BaseMetadataClassBuilder", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#af4f872853c54635ae6dcd619b8cd0229", null ],
     [ "~BaseMetadataClassBuilder", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#ad6e5302f6731d09137d1e54cb5abf338", null ],
+    [ "createElementByFullName", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a14f54ea1f1987cd1335424cee05cb0ff", null ],
+    [ "createElementByName", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a64e94d42a1ee715dd4f5fda03b84cad3", null ],
     [ "createElementByTypeUid", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#acdc31302cf193a346a898fedd2a0b3b9", null ],
     [ "getElementTypeList", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a5ad988daa60f4158b657f96ebae2b980", null ],
     [ "loadComponents", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#aecbda8cc207e4517c8ff4181160f4215", null ],

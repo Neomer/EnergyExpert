@@ -1,5 +1,6 @@
 var classenergy_1_1model_1_1network_1_1_abstract_network_element =
 [
+    [ "AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html#a3756b8c25c1be8e2325c98ac0ed1b5d4", null ],
     [ "AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html#a677235df0276bab90adca47b0fca2b0b", null ],
     [ "~AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html#ade53dbea19839e99b029c218b6e3a4d6", null ],
     [ "appendChild", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html#aa4c8a4f427479e122f2725f107406d71", null ],

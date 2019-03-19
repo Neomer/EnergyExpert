@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['iidentified',['IIdentified',['../classenergy_1_1model_1_1_i_identified.html#a90bb5e5f86a566a175ac107bf7218bff',1,'energy::model::IIdentified::IIdentified()'],['../classenergy_1_1model_1_1_i_identified.html#af8033272074b0380b56c89816c5c2b3c',1,'energy::model::IIdentified::IIdentified(const T &amp;id)']]],
-  ['isempty',['isEmpty',['../classenergy_1_1core_1_1types_1_1_uuid.html#a8d28ccce2ff2171b8bcab269222f590d',1,'energy::core::types::Uuid']]],
-  ['isequals',['isEquals',['../classenergy_1_1core_1_1collections_1_1_iterator.html#ace955920c19ecb0df73b83755cef17cb',1,'energy::core::collections::Iterator::isEquals()'],['../classenergy_1_1core_1_1types_1_1_uuid.html#a05bdae42006339bf5caa3d428d82015f',1,'energy::core::types::Uuid::isEquals()'],['../classenergy_1_1model_1_1_i_identified.html#abfe2c6d11909ac2c3ccece673e18f6c9',1,'energy::model::IIdentified::isEquals()']]],
-  ['isopen',['isOpen',['../classenergy_1_1database_1_1_i_database_connection.html#a940db37e2c0fe79c863efe746f821f0d',1,'energy::database::IDatabaseConnection::isOpen()'],['../classenergy_1_1database_1_1_postgre_sql_connection.html#ad1be86325d95e3db7fd3cdb48ad26e6b',1,'energy::database::PostgreSqlConnection::isOpen()']]],
-  ['issame',['isSame',['../classenergy_1_1core_1_1metadata_1_1_i_metadata.html#acdd4e61ed0e0d3eba893541248680d0a',1,'energy::core::metadata::IMetadata']]]
+  ['hasanyattributes',['hasAnyAttributes',['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a53d9f96aa2cc8764e3471374094b3bd9',1,'energy::core::serialization::xml::XmlNode']]],
+  ['hasanychild',['hasAnyChild',['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a697872a0ae7abaef5d167c8320db0fd2',1,'energy::core::serialization::xml::XmlNode']]],
+  ['hasattribute',['hasAttribute',['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aaa2acc68f54f2d0df9134fca72ab9448',1,'energy::core::serialization::xml::XmlNode']]],
+  ['haschildren',['hasChildren',['../classenergy_1_1model_1_1network_1_1_abstract_network_element.html#a7c399fca72e0890daa03c2a5b596ae7f',1,'energy::model::network::AbstractNetworkElement']]]
 ];

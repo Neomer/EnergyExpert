@@ -42,7 +42,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classenergy_1_1database_1_1_postgre_sql_connection.html#ad1be86325d95e3db7fd3cdb48ad26e6b"
+"classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html#ade57559a58997bab081c6484a34db4d8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

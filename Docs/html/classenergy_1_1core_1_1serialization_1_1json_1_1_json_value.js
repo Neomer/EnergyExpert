@@ -8,7 +8,7 @@ var classenergy_1_1core_1_1serialization_1_1json_1_1_json_value =
       [ "Boolean", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#af16073038412935d9383fca29dcc2211a6d8af0f5a86cb189636f9d413aa93495", null ]
     ] ],
     [ "JsonValue", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#acde8ee70f08e1d0e7fcdc8d92bd582e5", null ],
-    [ "~JsonValue", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#aa317f2b2aa0309fb84617c4e68bb5cc9", null ],
+    [ "~JsonValue", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#ac5ecd5dd193b3f9363345033e2dbc7c4", null ],
     [ "asInt32", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#ac772d323da2804b9e9481d3e9edf262c", null ],
     [ "asString", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#a8b00e5d6092b09449c712179b9dc03d8", null ],
     [ "asType", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#a7b1becf1049657bee52746f560507e21", null ],

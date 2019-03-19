@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next',['next',['../classenergy_1_1core_1_1collections_1_1_array_iterator.html#adf39415829a87bea1519c9f6edea7dbd',1,'energy::core::collections::ArrayIterator::next()'],['../classenergy_1_1core_1_1collections_1_1_iterator.html#a3d8c13bc5e0b32b1b3b3e735242a9e25',1,'energy::core::collections::Iterator::next()']]]
+  ['loadcomponents',['loadComponents',['../classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#aecbda8cc207e4517c8ff4181160f4215',1,'energy::core::metadata::BaseMetadataClassBuilder']]]
 ];

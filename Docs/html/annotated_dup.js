@@ -16,6 +16,9 @@ var annotated_dup =
           [ "AbstractSurface", "classenergy_1_1core_1_1draws_1_1_abstract_surface.html", "classenergy_1_1core_1_1draws_1_1_abstract_surface" ],
           [ "AbstractViewItem", "classenergy_1_1core_1_1draws_1_1_abstract_view_item.html", "classenergy_1_1core_1_1draws_1_1_abstract_view_item" ]
         ] ],
+        [ "helpers", null, [
+          [ "HtmlHelper", "classenergy_1_1core_1_1helpers_1_1_html_helper.html", "classenergy_1_1core_1_1helpers_1_1_html_helper" ]
+        ] ],
         [ "metadata", null, [
           [ "BaseMetadataClassBuilder", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html", "classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder" ],
           [ "IMetadata", "classenergy_1_1core_1_1metadata_1_1_i_metadata.html", "classenergy_1_1core_1_1metadata_1_1_i_metadata" ],
@@ -29,9 +32,19 @@ var annotated_dup =
             [ "JsonValue", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value" ]
           ] ],
           [ "xml", null, [
-            [ "XmlObject", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object" ]
+            [ "IXmlDecorator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_decorator.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_decorator" ],
+            [ "IXmlSerializable", "classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_serializable.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_serializable" ],
+            [ "XmlAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute" ],
+            [ "XmlAttributeNameDecorator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute_name_decorator.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute_name_decorator" ],
+            [ "XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node" ],
+            [ "XmlObject", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object" ],
+            [ "XmlSerializerImpl", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl" ],
+            [ "XmlTagNameDecorator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_tag_name_decorator.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_tag_name_decorator" ],
+            [ "XmlValue", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_value.html", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_value" ]
           ] ],
-          [ "IJsonSerializable", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable" ]
+          [ "IJsonSerializable", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable" ],
+          [ "ISerializable", "classenergy_1_1core_1_1serialization_1_1_i_serializable.html", "classenergy_1_1core_1_1serialization_1_1_i_serializable" ],
+          [ "ISerializer", "classenergy_1_1core_1_1serialization_1_1_i_serializer.html", "classenergy_1_1core_1_1serialization_1_1_i_serializer" ]
         ] ],
         [ "types", null, [
           [ "ICloneable", "classenergy_1_1core_1_1types_1_1_i_cloneable.html", "classenergy_1_1core_1_1types_1_1_i_cloneable" ],
@@ -62,8 +75,5 @@ var annotated_dup =
         ] ],
         [ "IIdentified", "classenergy_1_1model_1_1_i_identified.html", "classenergy_1_1model_1_1_i_identified" ]
       ] ]
-    ] ],
-    [ "A", "class_a.html", "class_a" ],
-    [ "B", "class_b.html", "class_b" ],
-    [ "C", "class_c.html", "class_c" ]
+    ] ]
 ];

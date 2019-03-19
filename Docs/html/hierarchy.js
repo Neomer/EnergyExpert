@@ -13,6 +13,7 @@ var hierarchy =
     [ "exception", null, [
       [ "energy::exceptions::DatabaseNotOpenException", "classenergy_1_1exceptions_1_1_database_not_open_exception.html", null ]
     ] ],
+    [ "energy::core::helpers::HtmlHelper", "classenergy_1_1core_1_1helpers_1_1_html_helper.html", null ],
     [ "energy::core::types::ICloneable< T >", "classenergy_1_1core_1_1types_1_1_i_cloneable.html", null ],
     [ "energy::core::types::ICloneable< Uuid >", "classenergy_1_1core_1_1types_1_1_i_cloneable.html", [
       [ "energy::core::types::Uuid", "classenergy_1_1core_1_1types_1_1_uuid.html", null ]
@@ -33,7 +34,6 @@ var hierarchy =
         [ "energy::model::network::Wire", "classenergy_1_1model_1_1network_1_1_wire.html", null ]
       ] ]
     ] ],
-    [ "energy::core::serialization::IJsonSerializable", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html", null ],
     [ "energy::core::metadata::IMetadata", "classenergy_1_1core_1_1metadata_1_1_i_metadata.html", [
       [ "energy::model::network::Bus::Metadata", "classenergy_1_1model_1_1network_1_1_bus_1_1_metadata.html", null ],
       [ "energy::model::network::Thread::Metadata", "classenergy_1_1model_1_1network_1_1_thread_1_1_metadata.html", null ],
@@ -41,13 +41,16 @@ var hierarchy =
       [ "energy::model::network::Wire::Metadata", "classenergy_1_1model_1_1network_1_1_wire_1_1_metadata.html", null ]
     ] ],
     [ "energy::core::types::IObservable< T >", "classenergy_1_1core_1_1types_1_1_i_observable.html", null ],
-    [ "energy::core::types::IObservable< int >", "classenergy_1_1core_1_1types_1_1_i_observable.html", [
-      [ "A", "class_a.html", null ]
-    ] ],
     [ "energy::core::types::IObserver< T >", "classenergy_1_1core_1_1types_1_1_i_observer.html", null ],
-    [ "energy::core::types::IObserver< int >", "classenergy_1_1core_1_1types_1_1_i_observer.html", [
-      [ "B", "class_b.html", null ],
-      [ "C", "class_c.html", null ]
+    [ "energy::core::serialization::ISerializable", "classenergy_1_1core_1_1serialization_1_1_i_serializable.html", [
+      [ "energy::core::serialization::IJsonSerializable", "classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html", null ],
+      [ "energy::core::serialization::xml::IXmlSerializable", "classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_serializable.html", [
+        [ "energy::core::serialization::xml::XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html", null ],
+        [ "energy::core::serialization::xml::XmlObject", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html", null ]
+      ] ]
+    ] ],
+    [ "energy::core::serialization::ISerializer", "classenergy_1_1core_1_1serialization_1_1_i_serializer.html", [
+      [ "energy::core::serialization::xml::XmlSerializerImpl", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html", null ]
     ] ],
     [ "energy::core::types::IStringable", "classenergy_1_1core_1_1types_1_1_i_stringable.html", [
       [ "energy::core::serialization::json::JsonValue", "classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html", [
@@ -59,10 +62,15 @@ var hierarchy =
     [ "energy::core::collections::Iterator< TElement >", "classenergy_1_1core_1_1collections_1_1_iterator.html", [
       [ "energy::core::collections::ArrayIterator< TElement >", "classenergy_1_1core_1_1collections_1_1_array_iterator.html", null ]
     ] ],
+    [ "energy::core::serialization::xml::IXmlDecorator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_decorator.html", [
+      [ "energy::core::serialization::xml::XmlAttributeNameDecorator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute_name_decorator.html", null ],
+      [ "energy::core::serialization::xml::XmlTagNameDecorator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_tag_name_decorator.html", null ]
+    ] ],
     [ "energy::core::metadata::MetaObject", "classenergy_1_1core_1_1metadata_1_1_meta_object.html", [
       [ "energy::core::metadata::MetadataClass< T >", "classenergy_1_1core_1_1metadata_1_1_metadata_class.html", null ],
       [ "energy::model::network::AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html", null ]
     ] ],
     [ "energy::model::network::Network", "classenergy_1_1model_1_1network_1_1_network.html", null ],
-    [ "energy::core::serialization::xml::XmlObject", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html", null ]
+    [ "energy::core::serialization::xml::XmlAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html", null ],
+    [ "energy::core::serialization::xml::XmlValue", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_value.html", null ]
 ];

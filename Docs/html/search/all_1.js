@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['b',['B',['../class_b.html',1,'']]],
   ['basemetadataclassbuilder',['BaseMetadataClassBuilder',['../classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html',1,'energy::core::metadata']]],
   ['basemetadataclassbuilder_3c_20abstractnetworkelement_20_3e',['BaseMetadataClassBuilder&lt; AbstractNetworkElement &gt;',['../classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html',1,'energy::core::metadata']]],
   ['begin',['begin',['../classenergy_1_1core_1_1collections_1_1_array.html#a16ef709131d43c82d877c907b050ef9f',1,'energy::core::collections::Array::begin()'],['../classenergy_1_1core_1_1collections_1_1_collection.html#a96dfaf98649767af6d505e3c7d174fb2',1,'energy::core::collections::Collection::begin()']]],

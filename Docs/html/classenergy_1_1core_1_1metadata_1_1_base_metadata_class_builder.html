@@ -101,8 +101,14 @@ $(document).ready(function(){initNavTree('classenergy_1_1core_1_1metadata_1_1_ba
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acdc31302cf193a346a898fedd2a0b3b9"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#acdc31302cf193a346a898fedd2a0b3b9">createElementByTypeUid</a> (const <a class="el" href="classenergy_1_1core_1_1types_1_1_uuid.html">energy::core::types::Uuid</a> &amp;uid) const</td></tr>
-<tr class="memdesc:acdc31302cf193a346a898fedd2a0b3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать элемент сети, основывясь на Uuid его типа.  <a href="#acdc31302cf193a346a898fedd2a0b3b9">More...</a><br /></td></tr>
+<tr class="memdesc:acdc31302cf193a346a898fedd2a0b3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать элемент сети, основываясь на Uuid его типа.  <a href="#acdc31302cf193a346a898fedd2a0b3b9">More...</a><br /></td></tr>
 <tr class="separator:acdc31302cf193a346a898fedd2a0b3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e94d42a1ee715dd4f5fda03b84cad3"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a64e94d42a1ee715dd4f5fda03b84cad3">createElementByName</a> (const char *name) const</td></tr>
+<tr class="memdesc:a64e94d42a1ee715dd4f5fda03b84cad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать элемент сети, основываясь на имени класса. Не рекомендуется использовать, лучше выбрать из методов BaseMetadataClassBuilder::createElementByTypeUid(const energy::core::types::Uuid &amp;) и BaseMetadataClassBuilder::createElementByFullName(const char *).  <a href="#a64e94d42a1ee715dd4f5fda03b84cad3">More...</a><br /></td></tr>
+<tr class="separator:a64e94d42a1ee715dd4f5fda03b84cad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f54ea1f1987cd1335424cee05cb0ff"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a14f54ea1f1987cd1335424cee05cb0ff">createElementByFullName</a> (const char *name) const</td></tr>
+<tr class="memdesc:a14f54ea1f1987cd1335424cee05cb0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать элемент сети, основываясь на полном имени класса с namespace.  <a href="#a14f54ea1f1987cd1335424cee05cb0ff">More...</a><br /></td></tr>
+<tr class="separator:a14f54ea1f1987cd1335424cee05cb0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad988daa60f4158b657f96ebae2b980"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classenergy_1_1core_1_1metadata_1_1_i_metadata.html">energy::core::metadata::IMetadata</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a5ad988daa60f4158b657f96ebae2b980">getElementTypeList</a> () const</td></tr>
 <tr class="memdesc:a5ad988daa60f4158b657f96ebae2b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список реализаций классов метаданных.  <a href="#a5ad988daa60f4158b657f96ebae2b980">More...</a><br /></td></tr>
 <tr class="separator:a5ad988daa60f4158b657f96ebae2b980"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +142,80 @@ class energy::core::metadata::BaseMetadataClassBuilder&lt; T &gt;</h3>
 
 <p>Абстрактный класс, реализующий базовый функционал паттерна Строитель (Builder). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a14f54ea1f1987cd1335424cee05cb0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f54ea1f1987cd1335424cee05cb0ff">&#9670;&nbsp;</a></span>createElementByFullName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html">energy::core::metadata::BaseMetadataClassBuilder</a>&lt; T &gt;::createElementByFullName </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создать элемент сети, основываясь на полном имени класса с namespace. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Искомое имя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Элемент сети, либо nullptr, если элемента с таким именем не зарегистрировано. </dd></dl>
+
+</div>
+</div>
+<a id="a64e94d42a1ee715dd4f5fda03b84cad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e94d42a1ee715dd4f5fda03b84cad3">&#9670;&nbsp;</a></span>createElementByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html">energy::core::metadata::BaseMetadataClassBuilder</a>&lt; T &gt;::createElementByName </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создать элемент сети, основываясь на имени класса. Не рекомендуется использовать, лучше выбрать из методов BaseMetadataClassBuilder::createElementByTypeUid(const energy::core::types::Uuid &amp;) и BaseMetadataClassBuilder::createElementByFullName(const char *). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Искомое имя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Элемент сети, либо nullptr, если элемента с таким именем не зарегистрировано. </dd></dl>
+
+</div>
+</div>
 <a id="acdc31302cf193a346a898fedd2a0b3b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acdc31302cf193a346a898fedd2a0b3b9">&#9670;&nbsp;</a></span>createElementByTypeUid()</h2>
 
@@ -162,7 +242,7 @@ template&lt;class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Создать элемент сети, основывясь на Uuid его типа. </p>
+<p>Создать элемент сети, основываясь на Uuid его типа. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uid</td><td>Uuid типа элемента сети </td></tr>

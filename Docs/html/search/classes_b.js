@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wire',['Wire',['../classenergy_1_1model_1_1network_1_1_wire.html',1,'energy::model::network']]]
+  ['uuid',['Uuid',['../classenergy_1_1core_1_1types_1_1_uuid.html',1,'energy::core::types']]]
 ];

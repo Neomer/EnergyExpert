@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['each',['each',['../classenergy_1_1core_1_1collections_1_1_collection.html#a7f4526a88132270d62954f91616bfcf7',1,'energy::core::collections::Collection']]],
-  ['empty',['Empty',['../classenergy_1_1core_1_1types_1_1_uuid.html#a346866a4e1d4316ce8e5839be4ff184e',1,'energy::core::types::Uuid']]],
-  ['end',['end',['../classenergy_1_1core_1_1collections_1_1_array.html#af7b371e6a09e63aff54621a416035b15',1,'energy::core::collections::Array::end()'],['../classenergy_1_1core_1_1collections_1_1_collection.html#aa88acf500432369a919c91bb899db3fd',1,'energy::core::collections::Collection::end()']]],
-  ['end_5fconst',['end_const',['../classenergy_1_1core_1_1collections_1_1_array.html#a6c25a70e273335972e2e536b38024932',1,'energy::core::collections::Array::end_const()'],['../classenergy_1_1core_1_1collections_1_1_collection.html#a11dee24bfb810717ede9865671c95c5c',1,'energy::core::collections::Collection::end_const()']]]
+  ['deserialize',['deserialize',['../classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a36dca8b6936cb485667f6d51b7ab12a1',1,'energy::core::serialization::ISerializer::deserialize()'],['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html#a7109d0d54deb56136f770c50ee132112',1,'energy::core::serialization::xml::XmlSerializerImpl::deserialize()']]]
 ];

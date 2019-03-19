@@ -7,9 +7,18 @@
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 
+/**
+ * @brief Базовый сериализатор для XML объектов.
+ * Позволяет производить сериализацию и десериализацию XML-документов в строку.
+ */
 class SDKSHARED_EXPORT XmlSerializerImpl : public ISerializer
 {
 public:
+    /**
+     * @brief Базовый сериализатор для XML объектов.
+     * @param tagNameDecorator Декоратор для имен тэгов.
+     * @param attributeNameDecorator Декоратор для имен атрибутов.
+     */
     XmlSerializerImpl(const IXmlDecorator *tagNameDecorator,
                       const IXmlDecorator *attributeNameDecorator);
 
