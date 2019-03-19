@@ -57,3 +57,17 @@ std::vector<const XmlNode *> XmlNode::findChildren(const char *name) const
     }
     return ret;
 }
+
+const XmlNode *XmlNode::findFirstChild(const char *name, bool recursively) const
+{
+    for (auto it = _children.begin(); it != _children.end(); ++it) {
+        if (!strcmp((*it)->getName(), name)) {
+            return *it;
+        }
+        const XmlNode *result = (*it)->findFirstChild(name, recursively);
+        if (result != nullptr) {
+            return result;
+        }
+    }
+    return nullptr;
+}
