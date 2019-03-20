@@ -126,7 +126,14 @@ public:
      * @param recursively Проверять с учетом вложенных элементов
      * @return Константный указатель на элемент, либо nullptr, если элемент с таким именем не найден.
      */
-    const XmlNode *findFirstChild(const char *name, bool recursively) const;
+    const XmlNode *findFirstChild_const(const char *name, bool recursively) const;
+    /**
+     * @brief Найти первый элемент с указанным именем тэга.
+     * @param name Наименование тэга элемента
+     * @param recursively Проверять с учетом вложенных элементов
+     * @return Указатель на элемент, либо nullptr, если элемент с таким именем не найден.
+     */
+    XmlNode *findFirstChild(const char *name, bool recursively);
     /**
      * @brief Возвращает значение элемента XML-документа.
      * Вначале необходимо проверить есть ли у элемента дочерние элементы с помощью метода XmlNode::hasChildren().

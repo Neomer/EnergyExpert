@@ -31,7 +31,7 @@ std::string XmlSerializerImpl::serialize(const energy::core::serialization::ISer
     return std::string(stream.str());
 }
 
-void XmlSerializerImpl::deserialize(energy::core::serialization::ISerializable *object, std::string &data)
+void XmlSerializerImpl::deserialize(energy::core::serialization::ISerializable *object, const std::string &data)
 {
     //TODO: реализовать
 
