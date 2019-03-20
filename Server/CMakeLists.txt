@@ -7,10 +7,10 @@ include_directories("/")
 
 set(SOURCE_EXE main.cpp)
 
-add_executable(main ${SOURCE_EXE})
+add_executable(Server ${SOURCE_EXE})
 
 LINK_DIRECTORIES(${CMAKE_BINARY_DIR}/Sdk)
-TARGET_LINK_LIBRARIES(main Sdk)
+TARGET_LINK_LIBRARIES(Server Sdk)
 
 # https://cmake.org/cmake/help/latest/prop_tgt/CXX_STANDARD.html
 set(CMAKE_CXX_STANDARD 17)

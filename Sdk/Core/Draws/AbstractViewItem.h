@@ -1,7 +1,7 @@
 #ifndef ABSTRACTVIEWITEM_H
 #define ABSTRACTVIEWITEM_H
 
-#include <export.h>
+#include "../../export.h"
 #include <inttypes.h>
 
 namespace energy { namespace core { namespace draws {

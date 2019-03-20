@@ -40,8 +40,6 @@ void Uuid::parseString(const std::string &str)
 
 std::string Uuid::toString() const
 {
-    // TODO: сделать корректное привидение к строке
-
     std::stringstream stream;
     stream << std::setfill('0') << std::setw(8) << std::hex << _dw[0] << "-"
            << std::setfill('0') << std::setw(4) << std::hex << ((_dw[1] & 0xFF00) >> 16) << "-"
@@ -54,12 +52,15 @@ std::string Uuid::toString() const
 
 void Uuid::toString(std::string &buffer) const
 {
-    // TODO: сделать корректное привидение к строке
     buffer.clear();
-    buffer.append(std::to_string(_dw[0]));
-    buffer.append(std::to_string(_dw[1]));
-    buffer.append(std::to_string(_dw[2]));
-    buffer.append(std::to_string(_dw[3]));
+    std::stringstream stream;
+    stream << std::setfill('0') << std::setw(8) << std::hex << _dw[0] << "-"
+           << std::setfill('0') << std::setw(4) << std::hex << ((_dw[1] & 0xFF00) >> 16) << "-"
+           << std::setfill('0') << std::setw(4) << std::hex << (_dw[1] & 0x00FF) << "-"
+           << std::setfill('0') << std::setw(4) << std::hex << ((_dw[2] & 0xFF00) >> 16) << "-"
+           << std::setfill('0') << std::setw(4) << std::hex << (_dw[2] & 0x00FF)
+           << std::setfill('0') << std::setw(8) << std::hex << _dw[3];
+    buffer = stream.str();
 }
 
 Uuid Uuid::clone() const

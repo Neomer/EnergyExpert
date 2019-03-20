@@ -33,7 +33,7 @@ std::string XmlSerializerImpl::serialize(const energy::core::serialization::ISer
 
 void XmlSerializerImpl::deserialize(energy::core::serialization::ISerializable *object, const std::string &data)
 {
-    //TODO: реализовать
+    //TODO: реализовать десериализацию XML
 
 }
 
