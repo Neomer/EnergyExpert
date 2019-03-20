@@ -2,6 +2,7 @@ var searchData=
 [
   ['icloneable',['ICloneable',['../classenergy_1_1core_1_1types_1_1_i_cloneable.html',1,'energy::core::types']]],
   ['icloneable_3c_20uuid_20_3e',['ICloneable&lt; Uuid &gt;',['../classenergy_1_1core_1_1types_1_1_i_cloneable.html',1,'energy::core::types']]],
+  ['iconfiguration',['IConfiguration',['../classenergy_1_1core_1_1configuration_1_1_i_configuration.html',1,'energy::core::configuration']]],
   ['idatabaseconnection',['IDatabaseConnection',['../classenergy_1_1database_1_1_i_database_connection.html',1,'energy::database']]],
   ['idatabaseconnectionsprovider',['IDatabaseConnectionsProvider',['../classenergy_1_1database_1_1_i_database_connections_provider.html',1,'energy::database']]],
   ['idatareader',['IDataReader',['../classenergy_1_1core_1_1data_1_1_i_data_reader.html',1,'energy::core::data']]],
@@ -13,6 +14,7 @@ var searchData=
   ['imetadata',['IMetadata',['../classenergy_1_1core_1_1metadata_1_1_i_metadata.html',1,'energy::core::metadata']]],
   ['iobservable',['IObservable',['../classenergy_1_1core_1_1types_1_1_i_observable.html',1,'energy::core::types']]],
   ['iobserver',['IObserver',['../classenergy_1_1core_1_1types_1_1_i_observer.html',1,'energy::core::types']]],
+  ['ioexception',['IOException',['../classenergy_1_1core_1_1exceptions_1_1_i_o_exception.html',1,'energy::core::exceptions']]],
   ['isempty',['isEmpty',['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeaa6cb9e21214e94534bed71a17708cd',1,'energy::core::serialization::xml::XmlNode::isEmpty()'],['../classenergy_1_1core_1_1types_1_1_uuid.html#a8d28ccce2ff2171b8bcab269222f590d',1,'energy::core::types::Uuid::isEmpty()']]],
   ['isequals',['isEquals',['../classenergy_1_1core_1_1collections_1_1_iterator.html#ace955920c19ecb0df73b83755cef17cb',1,'energy::core::collections::Iterator::isEquals()'],['../classenergy_1_1core_1_1types_1_1_uuid.html#a05bdae42006339bf5caa3d428d82015f',1,'energy::core::types::Uuid::isEquals()'],['../classenergy_1_1model_1_1_i_identified.html#abfe2c6d11909ac2c3ccece673e18f6c9',1,'energy::model::IIdentified::isEquals()']]],
   ['iserializable',['ISerializable',['../classenergy_1_1core_1_1serialization_1_1_i_serializable.html',1,'energy::core::serialization']]],

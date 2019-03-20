@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('classenergy_1_1core_1_1serialization_1
 <p>Класс, представляющий каждый узел XML-объекта. Элемент XML-документа представляет из себя объект ограниченный тэгами &lt;{имя тэга} [{имя атрибута}={значение атрибута} ...]&gt;{данные}&lt;/{имя тэга}&gt;.<br />
  Имя тэга - обязательное свойство и задается через конструктор. Получить его можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a38e26eac662f687ae7daa4f22d714494" title="Имя тэга узла дерева ">XmlNode::getName()</a>, а изменить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ad53aabb4d5ad37494c0a85c3445676de" title="Установить имя тэга узла дерева ">XmlNode::setName(const char *)</a>.<br />
  Данными для элемента могут служить либо вложенные элементы, либо текст. При этом, если для узла одновременно установлен и текст, и имеются дочерние узлы, то текст отображен не будет.<br />
- Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
+ Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
   
  <a href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#details">More...</a></p>
 
@@ -174,9 +174,12 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 <tr class="memitem:aeecbfca428a9f3b27117baf2036b9321"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeecbfca428a9f3b27117baf2036b9321">findChildren</a> (const char *name) const</td></tr>
 <tr class="memdesc:aeecbfca428a9f3b27117baf2036b9321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти элементы с заданным именем тэга  <a href="#aeecbfca428a9f3b27117baf2036b9321">More...</a><br /></td></tr>
 <tr class="separator:aeecbfca428a9f3b27117baf2036b9321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ed23bfb452346475c3b982ab3aaa45e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a4ed23bfb452346475c3b982ab3aaa45e">findFirstChild</a> (const char *name, bool recursively) const</td></tr>
-<tr class="memdesc:a4ed23bfb452346475c3b982ab3aaa45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти первый элемент с указанным именем тэга.  <a href="#a4ed23bfb452346475c3b982ab3aaa45e">More...</a><br /></td></tr>
-<tr class="separator:a4ed23bfb452346475c3b982ab3aaa45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a10eb8ff669a49fafe282aa8b99f59"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a20a10eb8ff669a49fafe282aa8b99f59">findFirstChild_const</a> (const char *name, bool recursively) const</td></tr>
+<tr class="memdesc:a20a10eb8ff669a49fafe282aa8b99f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти первый элемент с указанным именем тэга.  <a href="#a20a10eb8ff669a49fafe282aa8b99f59">More...</a><br /></td></tr>
+<tr class="separator:a20a10eb8ff669a49fafe282aa8b99f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cee047615febb5cdb94a2138bb41d46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a5cee047615febb5cdb94a2138bb41d46">findFirstChild</a> (const char *name, bool recursively)</td></tr>
+<tr class="memdesc:a5cee047615febb5cdb94a2138bb41d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти первый элемент с указанным именем тэга.  <a href="#a5cee047615febb5cdb94a2138bb41d46">More...</a><br /></td></tr>
+<tr class="separator:a5cee047615febb5cdb94a2138bb41d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51eceda9304c65a820caee8e1964b485"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a51eceda9304c65a820caee8e1964b485">getText_const</a> () const</td></tr>
 <tr class="memdesc:a51eceda9304c65a820caee8e1964b485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение элемента XML-документа. Вначале необходимо проверить есть ли у элемента дочерние элементы с помощью метода XmlNode::hasChildren(). Если у элемента есть дочерние элементы, то доступ к ним необходимо получить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>  <a href="#a51eceda9304c65a820caee8e1964b485">More...</a><br /></td></tr>
 <tr class="separator:a51eceda9304c65a820caee8e1964b485"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,7 +200,7 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 <div class="textblock"><p>Класс, представляющий каждый узел XML-объекта. Элемент XML-документа представляет из себя объект ограниченный тэгами &lt;{имя тэга} [{имя атрибута}={значение атрибута} ...]&gt;{данные}&lt;/{имя тэга}&gt;.<br />
  Имя тэга - обязательное свойство и задается через конструктор. Получить его можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a38e26eac662f687ae7daa4f22d714494" title="Имя тэга узла дерева ">XmlNode::getName()</a>, а изменить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ad53aabb4d5ad37494c0a85c3445676de" title="Установить имя тэга узла дерева ">XmlNode::setName(const char *)</a>.<br />
  Данными для элемента могут служить либо вложенные элементы, либо текст. При этом, если для узла одновременно установлен и текст, и имеются дочерние узлы, то текст отображен не будет.<br />
- Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
+ Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
  </p>
 <p>Например, код используемый в <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html" title="Базовый сериализатор для XML объектов. Позволяет производить сериализацию и десериализацию XML-докуме...">XmlSerializerImpl</a>. </p><div class="fragment"><div class="line">stream &lt;&lt; <span class="stringliteral">&quot;&lt;&quot;</span> &lt;&lt; node-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div><div class="line"><span class="keywordflow">if</span> (node-&gt;hasChildren()) {</div><div class="line">    std::for_each(node-&gt;getChildrenBeginIterator(), node-&gt;getChildrenEndIterator(), [<span class="keyword">this</span>, &amp;stream](<span class="keyword">const</span> <a class="code" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a733fd0d6e4299df5a080559bf14a16c2">XmlNode</a> *item) {</div><div class="line">       stream &lt;&lt; serialize(item);</div><div class="line">    });</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    stream &lt;&lt; node-&gt;getText_const();</div><div class="line">}</div><div class="line">stream &lt;&lt; <span class="stringliteral">&quot;&lt;/&quot;</span> &lt;&lt; node-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a733fd0d6e4299df5a080559bf14a16c2"></a>
@@ -353,14 +356,52 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 
 </div>
 </div>
-<a id="a4ed23bfb452346475c3b982ab3aaa45e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ed23bfb452346475c3b982ab3aaa45e">&#9670;&nbsp;</a></span>findFirstChild()</h2>
+<a id="a5cee047615febb5cdb94a2138bb41d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cee047615febb5cdb94a2138bb41d46">&#9670;&nbsp;</a></span>findFirstChild()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * XmlNode::findFirstChild </td>
+          <td class="memname"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * XmlNode::findFirstChild </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>recursively</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Найти первый элемент с указанным именем тэга. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Наименование тэга элемента </td></tr>
+    <tr><td class="paramname">recursively</td><td>Проверять с учетом вложенных элементов </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на элемент, либо nullptr, если элемент с таким именем не найден. </dd></dl>
+
+</div>
+</div>
+<a id="a20a10eb8ff669a49fafe282aa8b99f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a10eb8ff669a49fafe282aa8b99f59">&#9670;&nbsp;</a></span>findFirstChild_const()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * XmlNode::findFirstChild_const </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>

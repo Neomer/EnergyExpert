@@ -11,12 +11,19 @@ var hierarchy =
       [ "energy::core::collections::Array< TElement >", "classenergy_1_1core_1_1collections_1_1_array.html", null ]
     ] ],
     [ "exception", null, [
+      [ "energy::core::exceptions::IOException", "classenergy_1_1core_1_1exceptions_1_1_i_o_exception.html", null ],
+      [ "energy::core::exceptions::NullPointerException", "classenergy_1_1core_1_1exceptions_1_1_null_pointer_exception.html", null ],
       [ "energy::exceptions::DatabaseNotOpenException", "classenergy_1_1exceptions_1_1_database_not_open_exception.html", null ]
     ] ],
     [ "energy::core::helpers::HtmlHelper", "classenergy_1_1core_1_1helpers_1_1_html_helper.html", null ],
     [ "energy::core::types::ICloneable< T >", "classenergy_1_1core_1_1types_1_1_i_cloneable.html", null ],
     [ "energy::core::types::ICloneable< Uuid >", "classenergy_1_1core_1_1types_1_1_i_cloneable.html", [
       [ "energy::core::types::Uuid", "classenergy_1_1core_1_1types_1_1_uuid.html", null ]
+    ] ],
+    [ "energy::core::configuration::IConfiguration", "classenergy_1_1core_1_1configuration_1_1_i_configuration.html", [
+      [ "energy::core::configuration::AbstractFileConfiguration", "classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html", [
+        [ "energy::core::configuration::XmlConfiguration", "classenergy_1_1core_1_1configuration_1_1_xml_configuration.html", null ]
+      ] ]
     ] ],
     [ "energy::database::IDatabaseConnection", "classenergy_1_1database_1_1_i_database_connection.html", [
       [ "energy::database::PostgreSqlConnection", "classenergy_1_1database_1_1_postgre_sql_connection.html", null ]
@@ -71,6 +78,7 @@ var hierarchy =
       [ "energy::model::network::AbstractNetworkElement", "classenergy_1_1model_1_1network_1_1_abstract_network_element.html", null ]
     ] ],
     [ "energy::model::network::Network", "classenergy_1_1model_1_1network_1_1_network.html", null ],
+    [ "TypeCastingException", "class_type_casting_exception.html", null ],
     [ "energy::core::serialization::xml::XmlAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html", null ],
     [ "energy::core::serialization::xml::XmlValue", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_value.html", null ]
 ];

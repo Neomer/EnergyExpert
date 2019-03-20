@@ -45,7 +45,7 @@ set(SOURCE_LIB export.h
                Core/Types/Uuid.cpp Core/Types/Uuid.h
                Database/IDatabaseConnection.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
-               Database/Exceptions/DatabaseNotOpenException.h
+               Database/Exceptions/DatabaseNotOpenException.cpp Database/Exceptions/DatabaseNotOpenException.h
                Database/PostgreSql/PostgreSqlConnection.cpp Database/PostgreSql/PostgreSqlConnection.h
                Model/IIdentified.h
                Model/Network/AbstractNetworkElement.cpp Model/Network/AbstractNetworkElement.h

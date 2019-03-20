@@ -113,15 +113,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a671aa8b1e9d2c4e76890b011744513c3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a671aa8b1e9d2c4e76890b011744513c3">serialize</a> (const <a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializable.html">ISerializable</a> *object) const =0</td></tr>
 <tr class="memdesc:a671aa8b1e9d2c4e76890b011744513c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализует объект в строку  <a href="#a671aa8b1e9d2c4e76890b011744513c3">More...</a><br /></td></tr>
 <tr class="separator:a671aa8b1e9d2c4e76890b011744513c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36dca8b6936cb485667f6d51b7ab12a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a36dca8b6936cb485667f6d51b7ab12a1">deserialize</a> (<a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializable.html">ISerializable</a> *object, std::string &amp;data)=0</td></tr>
-<tr class="memdesc:a36dca8b6936cb485667f6d51b7ab12a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Десериализует объект из строки  <a href="#a36dca8b6936cb485667f6d51b7ab12a1">More...</a><br /></td></tr>
-<tr class="separator:a36dca8b6936cb485667f6d51b7ab12a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3edb7057b13e525b78c1ce273da9fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a7b3edb7057b13e525b78c1ce273da9fb">deserialize</a> (<a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializable.html">ISerializable</a> *object, const std::string &amp;data)=0</td></tr>
+<tr class="memdesc:a7b3edb7057b13e525b78c1ce273da9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Десериализует объект из строки  <a href="#a7b3edb7057b13e525b78c1ce273da9fb">More...</a><br /></td></tr>
+<tr class="separator:a7b3edb7057b13e525b78c1ce273da9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Общий интерфейс для всех сериализаторов </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a36dca8b6936cb485667f6d51b7ab12a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36dca8b6936cb485667f6d51b7ab12a1">&#9670;&nbsp;</a></span>deserialize()</h2>
+<a id="a7b3edb7057b13e525b78c1ce273da9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3edb7057b13e525b78c1ce273da9fb">&#9670;&nbsp;</a></span>deserialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>data</em>&#160;</td>
         </tr>
         <tr>
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html#a7109d0d54deb56136f770c50ee132112">energy::core::serialization::xml::XmlSerializerImpl</a>.</p>
+<p>Implemented in <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html#a66c88684d818139d24904f7e97dae39e">energy::core::serialization::xml::XmlSerializerImpl</a>.</p>
 
 </div>
 </div>

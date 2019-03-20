@@ -42,7 +42,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_object.html#ade57559a58997bab081c6484a34db4d8"
+"classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#aed6be64fd94aad29b19d4942d89b1eae"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

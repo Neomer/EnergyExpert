@@ -160,8 +160,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>deserialize()
-: <a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a36dca8b6936cb485667f6d51b7ab12a1">energy::core::serialization::ISerializer</a>
-, <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html#a7109d0d54deb56136f770c50ee132112">energy::core::serialization::xml::XmlSerializerImpl</a>
+: <a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a7b3edb7057b13e525b78c1ce273da9fb">energy::core::serialization::ISerializer</a>
+, <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html#a66c88684d818139d24904f7e97dae39e">energy::core::serialization::xml::XmlSerializerImpl</a>
 </li>
 </ul>
 
@@ -191,6 +191,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
+<li>fileDataReady()
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html#a50d3095a8b67b1992f39a4746ecd0241">energy::core::configuration::AbstractFileConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_xml_configuration.html#a34fb61716e673c38a972c7caa9478088">energy::core::configuration::XmlConfiguration</a>
+</li>
 <li>fill()
 : <a class="el" href="classenergy_1_1core_1_1collections_1_1_array.html#aaf9d9d348e8249fbe547d28ee63ab135">energy::core::collections::Array&lt; TElement &gt;</a>
 </li>
@@ -198,7 +202,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeecbfca428a9f3b27117baf2036b9321">energy::core::serialization::xml::XmlNode</a>
 </li>
 <li>findFirstChild()
-: <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a4ed23bfb452346475c3b982ab3aaa45e">energy::core::serialization::xml::XmlNode</a>
+: <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a5cee047615febb5cdb94a2138bb41d46">energy::core::serialization::xml::XmlNode</a>
+</li>
+<li>findFirstChild_const()
+: <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a20a10eb8ff669a49fafe282aa8b99f59">energy::core::serialization::xml::XmlNode</a>
 </li>
 <li>fromJsonObject()
 : <a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_json_serializable.html#acd3e75584162516b5daac57982a9c3e6">energy::core::serialization::IJsonSerializable</a>
@@ -379,7 +386,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>open()
-: <a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ae1803d3c8c532ecf567783373c595404">energy::core::data::IDataStream</a>
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html#a55e1f86a218a8cbd0bddc92affcead02">energy::core::configuration::AbstractFileConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a4f348b5d9f4fa73716789cf04bda99df">energy::core::configuration::IConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ae1803d3c8c532ecf567783373c595404">energy::core::data::IDataStream</a>
 , <a class="el" href="classenergy_1_1database_1_1_i_database_connection.html#a6e5c6a9b9c3dc484f5622c7a8cfac6f1">energy::database::IDatabaseConnection</a>
 , <a class="el" href="classenergy_1_1database_1_1_postgre_sql_connection.html#a40f78093c77a3f8ec07c38cc27d12745">energy::database::PostgreSqlConnection</a>
 </li>
@@ -404,8 +413,24 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>read()
 : <a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ab2059c856dafc51eb9555ce8fee6162d">energy::core::data::IDataStream</a>
 </li>
+<li>readDouble()
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#acfda57e047cea9abf87335151fc998ce">energy::core::configuration::IConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_xml_configuration.html#aa7948276b01d8c1e32cc1f48f053b397">energy::core::configuration::XmlConfiguration</a>
+</li>
+<li>readInt()
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a5aa29e05faa662c611e8614c21d0d101">energy::core::configuration::IConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_xml_configuration.html#afe7a6975a6b94ec6f9216289f9a08cf8">energy::core::configuration::XmlConfiguration</a>
+</li>
+<li>readString()
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a83969494a1a47699801bce565e1b3753">energy::core::configuration::IConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_xml_configuration.html#ad70ef5f6d4ac0f3884c5399e87e90515">energy::core::configuration::XmlConfiguration</a>
+</li>
 <li>registerConnection()
 : <a class="el" href="classenergy_1_1database_1_1_i_database_connections_provider.html#aa055d57423110bf0209f34d8ce820487">energy::database::IDatabaseConnectionsProvider</a>
+</li>
+<li>rejectAndClose()
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html#a342609553ff69169de164f000d387368">energy::core::configuration::AbstractFileConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a0f77197e784a68305b591b8bae60fab3">energy::core::configuration::IConfiguration</a>
 </li>
 </ul>
 
@@ -413,6 +438,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>safeLoad()
 : <a class="el" href="classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a70c5da6276d7349d282a2d2651a016ef">energy::core::metadata::BaseMetadataClassBuilder&lt; T &gt;</a>
+</li>
+<li>saveAndClose()
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html#a27b4614a5e6cf72cec332db43fe9850c">energy::core::configuration::AbstractFileConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a86a88633306bb95c88c7ced2ec624756">energy::core::configuration::IConfiguration</a>
 </li>
 <li>serialize()
 : <a class="el" href="classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a671aa8b1e9d2c4e76890b011744513c3">energy::core::serialization::ISerializer</a>
@@ -430,7 +459,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classenergy_1_1model_1_1network_1_1_abstract_network_element.html#ad5253db9f87bd268fe28963346e45128">energy::model::network::AbstractNetworkElement</a>
 </li>
 <li>setText()
-: <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6">energy::core::serialization::xml::XmlNode</a>
+: <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a9880b786c75fe92b65238aff9c54d850">energy::core::serialization::xml::XmlNode</a>
 </li>
 <li>setValue()
 : <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html#a29f96fb48312e3707087780693bfc29b">energy::core::serialization::xml::XmlAttribute</a>
@@ -477,7 +506,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classenergy_1_1model_1_1network_1_1_wire.html#a4bd34fb9640763d747c7b97ed07d9fd8">energy::model::network::Wire</a>
 </li>
 <li>write()
-: <a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ad187b2b188b66bf6cf56322896dc65cc">energy::core::data::IDataStream</a>
+: <a class="el" href="classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a7f9043d919bd486de7322327ec0c58d1">energy::core::configuration::IConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1configuration_1_1_xml_configuration.html#a5640825ae65346711bebd71b231d72cd">energy::core::configuration::XmlConfiguration</a>
+, <a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ad187b2b188b66bf6cf56322896dc65cc">energy::core::data::IDataStream</a>
 </li>
 </ul>
 

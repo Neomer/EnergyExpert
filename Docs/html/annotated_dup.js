@@ -8,6 +8,11 @@ var annotated_dup =
           [ "Collection", "classenergy_1_1core_1_1collections_1_1_collection.html", "classenergy_1_1core_1_1collections_1_1_collection" ],
           [ "Iterator", "classenergy_1_1core_1_1collections_1_1_iterator.html", "classenergy_1_1core_1_1collections_1_1_iterator" ]
         ] ],
+        [ "configuration", null, [
+          [ "AbstractFileConfiguration", "classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html", "classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration" ],
+          [ "IConfiguration", "classenergy_1_1core_1_1configuration_1_1_i_configuration.html", "classenergy_1_1core_1_1configuration_1_1_i_configuration" ],
+          [ "XmlConfiguration", "classenergy_1_1core_1_1configuration_1_1_xml_configuration.html", "classenergy_1_1core_1_1configuration_1_1_xml_configuration" ]
+        ] ],
         [ "data", null, [
           [ "IDataReader", "classenergy_1_1core_1_1data_1_1_i_data_reader.html", "classenergy_1_1core_1_1data_1_1_i_data_reader" ],
           [ "IDataStream", "classenergy_1_1core_1_1data_1_1_i_data_stream.html", "classenergy_1_1core_1_1data_1_1_i_data_stream" ]
@@ -15,6 +20,10 @@ var annotated_dup =
         [ "draws", null, [
           [ "AbstractSurface", "classenergy_1_1core_1_1draws_1_1_abstract_surface.html", "classenergy_1_1core_1_1draws_1_1_abstract_surface" ],
           [ "AbstractViewItem", "classenergy_1_1core_1_1draws_1_1_abstract_view_item.html", "classenergy_1_1core_1_1draws_1_1_abstract_view_item" ]
+        ] ],
+        [ "exceptions", null, [
+          [ "IOException", "classenergy_1_1core_1_1exceptions_1_1_i_o_exception.html", "classenergy_1_1core_1_1exceptions_1_1_i_o_exception" ],
+          [ "NullPointerException", "classenergy_1_1core_1_1exceptions_1_1_null_pointer_exception.html", "classenergy_1_1core_1_1exceptions_1_1_null_pointer_exception" ]
         ] ],
         [ "helpers", null, [
           [ "HtmlHelper", "classenergy_1_1core_1_1helpers_1_1_html_helper.html", "classenergy_1_1core_1_1helpers_1_1_html_helper" ]
@@ -75,5 +84,6 @@ var annotated_dup =
         ] ],
         [ "IIdentified", "classenergy_1_1model_1_1_i_identified.html", "classenergy_1_1model_1_1_i_identified" ]
       ] ]
-    ] ]
+    ] ],
+    [ "TypeCastingException", "class_type_casting_exception.html", "class_type_casting_exception" ]
 ];

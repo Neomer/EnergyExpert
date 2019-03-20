@@ -1,6 +1,7 @@
 var searchData=
 [
   ['safeload',['safeLoad',['../classenergy_1_1core_1_1metadata_1_1_base_metadata_class_builder.html#a70c5da6276d7349d282a2d2651a016ef',1,'energy::core::metadata::BaseMetadataClassBuilder']]],
+  ['saveandclose',['saveAndClose',['../classenergy_1_1core_1_1configuration_1_1_abstract_file_configuration.html#a27b4614a5e6cf72cec332db43fe9850c',1,'energy::core::configuration::AbstractFileConfiguration::saveAndClose()'],['../classenergy_1_1core_1_1configuration_1_1_i_configuration.html#a86a88633306bb95c88c7ced2ec624756',1,'energy::core::configuration::IConfiguration::saveAndClose()']]],
   ['serialize',['serialize',['../classenergy_1_1core_1_1serialization_1_1_i_serializer.html#a671aa8b1e9d2c4e76890b011744513c3',1,'energy::core::serialization::ISerializer::serialize()'],['../classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html#add9444d2d8cef3bdc3b0bedae4fafcf1',1,'energy::core::serialization::xml::XmlSerializerImpl::serialize()']]],
   ['setid',['setId',['../classenergy_1_1model_1_1_i_identified.html#a48054f36b0ad353e7f01fdf049505e4c',1,'energy::model::IIdentified']]],
   ['setidbyvalue',['setIdByValue',['../classenergy_1_1model_1_1_i_identified.html#a2923f67d74d0d1714b7ba6270276a82a',1,'energy::model::IIdentified']]],
