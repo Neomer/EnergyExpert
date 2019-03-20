@@ -8,10 +8,15 @@ set(SOURCE_LIB export.h
                Core/Collections/Iterator.h
                Core/Collections/Array.h Core/Collections/ArrayIterator.h
                Core/Collections/CollectionExtensions.h
+               Core/Configuration/AbstractFileConfiguration.cpp Core/Configuration/AbstractFileConfiguration.h
+               Core/Configuration/IConfiguration.cpp Core/Configuration/IConfiguration.h
+               Core/Configuration/XmlConfiguration.cpp Core/Configuration/XmlConfiguration.h
                Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Data/IDataStream.cpp Core/Data/IDataStream.h
                Core/Draws/AbstractSurface.cpp Core/Draws/AbstractSurface.h
                Core/Draws/AbstractViewItem.cpp Core/Draws/AbstractViewItem.h
+               Core/Exceptions/IOException.cpp Core/Exceptions/IOException.h
+               Core/Exceptions/NullPointerException.cpp Core/Exceptions/NullPointerException.h
                Core/Exceptions/TypeCastingException.cpp Core/Exceptions/TypeCastingException.h
                Core/Helpers/HtmlHelper.cpp Core/Helpers/HtmlHelper.h
                Core/Metadata/IMetadata.cpp Core/Metadata/IMetadata.h

@@ -26,7 +26,7 @@ public:
      * @param object Объект для десериализации
      * @param data Строка для разбора
      */
-    virtual void deserialize(ISerializable *object, std::string &data) = 0;
+    virtual void deserialize(ISerializable *object, const std::string &data) = 0;
 };
 
 } } }

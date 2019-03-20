@@ -29,7 +29,7 @@ public:
      * @param object Экземпляр класс XmlObject.
      */
     virtual std::string serialize(const ISerializable *object) const override;
-    virtual void deserialize(ISerializable *object, std::string &data) override;
+    virtual void deserialize(ISerializable *object, const std::string &data) override;
 
 private:
     void serializeAttributes(std::stringstream &stream, const XmlNode *node) const;
