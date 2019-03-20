@@ -46,6 +46,16 @@ void AbstractWidget::addChildWidget(AbstractWidget *widget)
     _childWidgets.push_back(widget);
 }
 
+int32_t AbstractWidget::getAbsoluteLeft() const
+{
+    return _left + (_parent != nullptr ? _parent->getAbsoluteLeft() : 0);
+}
+
+int32_t AbstractWidget::getAbsoluteTop() const
+{
+    return _top + (_parent != nullptr ? _parent->getAbsoluteTop() : 0);
+}
+
 
 
 

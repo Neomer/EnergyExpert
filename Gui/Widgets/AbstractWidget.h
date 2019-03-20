@@ -19,22 +19,24 @@ public:
      */
     virtual ~AbstractWidget();
 
-    virtual int32_t getLeft() const { return _left; }
+    int32_t getLeft() const { return _left; }
     virtual void setLeft(int32_t value);
 
-    virtual int32_t getTop() const { return _top; }
+    int32_t getTop() const { return _top; }
     virtual void setTop(int32_t value);
 
-    virtual uint32_t getWidth() const { return _width; }
+    uint32_t getWidth() const { return _width; }
     virtual void setWidth(uint32_t value);
 
-    virtual uint32_t getHeight() const { return _height; }
+    uint32_t getHeight() const { return _height; }
     virtual void setHeight(uint32_t value);
 
     void addChildWidget(AbstractWidget *widget);
 
     AbstractWidget *getParent() { return _parent; }
     const AbstractWidget *getParent_const() const { return _parent; }
+
+    int32_t getAbsoluteLeft() const;
 
 private:
     std::deque<AbstractWidget *> _childWidgets;
