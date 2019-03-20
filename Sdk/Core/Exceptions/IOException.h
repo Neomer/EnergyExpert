@@ -3,7 +3,7 @@
 
 #include <exception>
 
-namespace energy { namespace core { namespace exceptions {
+namespace energy { namespace exceptions {
 
 /**
  * @brief Исключение ввода-вывода.
@@ -25,7 +25,7 @@ private:
     const char *_message;
 };
 
-} } }
+} }
 
 
 #endif // IOEXCEPTION_H

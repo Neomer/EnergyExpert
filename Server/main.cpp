@@ -8,15 +8,43 @@
 #include <Core/Serialization/Xml/XmlSerializerImpl.h>
 #include <Core/Serialization/Xml/XmlTagNameDecorator.h>
 #include <Core/Serialization/Xml/XmlAttributeNameDecorator.h>
+#include <Logs/ConsoleLogger.h>
+#include <Logs/FileLogger.h>
+#include <Logs/DefaultLogMessageFormatter.h>
 
+#include <Core/Data/Exceptions/DataStreamNotOpenException.h>
+#include <Core/Exceptions/IOException.h>
+
+using namespace energy::exceptions;
 using namespace energy::core::serialization::json;
 using namespace energy::core::serialization::xml;
 using namespace energy::model::network;
 using namespace energy::core::types;
 using namespace energy::core::serialization;
+using namespace energy::logs;
 
 int main()
 {
+    DefaultLogMessageFormatter formatter;
+    ConsoleLogger consoleLogger(&formatter);
+    consoleLogger.info("test to info");
+    consoleLogger.debug("test to debug");
+    consoleLogger.error("test to error");
+    consoleLogger.trace("test to trace");
+    consoleLogger.warning("test to warning");
+
+    try {
+        FileLogger fileLogger("c:\\test.log", 10, &formatter);
+        fileLogger.info("test to info");
+        fileLogger.debug("test to debug");
+        fileLogger.error("test to error");
+        fileLogger.trace("test to trace");
+        fileLogger.warning("test to warning");
+    } catch (energy::exceptions::IOException &) {
+        consoleLogger.error("Не удалось создать файл для логирования!");
+    }
+
+
     JsonObject json;
     std::cout << "Object type: " << json.objectType() << std::endl;
     json.value("Statuette");

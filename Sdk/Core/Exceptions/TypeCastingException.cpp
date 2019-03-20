@@ -1,6 +1,6 @@
 #include "TypeCastingException.h"
 
-using namespace energy::core::exceptions;
+using namespace energy::exceptions;
 
 TypeCastingException::TypeCastingException() :
     _message{ "Type casting failed!" }

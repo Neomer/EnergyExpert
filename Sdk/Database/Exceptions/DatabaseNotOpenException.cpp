@@ -1,6 +1,6 @@
 #include "DatabaseNotOpenException.h"
 
-using namespace energy::core::exceptions;
+using namespace energy::exceptions;
 
 DatabaseNotOpenException::DatabaseNotOpenException() :
     _message{ "Не удалось подключиться к базе данных!" }
