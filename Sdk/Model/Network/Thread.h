@@ -1,7 +1,7 @@
 #ifndef THREAD_H
 #define THREAD_H
 
-#include <Model/Network/AbstractNetworkElement.h>
+#include <Sdk/Model/Network/AbstractNetworkElement.h>
 
 namespace energy { namespace model { namespace network {
 

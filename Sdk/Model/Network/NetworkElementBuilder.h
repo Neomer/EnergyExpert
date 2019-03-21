@@ -1,8 +1,8 @@
 #ifndef NETWORKELEMENTBUILDER_H
 #define NETWORKELEMENTBUILDER_H
 
-#include <Core/Metadata/BaseMetadataClassBuilder.h>
-#include <Model/Network/AbstractNetworkElement.h>
+#include <Sdk/Core/Metadata/BaseMetadataClassBuilder.h>
+#include <Sdk/Model/Network/AbstractNetworkElement.h>
 
 namespace energy { namespace model { namespace network {
 

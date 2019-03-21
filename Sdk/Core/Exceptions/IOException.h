@@ -3,6 +3,8 @@
 
 #include <exception>
 
+#include <Sdk/export.h>
+
 namespace energy { namespace exceptions {
 
 /**
@@ -12,7 +14,7 @@ namespace energy { namespace exceptions {
  * - Ошибка чтения-записи
  * - Недостаток прав доступа для операции чтения-записи
  */
-class IOException : public std::exception
+class SDKSHARED_EXPORT IOException : public std::exception
 {
 public:
     explicit IOException();

@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <string>
 
-#include <Core/Data/IDataStream.h>
+#include <Sdk/Core/Data/IDataStream.h>
 
 namespace energy { namespace core { namespace data {
 

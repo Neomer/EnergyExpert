@@ -4,7 +4,7 @@
 
 #include "DateTime.h"
 
-#include <Core/Exceptions/NullPointerException.h>
+#include <Sdk/Core/Exceptions/NullPointerException.h>
 
 #define SECS_IN_MINUTE          60
 #define SECS_IN_HOUR            3600

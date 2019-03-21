@@ -3,9 +3,15 @@
 
 #include <exception>
 
+#include <Sdk/export.h>
+
 namespace energy { namespace exceptions {
 
-class NullPointerException : public std::exception
+/**
+ * @brief Исключение вызывается всякий раз, когда происходит попытка использования нулевого указателя.
+ * Эта ошибка означает, что использование переменной произошло раньше ее инициализации.
+ */
+class SDKSHARED_EXPORT NullPointerException : public std::exception
 {
 public:
     explicit NullPointerException();

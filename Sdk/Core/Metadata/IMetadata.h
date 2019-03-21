@@ -1,8 +1,8 @@
 #ifndef IMETADATA_H
 #define IMETADATA_H
 
-#include <export.h>
-#include <Core/Types/Uuid.h>
+#include <Sdk/export.h>
+#include <Sdk/Core/Types/Uuid.h>
 
 namespace energy { namespace core { namespace metadata {
 

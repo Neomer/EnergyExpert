@@ -1,7 +1,7 @@
 #ifndef WIRE_H
 #define WIRE_H
 
-#include <Model/Network/AbstractNetworkElement.h>
+#include <Sdk/Model/Network/AbstractNetworkElement.h>
 
 namespace energy { namespace model { namespace network {
 

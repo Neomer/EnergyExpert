@@ -5,13 +5,13 @@
 #include <mutex>
 #include <algorithm>
 
-#include <export.h>
+#include <Sdk/export.h>
 
 namespace energy { namespace core { namespace types {
 
 /**
  * @brief Паттерн Наблюдатель.
- * Класс, ожидающий обновление даных.
+ * Класс, ожидающий обновление данных.
  */
 template<typename T>
 class IObservable;

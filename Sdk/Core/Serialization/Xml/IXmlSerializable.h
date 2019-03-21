@@ -1,7 +1,7 @@
 #ifndef IXMLSERIALIZABLE_H
 #define IXMLSERIALIZABLE_H
 
-#include <Core/Serialization/ISerializable.h>
+#include <Sdk/Core/Serialization/ISerializable.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 

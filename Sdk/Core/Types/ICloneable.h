@@ -1,13 +1,13 @@
 #ifndef ICLONEABLE_H
 #define ICLONEABLE_H
 
-#include <export.h>
+#include <Sdk/export.h>
 
 namespace energy { namespace core { namespace types {
 
 /**
  * @brief ICloneable<T> интерфейс, реализации которого должны предоставлять копии самого себя.
- * T - тип, в который может быть склонирован исходный тип.
+ * T - тип, в который может быть клонирован исходный тип. Для типа T должен быть доступен конструктор копирования.
  */
 template<typename T>
 class SDKSHARED_EXPORT ICloneable {

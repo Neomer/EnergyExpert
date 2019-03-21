@@ -3,10 +3,10 @@
 
 #include <vector>
 
-#include <Model/IIdentified.h>
-#include <Core/Types/Uuid.h>
-#include <Core/Types/IDrawable.h>
-#include <Core/Metadata/MetaObject.h>
+#include <Sdk/Model/IIdentified.h>
+#include <Sdk/Core/Types/Uuid.h>
+#include <Sdk/Core/Types/IDrawable.h>
+#include <Sdk/Core/Metadata/MetaObject.h>
 
 namespace energy { namespace model { namespace network {
 

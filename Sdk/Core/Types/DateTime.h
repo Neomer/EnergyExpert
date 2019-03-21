@@ -4,8 +4,8 @@
 #include <inttypes.h>
 #include <chrono>
 
-#include <Core/Types/ICloneable.h>
-#include <Core/Types/IStringable.h>
+#include <Sdk/Core/Types/ICloneable.h>
+#include <Sdk/Core/Types/IStringable.h>
 
 namespace energy::core::types {
 

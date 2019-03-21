@@ -1,8 +1,8 @@
 #ifndef DEFAULTLOGMESSAGEFORMATTER_H
 #define DEFAULTLOGMESSAGEFORMATTER_H
 
-#include "../export.h"
-#include <Logs/ILogMessageFormatter.h>
+#include <Sdk/export.h>
+#include <Sdk/Logs/ILogMessageFormatter.h>
 
 namespace energy::logs {
 

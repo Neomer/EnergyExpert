@@ -1,9 +1,9 @@
 #include "NetworkElementBuilder.h"
 
-#include <Model/Network/Wire.h>
-#include <Model/Network/TransformerSubstation.h>
-#include <Model/Network/Thread.h>
-#include <Model/Network/Bus.h>
+#include <Sdk/Model/Network/Wire.h>
+#include <Sdk/Model/Network/TransformerSubstation.h>
+#include <Sdk/Model/Network/Thread.h>
+#include <Sdk/Model/Network/Bus.h>
 
 using namespace energy::core::metadata;
 using namespace energy::model::network;

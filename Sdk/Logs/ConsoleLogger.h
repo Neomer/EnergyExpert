@@ -1,11 +1,14 @@
 #ifndef CONSOLELOGGER_H
 #define CONSOLELOGGER_H
 
-#include <Logs/ILogger.h>
-#include "../export.h"
+#include <Sdk/Logs/ILogger.h>
+#include <Sdk/export.h>
 
 namespace energy::logs {
 
+/**
+ * @brief Логер, пишущий в консоль
+ */
 class SDKSHARED_EXPORT ConsoleLogger : public ILogger
 {
 public:

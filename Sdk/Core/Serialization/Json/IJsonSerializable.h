@@ -1,8 +1,8 @@
 #ifndef IJSONSERIALIZABLE_H
 #define IJSONSERIALIZABLE_H
 
-#include <Core/Serialization/Json/JsonObject.h>
-#include <Core/Serialization/ISerializable.h>
+#include <Sdk/Core/Serialization/Json/JsonObject.h>
+#include <Sdk/Core/Serialization/ISerializable.h>
 
 namespace energy { namespace core { namespace serialization {
 

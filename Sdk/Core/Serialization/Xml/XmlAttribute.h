@@ -1,18 +1,24 @@
 #ifndef XMLATTRIBUTE_H
 #define XMLATTRIBUTE_H
 
-#include <export.h>
+#include <Sdk/export.h>
+#include <Sdk/Core/Serialization/Xml/IXmlAttributeDestroyingListener.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
+
+class XmlNode;
 
 /**
  * @brief Атрибут узла XML документа.
  */
 class SDKSHARED_EXPORT XmlAttribute
 {
+    friend class XmlNode;
+
 public:
     explicit XmlAttribute();
     explicit XmlAttribute(const char *name, const char *value);
+    ~XmlAttribute();
 
     /**
      * @brief Имя атрибута
@@ -33,9 +39,12 @@ public:
      */
     void setValue(const char *value);
 
+    void setDestroyListener(IXmlAttributeDestroyingListener *destroyListener);
+
 private:
     const char *_name;
     const char *_value;
+    IXmlAttributeDestroyingListener *_destroyListener;
 };
 
 } } } }

@@ -3,9 +3,14 @@
 
 #include <exception>
 
+#include <Sdk/export.h>
+
 namespace energy { namespace exceptions {
 
-class TypeCastingException : public std::exception
+/**
+ * @brief Исключение приведения одного типа к другому.
+ */
+class SDKSHARED_EXPORT TypeCastingException : public std::exception
 {
 public:
     explicit TypeCastingException();

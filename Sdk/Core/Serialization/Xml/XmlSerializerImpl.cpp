@@ -2,7 +2,7 @@
 #include <algorithm>
 
 #include "XmlSerializerImpl.h"
-#include <Core/Serialization/Xml/XmlObject.h>
+#include <Sdk/Core/Serialization/Xml/XmlObject.h>
 
 using namespace energy::core::serialization::xml;
 
@@ -19,10 +19,8 @@ std::string XmlSerializerImpl::serialize(const energy::core::serialization::ISer
     std::stringstream stream;
     try {
         auto xmlObject = const_cast<XmlObject *>(static_cast<const XmlObject *>(object));
-        auto rootNode = xmlObject->getRootNode();
-
         stream << "<?xml version=\"1.0\"?>";
-        serializeNode(stream, &rootNode);
+        serializeNode(stream, xmlObject->getRootNode());
     }
     catch (std::bad_alloc ex) {
 
