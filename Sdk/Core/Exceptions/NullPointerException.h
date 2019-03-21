@@ -3,7 +3,7 @@
 
 #include <exception>
 
-namespace energy { namespace core { namespace exceptions {
+namespace energy { namespace exceptions {
 
 class NullPointerException : public std::exception
 {
@@ -18,6 +18,6 @@ private:
     const char *_message;
 };
 
-} } }
+} }
 
 #endif // NULLPOINTEREXCEPTION_H

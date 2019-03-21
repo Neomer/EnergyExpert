@@ -2,7 +2,7 @@
 
 #include <Core/Exceptions/NullPointerException.h>
 
-using namespace energy::core::exceptions;
+using namespace energy::exceptions;
 using namespace energy::core::configuration;
 using namespace energy::core::serialization;
 using namespace energy::core::serialization::xml;

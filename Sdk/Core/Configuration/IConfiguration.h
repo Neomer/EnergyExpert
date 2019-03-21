@@ -20,17 +20,17 @@ public:
     /**
      * @brief Открыть файл конфигурации.
      * @param path Путь до файла конфигурации
-     * @throw energy::core::exceptions::IOException Не удалось получить доступ к файлу
+     * @throw energy::exceptions::IOException Не удалось получить доступ к файлу
      */
     virtual void open(const char *path) = 0;
     /**
      * @brief Сохранить и закрыть файл конфигурации
-     * @throw energy::core::exceptions::IOException Не удалось получить доступ к файлу
+     * @throw energy::exceptions::IOException Не удалось получить доступ к файлу
      */
     virtual void saveAndClose() = 0;
     /**
      * @brief Закрыть файл без изменений
-     * @throw energy::core::exceptions::IOException Не удалось получить доступ к файлу
+     * @throw energy::exceptions::IOException Не удалось получить доступ к файлу
      */
     virtual void rejectAndClose() = 0;
     /**
@@ -67,7 +67,7 @@ public:
      * @brief readInt Прочитать значение из файла конфигурации.
      * @param key Ключ конфигурации
      * @return Целое число
-     * @throw energy::core::exceptions::IOException Не удалось найти значение с указанным ключом
+     * @throw energy::exceptions::IOException Не удалось найти значение с указанным ключом
      * @throw std::invalid_argument Преобразование не может быть выполнено
      * @throw std::out_of_range Преобразованное значение будет выходить за границы диапазона значений типа результата
      */
@@ -76,7 +76,7 @@ public:
      * @brief readDouble Прочитать значение из файла конфигурации.
      * @param key Ключ конфигурации
      * @return Вещественное число
-     * @throw energy::core::exceptions::IOException Не удалось найти значение с указанным ключом
+     * @throw energy::exceptions::IOException Не удалось найти значение с указанным ключом
      * @throw std::invalid_argument Преобразование не может быть выполнено
      * @throw std::out_of_range Преобразованное значение будет выходить за границы диапазона значений типа результата
      */
@@ -85,7 +85,7 @@ public:
      * @brief readString Прочитать значение из файла конфигурации.
      * @param key Ключ конфигурации
      * @return Строка
-     * @throw energy::core::exceptions::IOException Не удалось найти значение с указанным ключом
+     * @throw energy::exceptions::IOException Не удалось найти значение с указанным ключом
      * @throw std::invalid_argument Преобразование не может быть выполнено
      * @throw std::out_of_range Преобразованное значение будет выходить за границы диапазона значений типа результата
      */

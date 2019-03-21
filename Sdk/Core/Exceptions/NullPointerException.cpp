@@ -1,6 +1,6 @@
 #include "NullPointerException.h"
 
-using namespace energy::core::exceptions;
+using namespace energy::exceptions;
 
 
 NullPointerException::NullPointerException() :

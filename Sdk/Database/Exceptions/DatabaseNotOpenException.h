@@ -4,7 +4,7 @@
 #include <export.h>
 #include <exception>
 
-namespace energy { namespace core { namespace exceptions {
+namespace energy { namespace exceptions {
 
 class SDKSHARED_EXPORT DatabaseNotOpenException : public std::exception
 {
@@ -19,7 +19,7 @@ private:
     const char *_message;
 };
 
-} } }
+} }
 
 
 #endif // DATABASENOTOPENEXCEPTION_H

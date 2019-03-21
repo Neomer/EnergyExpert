@@ -11,6 +11,10 @@ set(SOURCE_LIB export.h
                Core/Configuration/AbstractFileConfiguration.cpp Core/Configuration/AbstractFileConfiguration.h
                Core/Configuration/IConfiguration.cpp Core/Configuration/IConfiguration.h
                Core/Configuration/XmlConfiguration.cpp Core/Configuration/XmlConfiguration.h
+               Core/Data/Exceptions/DataStreamAlreadyOpenException.cpp Core/Data/Exceptions/DataStreamAlreadyOpenException.h
+               Core/Data/Exceptions/DataStreamNotOpenException.cpp Core/Data/Exceptions/DataStreamNotOpenException.h
+               Core/Data/BufferedWriteFile.cpp Core/Data/BufferedWriteFile.h
+               Core/Data/File.cpp Core/Data/File.h
                Core/Data/IDataReader.cpp Core/Data/IDataReader.h
                Core/Data/IDataStream.cpp Core/Data/IDataStream.h
                Core/Draws/AbstractSurface.cpp Core/Draws/AbstractSurface.h
@@ -47,6 +51,11 @@ set(SOURCE_LIB export.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
                Database/Exceptions/DatabaseNotOpenException.cpp Database/Exceptions/DatabaseNotOpenException.h
                Database/PostgreSql/PostgreSqlConnection.cpp Database/PostgreSql/PostgreSqlConnection.h
+               Logs/ConsoleLogger.cpp Logs/ConsoleLogger.h
+               Logs/DefaultLogMessageFormatter.cpp Logs/DefaultLogMessageFormatter.h
+               Logs/FileLogger.cpp Logs/FileLogger.h
+               Logs/ILogger.h Logs/ILogger.cpp
+               Logs/ILogMessageFormatter.h
                Model/IIdentified.h
                Model/Network/AbstractNetworkElement.cpp Model/Network/AbstractNetworkElement.h
                Model/Network/Bus.cpp Model/Network/Bus.h

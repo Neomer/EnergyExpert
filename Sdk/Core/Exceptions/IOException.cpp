@@ -1,6 +1,6 @@
 #include "IOException.h"
 
-using namespace energy::core::exceptions;
+using namespace energy::exceptions;
 
 IOException::IOException() :
     _message{ "" }
