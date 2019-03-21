@@ -6,6 +6,9 @@
 
 namespace energy::logs {
 
+/**
+ * @brief Логер, пишущий в консоль
+ */
 class SDKSHARED_EXPORT ConsoleLogger : public ILogger
 {
 public:

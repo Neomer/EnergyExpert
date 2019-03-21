@@ -8,6 +8,9 @@
 
 namespace energy::logs {
 
+/**
+ * @brief Логер, пишущий в файл.
+ */
 class SDKSHARED_EXPORT FileLogger : public ILogger
 {
 public:
