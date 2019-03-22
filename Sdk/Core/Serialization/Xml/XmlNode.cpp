@@ -73,7 +73,7 @@ std::vector<XmlAttribute *>::const_iterator XmlNode::getAttributesBeginIterator(
 
 std::vector<XmlAttribute *>::const_iterator XmlNode::getAttributesEndIterator() const
 {
-    _attr.end();
+    return _attr.end();
 }
 
 bool XmlNode::hasAnyAttributes() const

@@ -14,6 +14,7 @@
 
 #include <Core/Data/Exceptions/DataStreamNotOpenException.h>
 #include <Core/Exceptions/IOException.h>
+#include <Core/Types/DateTime.h>
 
 using namespace energy::exceptions;
 using namespace energy::core::serialization::json;
@@ -71,6 +72,9 @@ int main()
     xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item1"), static_cast<const char *>("sub_item1_value")));
     xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item2")));
     xmlNode.getChildren().push_back(new XmlNode(static_cast<const char *>("sub_item3")));
+    DateTime dt(306723825);
+    std::cout << "Date time: " << dt.toString() << std::endl;
+
 
     std::cout << "Has attribute " << xmlNode.hasAttribute("attribute name") << std::endl;
 
