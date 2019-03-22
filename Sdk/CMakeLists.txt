@@ -47,6 +47,7 @@ set(SOURCE_LIB export.h
                Core/Types/IDrawable.h
                Core/Types/IObservable.h
                Core/Types/Uuid.cpp Core/Types/Uuid.h
+               Core/Types/DateTime.cpp Core/Types/DateTime.h
                Database/IDatabaseConnection.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
                Database/Exceptions/DatabaseNotOpenException.cpp Database/Exceptions/DatabaseNotOpenException.h
