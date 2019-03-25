@@ -1,6 +1,7 @@
 #include <cstring>
 #include <regex>
 #include <string>
+#include <sstream>
 
 #include "Ip4Address.h"
 #include <Sdk/Core/Exceptions/TypeCastingException.h>
@@ -39,4 +40,24 @@ Ip4Address Ip4Address::FromString(const std::string &str)
         }
     }
     return result;
+}
+
+std::string Ip4Address::toString() const
+{
+    std::stringstream stream;
+    stream << std::to_string(_data[0]) << '.'
+           << std::to_string(_data[1]) << '.'
+           << std::to_string(_data[2]) << '.'
+           << std::to_string(_data[3]);
+    return stream.str();
+}
+
+void Ip4Address::toString(std::string &buffer) const
+{
+    std::stringstream stream;
+    stream << std::to_string(_data[0]) << '.'
+           << std::to_string(_data[1]) << '.'
+           << std::to_string(_data[2]) << '.'
+           << std::to_string(_data[3]);
+    buffer = stream.str();
 }

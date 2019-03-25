@@ -5,10 +5,12 @@
 #include <string>
 
 #include <Sdk/export.h>
+#include <Sdk/Core/Types/IStringable.h>
 
 namespace energy::core::net {
 
-class SDKSHARED_EXPORT Ip4Address
+class SDKSHARED_EXPORT Ip4Address :
+        public energy::core::types::IStringable
 {
 public:
     Ip4Address();
@@ -24,6 +26,11 @@ public:
 
 private:
     uint8_t _data[4];
+
+    // IStringable interface
+public:
+    virtual std::string toString() const override;
+    virtual void toString(std::string &buffer) const override;
 };
 
 }

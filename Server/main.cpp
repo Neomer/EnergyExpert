@@ -16,6 +16,7 @@
 #include <Core/Exceptions/IOException.h>
 #include <Core/Types/DateTime.h>
 #include <Sdk/os.h>
+#include <Sdk/Core/Net/Ip4Address.h>
 
 using namespace energy::exceptions;
 using namespace energy::core::serialization::json;
@@ -24,6 +25,7 @@ using namespace energy::model::network;
 using namespace energy::core::types;
 using namespace energy::core::serialization;
 using namespace energy::logs;
+using namespace energy::core::net;
 
 #ifdef _OS_WIN_
     #include <winsock2.h>
@@ -101,6 +103,9 @@ int main()
         ISerializer *serializer = new XmlSerializerImpl(&tagNameDecorator,
                                                         &attributeNameDecorator);
         std::cout << "XML document: " << serializer->serialize(&xml) << std::endl;
+
+        Ip4Address ip = Ip4Address::FromString("127.0.0.1");
+        fileLogger.info(ip.toString().c_str());
 
     } catch (std::exception &e) {
         consoleLogger.error(e.what());
