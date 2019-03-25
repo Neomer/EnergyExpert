@@ -4,6 +4,7 @@ project(Sdk  VERSION 0.0.1 DESCRIPTION "EnergyExpert SDK library")
 
 set(SOURCE_LIB export.h
                singleton.h
+               os.h
                Core/Collections/Collection.h
                Core/Collections/Iterator.h
                Core/Collections/Array.h Core/Collections/ArrayIterator.h
@@ -27,6 +28,9 @@ set(SOURCE_LIB export.h
                Core/Metadata/MetaObject.cpp Core/Metadata/MetaObject.h
                Core/Metadata/MetadataClass.h
                Core/Metadata/BaseMetadataClassBuilder.h
+               Core/Net/AbstractSocket.h Core/Net/AbstractSocket_w.cpp
+               Core/Net/Ip4Address.cpp Core/Net/Ip4Address.h
+               Core/Net/Url.cpp Core/Net/Url.h
                Core/Serialization/Json/IJsonSerializable.h
                Core/Serialization/Json/JsonObject.cpp Core/Serialization/Json/JsonObject.h
                Core/Serialization/Json/JsonValue.cpp Core/Serialization/Json/JsonValue.h
@@ -72,6 +76,7 @@ set(SOURCE_LIB export.h
 add_library(Sdk SHARED ${SOURCE_LIB})
 
 include_directories("/")
+include_directories("../")
 
 set_target_properties(Sdk PROPERTIES VERSION ${PROJECT_VERSION})
 
@@ -86,3 +91,4 @@ set_property(TARGET Sdk PROPERTY CXX_STANDARD 17)
 add_compile_definitions(SDK_LIBRARY_EXPORT)
 
 target_link_libraries(${TARGET} Sdk)
+

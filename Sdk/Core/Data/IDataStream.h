@@ -9,7 +9,7 @@ namespace energy { namespace core { namespace data {
 /**
  * @brief IDataStream поток данных
  */
-class SDKSHARED_EXPORT IDataStream
+class IDataStream
 {
 public:
     IDataStream();

@@ -5,6 +5,8 @@
 
 namespace energy { namespace exceptions {
 
+#include <Sdk/export.h>
+
 /**
  * @brief Исключение ввода-вывода.
  * Вызывается в следующих ситуациях:
@@ -12,11 +14,11 @@ namespace energy { namespace exceptions {
  * - Ошибка чтения-записи
  * - Недостаток прав доступа для операции чтения-записи
  */
-class IOException : public std::exception
+class SDKSHARED_EXPORT IOException : public std::exception
 {
 public:
-    explicit IOException();
-    explicit IOException(const char *message);
+    IOException();
+    IOException(const char *message);
     virtual ~IOException() noexcept = default;
 
     virtual const char* what() const noexcept { return _message; }

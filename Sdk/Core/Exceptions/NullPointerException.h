@@ -2,10 +2,11 @@
 #define NULLPOINTEREXCEPTION_H
 
 #include <exception>
+#include <Sdk/export.h>
 
 namespace energy { namespace exceptions {
 
-class NullPointerException : public std::exception
+class SDKSHARED_EXPORT NullPointerException : public std::exception
 {
 public:
     explicit NullPointerException();

@@ -2,10 +2,11 @@
 #define TYPECASTINGEXCEPTION_H
 
 #include <exception>
+#include <Sdk/export.h>
 
 namespace energy { namespace exceptions {
 
-class TypeCastingException : public std::exception
+class SDKSHARED_EXPORT TypeCastingException : public std::exception
 {
 public:
     explicit TypeCastingException();
