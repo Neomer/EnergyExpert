@@ -10,7 +10,7 @@ namespace energy { namespace core { namespace types {
  * T - тип, в который может быть клонирован исходный тип. Для типа T должен быть доступен конструктор копирования.
  */
 template<typename T>
-class SDKSHARED_EXPORT ICloneable {
+class ICloneable {
 public:
     ICloneable() = default;
     virtual ~ICloneable() = default;
