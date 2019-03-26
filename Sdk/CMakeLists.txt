@@ -2,6 +2,8 @@
 
 project(Sdk  VERSION 0.0.1 DESCRIPTION "EnergyExpert SDK library")
 
+set (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../cmake")
+
 # Настройка для включения компиляции классов работы с PostgreSQL
 set(PostgreSQLSupport true)
 
@@ -86,17 +88,7 @@ set(SOURCE_LIB export.h
 
 add_library(Sdk SHARED ${SOURCE_LIB})
 
-if(${PostgreSQLSupport}) # Настройки для работы с PostgreSQL
-    add_compile_definitions(POSTGRESQL_SUPPORT)
-
-    set(POSTGRESQL_DIR D:/PostgreSQL/pg11)
-    include_directories(${POSTGRESQL_DIR}/include)
-
-    #add_library(pq SHARED IMPORTED)
-    #set_target_properties(pq PROPERTIES IMPORTED_LOCATION ${POSTGRESQL_DIR}/lib/libpq.lib)
-    target_link_libraries(Sdk ${POSTGRESQL_DIR}/lib/libpq.a)
-endif()
-
+include(PostgreSql)
 
 include_directories("../")
 
