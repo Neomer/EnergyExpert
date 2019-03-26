@@ -1,9 +1,9 @@
 #ifndef XMLSERIALIZERIMPL_H
 #define XMLSERIALIZERIMPL_H
 
-#include <Core/Serialization/ISerializer.h>
-#include <Core/Serialization/Xml/XmlNode.h>
-#include <Core/Serialization/Xml/IXmlDecorator.h>
+#include <Sdk/Core/Serialization/ISerializer.h>
+#include <Sdk/Core/Serialization/Xml/XmlNode.h>
+#include <Sdk/Core/Serialization/Xml/IXmlDecorator.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 

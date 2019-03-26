@@ -2,7 +2,7 @@
 #define ISERIALIZER_H
 
 #include <string>
-#include <Core/Serialization/ISerializable.h>
+#include <Sdk/Core/Serialization/ISerializable.h>
 
 namespace energy { namespace core { namespace serialization {
 

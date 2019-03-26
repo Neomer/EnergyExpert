@@ -1,7 +1,7 @@
 #ifndef ABSTRACTFILECONFIGURATION_H
 #define ABSTRACTFILECONFIGURATION_H
 
-#include <Core/Configuration/IConfiguration.h>
+#include <Sdk/Core/Configuration/IConfiguration.h>
 
 namespace energy { namespace core { namespace configuration {
 

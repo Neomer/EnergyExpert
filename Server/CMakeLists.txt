@@ -2,7 +2,7 @@
 
 project(Server VERSION 0.0.1 DESCRIPTION "EnergyExpert server application")
 
-include_directories("../Sdk/")
+include_directories("../")
 include_directories("/")
 
 set(SOURCE_EXE main.cpp)

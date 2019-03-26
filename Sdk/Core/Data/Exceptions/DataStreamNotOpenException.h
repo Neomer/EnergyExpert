@@ -1,7 +1,7 @@
 #ifndef DATASTREAMNOTOPENEXCEPTION_H
 #define DATASTREAMNOTOPENEXCEPTION_H
 
-#include <Core/Exceptions/IOException.h>
+#include <Sdk/Core/Exceptions/IOException.h>
 
 namespace energy { namespace exceptions {
 

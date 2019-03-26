@@ -1,7 +1,7 @@
 #ifndef ILOGGER_H
 #define ILOGGER_H
 
-#include <Logs/ILogMessageFormatter.h>
+#include <Sdk/Logs/ILogMessageFormatter.h>
 
 namespace energy::logs {
 

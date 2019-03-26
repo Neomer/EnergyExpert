@@ -1,7 +1,7 @@
 #ifndef DATASTREAMALREADYOPENEXCEPTION_H
 #define DATASTREAMALREADYOPENEXCEPTION_H
 
-#include <Core/Exceptions/IOException.h>
+#include <Sdk/Core/Exceptions/IOException.h>
 
 namespace energy { namespace exceptions {
 
