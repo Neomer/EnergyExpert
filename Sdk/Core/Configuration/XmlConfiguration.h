@@ -1,9 +1,9 @@
 #ifndef XMLCONFIGURATION_H
 #define XMLCONFIGURATION_H
 
-#include <Core/Configuration/AbstractFileConfiguration.h>
-#include <Core/Serialization/Xml/XmlObject.h>
-#include <Core/Serialization/ISerializer.h>
+#include <Sdk/Core/Configuration/AbstractFileConfiguration.h>
+#include <Sdk/Core/Serialization/Xml/XmlObject.h>
+#include <Sdk/Core/Serialization/ISerializer.h>
 
 namespace energy { namespace core { namespace configuration {
 

@@ -1,10 +1,10 @@
 #ifndef FILELOGGER_H
 #define FILELOGGER_H
 
-#include "../export.h"
+#include <Sdk/export.h>
 
-#include <Logs/ILogger.h>
-#include <Core/Data/File.h>
+#include <Sdk/Logs/ILogger.h>
+#include <Sdk/Core/Data/File.h>
 
 namespace energy::logs {
 

@@ -3,7 +3,7 @@
 using namespace energy::exceptions;
 
 TypeCastingException::TypeCastingException() :
-    _message{ "Type casting failed!" }
+    _message{ "Приведение типов не удалось!" }
 {
 
 }

@@ -1,7 +1,7 @@
 #ifndef IDATAREADER_H
 #define IDATAREADER_H
 
-#include "../../export.h"
+#include <Sdk/export.h>
 
 #include "IDataStream.h"
 

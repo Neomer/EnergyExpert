@@ -1,10 +1,10 @@
 #ifndef IDATABASECONNECTIONSPROVIDER_H
 #define IDATABASECONNECTIONSPROVIDER_H
 
-#include <export.h>
 #include <vector>
 
-#include "IDatabaseConnection.h"
+#include <Sdk/export.h>
+#include <Sdk/Database/IDatabaseConnection.h>
 
 namespace energy { namespace database {
 

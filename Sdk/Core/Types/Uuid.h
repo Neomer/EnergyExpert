@@ -4,9 +4,9 @@
 #include <string>
 #include <inttypes.h>
 
-#include <export.h>
-#include <Core/Types/IStringable.h>
-#include <Core/Types/ICloneable.h>
+#include <Sdk/export.h>
+#include <Sdk/Core/Types/IStringable.h>
+#include <Sdk/Core/Types/ICloneable.h>
 
 namespace energy { namespace core { namespace types {
 

@@ -1,7 +1,7 @@
 #ifndef IDATASTREAM_H
 #define IDATASTREAM_H
 
-#include "../../export.h"
+#include <Sdk/export.h>
 #include <stddef.h>
 
 namespace energy { namespace core { namespace data {

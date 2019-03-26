@@ -1,6 +1,6 @@
 #include "XmlConfiguration.h"
 
-#include <Core/Exceptions/NullPointerException.h>
+#include <Sdk/Core/Exceptions/NullPointerException.h>
 
 using namespace energy::exceptions;
 using namespace energy::core::configuration;
@@ -69,10 +69,10 @@ XmlNode *XmlConfiguration::getNode(const char *key)
     if (key == nullptr) {
         throw NullPointerException();
     }
-    auto node = _xmlObject.getRootNode().findFirstChild(key, true);
+    auto node = _xmlObject.getRootNode()->findFirstChild(key, true);
     if (node == nullptr) {
         node = new XmlNode(key);
-        _xmlObject.getRootNode().getChildren().push_back(node);
+        _xmlObject.getRootNode()->appendChild(node);
     }
     if (node == nullptr) {
         throw NullPointerException();
@@ -85,7 +85,7 @@ const XmlNode *XmlConfiguration::getNode_const(const char *key) const
     if (key == nullptr) {
         throw NullPointerException();
     }
-    auto node = _xmlObject.getRootNode_const().findFirstChild_const(key, true);
+    auto node = _xmlObject.getRootNode_const()->findFirstChild_const(key, true);
     if (node == nullptr) {
         throw IOException();
     }

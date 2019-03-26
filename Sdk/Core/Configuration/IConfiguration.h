@@ -3,8 +3,8 @@
 
 #include <string>
 
-#include <Core/Exceptions/IOException.h>
-#include <Core/Types/IStringable.h>
+#include <Sdk/Core/Exceptions/IOException.h>
+#include <Sdk/Core/Types/IStringable.h>
 
 namespace energy { namespace core { namespace configuration {
 

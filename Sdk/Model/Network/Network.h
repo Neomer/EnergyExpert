@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include <Model/Network/AbstractNetworkElement.h>
+#include <Sdk/Model/Network/AbstractNetworkElement.h>
 
 namespace energy { namespace model { namespace network {
 

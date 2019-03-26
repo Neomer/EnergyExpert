@@ -1,8 +1,8 @@
 #ifndef XMLATTRIBUTENAMEDECORATOR_H
 #define XMLATTRIBUTENAMEDECORATOR_H
 
-#include <export.h>
-#include <Core/Serialization/Xml/IXmlDecorator.h>
+#include <Sdk/export.h>
+#include <Sdk/Core/Serialization/Xml/IXmlDecorator.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 

@@ -1,8 +1,8 @@
 #ifndef HTMLHELPER_H
 #define HTMLHELPER_H
 
-#include <export.h>
-#include <singleton.h>
+#include <Sdk/export.h>
+#include <Sdk/singleton.h>
 #include <string>
 
 namespace energy { namespace core { namespace helpers {

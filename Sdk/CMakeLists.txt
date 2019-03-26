@@ -2,8 +2,12 @@
 
 project(Sdk  VERSION 0.0.1 DESCRIPTION "EnergyExpert SDK library")
 
+# Настройка для включения компиляции классов работы с PostgreSQL
+set(PostgreSQLSupport true)
+
 set(SOURCE_LIB export.h
                singleton.h
+               property.h
                Core/Collections/Collection.h
                Core/Collections/Iterator.h
                Core/Collections/Array.h Core/Collections/ArrayIterator.h
@@ -40,6 +44,7 @@ set(SOURCE_LIB export.h
                Core/Serialization/Xml/XmlSerializerImpl.cpp Core/Serialization/Xml/XmlSerializerImpl.h
                Core/Serialization/Xml/XmlTagNameDecorator.cpp Core/Serialization/Xml/XmlTagNameDecorator.h
                Core/Serialization/Xml/XmlValue.cpp Core/Serialization/Xml/XmlValue.h
+               Core/Serialization/Xml/IXmlAttributeDestroyingListener.h
                Core/Serialization/ISerializable.h
                Core/Serialization/ISerializer.h
                Core/Types/IStringable.h
@@ -49,9 +54,19 @@ set(SOURCE_LIB export.h
                Core/Types/Uuid.cpp Core/Types/Uuid.h
                Core/Types/DateTime.cpp Core/Types/DateTime.h
                Database/IDatabaseConnection.h
+               Database/IDatabaseConnectionSettings.h
+               Database/IDatabaseQuery.cpp Database/IDatabaseQuery.h
+               Database/IDatabaseValue.cpp Database/IDatabaseValue.h
+               Database/IDatabaseTransaction.cpp Database/IDatabaseTransaction.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
+               Database/Exceptions/DatabaseCommitFailedException.cpp Database/Exceptions/DatabaseCommitFailedException.h
+               Database/Exceptions/DatabaseExecutionFailed.cpp Database/Exceptions/DatabaseExecutionFailed.h
                Database/Exceptions/DatabaseNotOpenException.cpp Database/Exceptions/DatabaseNotOpenException.h
                Database/PostgreSql/PostgreSqlConnection.cpp Database/PostgreSql/PostgreSqlConnection.h
+               Database/PostgreSql/PostgreSqlConnectionSettings.cpp Database/PostgreSql/PostgreSqlConnectionSettings.h
+               Database/PostgreSql/PostgreSqlQuery.cpp Database/PostgreSql/PostgreSqlQuery.h
+               Database/PostgreSql/PostgreSqlTransaction.cpp Database/PostgreSql/PostgreSqlTransaction.h
+               Database/PostgreSql/PostgreSqlValue.cpp Database/PostgreSql/PostgreSqlValue.h
                Logs/ConsoleLogger.cpp Logs/ConsoleLogger.h
                Logs/DefaultLogMessageFormatter.cpp Logs/DefaultLogMessageFormatter.h
                Logs/FileLogger.cpp Logs/FileLogger.h
@@ -71,7 +86,19 @@ set(SOURCE_LIB export.h
 
 add_library(Sdk SHARED ${SOURCE_LIB})
 
-include_directories("/")
+if(${PostgreSQLSupport}) # Настройки для работы с PostgreSQL
+    add_compile_definitions(POSTGRESQL_SUPPORT)
+
+    set(POSTGRESQL_DIR D:/PostgreSQL/pg11)
+    include_directories(${POSTGRESQL_DIR}/include)
+
+    #add_library(pq SHARED IMPORTED)
+    #set_target_properties(pq PROPERTIES IMPORTED_LOCATION ${POSTGRESQL_DIR}/lib/libpq.lib)
+    target_link_libraries(Sdk ${POSTGRESQL_DIR}/lib/libpq.a)
+endif()
+
+
+include_directories("../")
 
 set_target_properties(Sdk PROPERTIES VERSION ${PROJECT_VERSION})
 
@@ -86,3 +113,5 @@ set_property(TARGET Sdk PROPERTY CXX_STANDARD 17)
 add_compile_definitions(SDK_LIBRARY_EXPORT)
 
 target_link_libraries(${TARGET} Sdk)
+
+

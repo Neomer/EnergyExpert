@@ -1,6 +1,6 @@
 #include <sstream>
 
-#include <Core/Helpers/HtmlHelper.h>
+#include <Sdk/Core/Helpers/HtmlHelper.h>
 #include "XmlAttributeNameDecorator.h"
 
 using namespace energy::core::helpers;

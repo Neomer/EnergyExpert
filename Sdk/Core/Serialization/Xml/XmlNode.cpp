@@ -5,16 +5,18 @@
 
 using namespace energy::core::serialization::xml;
 
-XmlNode::XmlNode(const char *name, const XmlNode *parent) :
+XmlNode::XmlNode(const char *name, XmlNode *parent) :
     _name{ name },
-    _parent{ parent }
+    _parent{ parent },
+    _enableEvents{ true }
 {
 
 }
 
 XmlNode::XmlNode(const char *name) :
     _name{ name },
-    _parent{ nullptr }
+    _parent{ nullptr },
+    _enableEvents{ true }
 {
 
 }
@@ -22,20 +24,19 @@ XmlNode::XmlNode(const char *name) :
 XmlNode::XmlNode(const char *name, const char *value) :
     _name{ name },
     _parent{ nullptr },
-    _value{ value }
+    _value{ value },
+    _enableEvents{ true }
 {
 
 }
 
 XmlNode::~XmlNode()
 {
-    std::for_each(_children.begin(), _children.end(), [](XmlNode *item) {
-        delete item;
-    });
-
-    std::for_each(_attr.begin(), _attr.end(), [](XmlAttribute *item) {
-        delete item;
-    });
+    if (_parent != nullptr) {
+        _parent->onChildDestroying(this);
+    }
+    clearAttributes();
+    clearChildren();
 }
 
 const XmlNode *XmlNode::getParentNode() const
@@ -61,8 +62,9 @@ const XmlAttribute *XmlNode::getAttribute(const char *name) const
     return it != _attr.end() ? *it : nullptr;
 }
 
-void XmlNode::addAttribute(XmlAttribute *attribute)
+void XmlNode::appendAttribute(XmlAttribute *attribute)
 {
+    attribute->setDestroyListener(this);
     _attr.push_back(attribute);
 }
 
@@ -94,7 +96,7 @@ bool XmlNode::hasAnyChild() const
     return _children.size();
 }
 
-std::vector<XmlNode *> &XmlNode::getChildren()
+const std::vector<XmlNode *> &XmlNode::getChildren() const
 {
     return _children;
 }
@@ -171,4 +173,53 @@ void XmlNode::setText(const energy::core::types::IStringable &stringable)
 bool XmlNode::isEmpty() const
 {
     return _children.size() == 0 && _value.empty();
+}
+
+XmlNode *XmlNode::appendChild(XmlNode *node)
+{
+    node->_parent = this;
+    _children.push_back(node);
+    return node;
+}
+
+void XmlNode::clearAttributes()
+{
+    disableEvents();
+    while (_attr.begin() != _attr.end()) {
+        delete _attr[0];
+    };
+    enableEvents();
+}
+
+void XmlNode::clearChildren()
+{
+    disableEvents();
+    while (_children.begin() != _children.end()) {
+        delete _children[0];
+    };
+    enableEvents();
+}
+
+void XmlNode::onChildDestroying(const XmlNode *node)
+{
+    if (!_enableEvents) {
+        _children.erase(std::remove(_children.begin(), _children.end(), node), _children.end());
+    }
+}
+
+void XmlNode::enableEvents()
+{
+    _enableEvents = true;
+}
+
+void XmlNode::disableEvents()
+{
+    _enableEvents = false;
+}
+
+void XmlNode::onXmlAttributeDestroying(const XmlAttribute *xmlAttribute)
+{
+    if (!_enableEvents) {
+        _attr.erase(std::remove(_attr.begin(), _attr.end(), xmlAttribute), _attr.end());
+    }
 }

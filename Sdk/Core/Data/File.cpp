@@ -1,9 +1,9 @@
 #include <stdexcept>
 #include <cstring>
 
-#include <Core/Exceptions/NullPointerException.h>
-#include <Core/Data/Exceptions/DataStreamNotOpenException.h>
-#include <Core/Data/Exceptions/DataStreamAlreadyOpenException.h>
+#include <Sdk/Core/Exceptions/NullPointerException.h>
+#include <Sdk/Core/Data/Exceptions/DataStreamNotOpenException.h>
+#include <Sdk/Core/Data/Exceptions/DataStreamAlreadyOpenException.h>
 
 #include "File.h"
 

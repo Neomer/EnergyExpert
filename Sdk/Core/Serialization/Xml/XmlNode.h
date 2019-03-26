@@ -2,11 +2,13 @@
 #define XMLNODE_H
 
 #include <vector>
+#include <atomic>
 
-#include <Core/Serialization/Xml/XmlAttribute.h>
-#include <Core/Serialization/Xml/XmlValue.h>
-#include <Core/Serialization/Xml/IXmlSerializable.h>
-#include <Core/Types/IStringable.h>
+#include <Sdk/Core/Serialization/Xml/XmlAttribute.h>
+#include <Sdk/Core/Serialization/Xml/XmlValue.h>
+#include <Sdk/Core/Serialization/Xml/IXmlSerializable.h>
+#include <Sdk/Core/Serialization/Xml/IXmlAttributeDestroyingListener.h>
+#include <Sdk/Core/Types/IStringable.h>
 
 namespace energy { namespace core { namespace serialization { namespace xml {
 
@@ -35,14 +37,18 @@ namespace energy { namespace core { namespace serialization { namespace xml {
  *
  * @endcode
  */
-class SDKSHARED_EXPORT XmlNode : public IXmlSerializable
+class SDKSHARED_EXPORT XmlNode :
+        public IXmlSerializable,
+        public IXmlAttributeDestroyingListener
 {
+    friend class XmlAttribute;
+
 public:
     /**
      * @brief Узел XML-дерева.
      * @param parent Указатель на родительский узел.
      */
-    XmlNode(const char *name, const XmlNode *parent);
+    XmlNode(const char *name, XmlNode *parent);
     /**
      * @brief Узел XML-дерева.
      * @param name Наименование тэга
@@ -54,7 +60,10 @@ public:
      * @param value Текстовое значение
      */
     XmlNode(const char *name, const char *value);
-    ~XmlNode();
+    /**
+     * @brief Уничтожает элемент дерева, удаляются все дочерние узлы и атрибуты.
+     */
+    virtual ~XmlNode() override;
     /**
      * @brief Возвращает указатель на родительский узел.
      */
@@ -78,7 +87,7 @@ public:
      * @brief Добавить атрибут к узлу
      * @param attribute
      */
-    void addAttribute(XmlAttribute *attribute);
+    void appendAttribute(XmlAttribute *attribute);
     /**
      * @brief Итератор на начало списка атрибутов
      */
@@ -105,7 +114,7 @@ public:
     /**
      * @brief Возвращает список дочерних элементов
      */
-    std::vector<XmlNode *> &getChildren();
+    const std::vector<XmlNode *> &getChildren() const;
     /**
      * @brief Итератор на начало списка дочерних элементов
      */
@@ -161,13 +170,46 @@ public:
      * @return true, если у элемента нет ни значения, ни дочерних элементов
      */
     bool isEmpty() const;
+    /**
+     * @brief Добавляет потомка в дереву, назначая родителя для нового узла.
+     * @param node Новый узел
+     * @return Указатель на новый узел
+     */
+    XmlNode * appendChild(XmlNode *node);
+    /**
+     * @brief Удаляет все атрибуты
+     */
+    void clearAttributes();
+    /**
+     * @brief Удаляет всех потомков
+     */
+    void clearChildren();
 
 private:
+    void onChildDestroying(const XmlNode *node);
+    /**
+     * @brief Включает входящие события
+     */
+    void enableEvents();
+    /**
+     * @brief Отключает входящие события
+     */
+    void disableEvents();
+
+
     const char *_name;
-    const XmlNode *_parent;
+    XmlNode *_parent;
     std::vector<XmlAttribute *> _attr;
     std::vector<XmlNode *> _children;
     std::string _value;
+
+    // IXmlAttributeDestroyingListener interface
+public:
+    virtual void onXmlAttributeDestroying(const XmlAttribute *xmlAttribute) override;
+
+private:
+    //TODO: Необходимо сделать поддержку многопоточности.
+    bool _enableEvents; // Отключаем входящие сигналы, если происходит собственное удаление.
 };
 
 } } } }

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <mutex>
-#include <Core/Metadata/IMetadata.h>
+#include <Sdk/Core/Metadata/IMetadata.h>
 #include <string.h>
 
 namespace energy { namespace core { namespace metadata {

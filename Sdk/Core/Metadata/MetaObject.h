@@ -1,8 +1,8 @@
 #ifndef METAOBJECT_H
 #define METAOBJECT_H
 
-#include <export.h>
-#include <Core/Metadata/IMetadata.h>
+#include <Sdk/export.h>
+#include <Sdk/Core/Metadata/IMetadata.h>
 
 namespace energy { namespace core { namespace metadata {
 

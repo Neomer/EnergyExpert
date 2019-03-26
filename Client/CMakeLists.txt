@@ -2,6 +2,7 @@
 
 project(Client  VERSION 0.0.1 DESCRIPTION "EnergyExpert Client desktop application")
 
+include_directories("../")
 include_directories("/")
 
 # https://cmake.org/cmake/help/latest/prop_tgt/CXX_STANDARD.html
