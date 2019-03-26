@@ -9,7 +9,7 @@ namespace energy { namespace core { namespace types {
 /**
  * @brief IStringable интерфейс, реализации которого должны уметь предоставлять свое значение в виде строки
  */
-class SDKSHARED_EXPORT IStringable {
+class IStringable {
 public:
     IStringable() = default;
     virtual ~IStringable() = default;

@@ -14,7 +14,7 @@ class IDatabaseConnectionSettings :
 {
 public:
     IDatabaseConnectionSettings() = default;
-    virtual ~IDatabaseConnectionSettings() = default;
+    virtual ~IDatabaseConnectionSettings() override = default;
 };
 
 } }

@@ -106,7 +106,7 @@ int main()
         connectionSettings.setDatabase("EnergyExpert");
         connectionSettings.setUsername("postgres");
         connectionSettings.setPassword("123456");
-        consoleLogger.debug(connectionSettings.toString().c_str());
+        consoleLogger.ILogger::debug(connectionSettings);
 
         IDatabaseConnection *connection = new PostgreSqlConnection();
         connection->setConnectionSettings(&connectionSettings);
