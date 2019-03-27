@@ -120,6 +120,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a940db37e2c0fe79c863efe746f821f0d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1database_1_1_i_database_connection.html#a940db37e2c0fe79c863efe746f821f0d">isOpen</a> () const noexcept=0</td></tr>
 <tr class="memdesc:a940db37e2c0fe79c863efe746f821f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">isOpen используется для проверки открыто ли подключение  <a href="#a940db37e2c0fe79c863efe746f821f0d">More...</a><br /></td></tr>
 <tr class="separator:a940db37e2c0fe79c863efe746f821f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae528bf93ac03501e281f65bb33ff8477"><td class="memItemLeft" align="right" valign="top"><a id="ae528bf93ac03501e281f65bb33ff8477"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1database_1_1_i_database_connection.html#ae528bf93ac03501e281f65bb33ff8477">setConnectionSettings</a> (const <a class="el" href="classenergy_1_1database_1_1_i_database_connection_settings.html">IDatabaseConnectionSettings</a> *settings)=0</td></tr>
+<tr class="memdesc:ae528bf93ac03501e281f65bb33ff8477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает параметры подключения к базе данных <br /></td></tr>
+<tr class="separator:ae528bf93ac03501e281f65bb33ff8477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5b8205176d91778d115f07183c0236"><td class="memItemLeft" align="right" valign="top"><a id="a2c5b8205176d91778d115f07183c0236"></a>
+virtual const <a class="el" href="classenergy_1_1database_1_1_i_database_connection_settings.html">IDatabaseConnectionSettings</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1database_1_1_i_database_connection.html#a2c5b8205176d91778d115f07183c0236">getConnectionSettings</a> () const =0</td></tr>
+<tr class="memdesc:a2c5b8205176d91778d115f07183c0236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущие параметры подключения к базе данных <br /></td></tr>
+<tr class="separator:a2c5b8205176d91778d115f07183c0236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc54cd7a30035573910dba7c9b014db2"><td class="memItemLeft" align="right" valign="top"><a id="afc54cd7a30035573910dba7c9b014db2"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classenergy_1_1database_1_1_i_database_transaction.html">IDatabaseTransaction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1database_1_1_i_database_connection.html#afc54cd7a30035573910dba7c9b014db2">createTransaction</a> () const =0</td></tr>
+<tr class="memdesc:afc54cd7a30035573910dba7c9b014db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает новую транзакцию, внутри подключения. <br /></td></tr>
+<tr class="separator:afc54cd7a30035573910dba7c9b014db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classenergy_1_1database_1_1_i_database_connection.html" title="IDatabaseConnection абстрактный класс для активного подключения к базе данных. Используется для созда...">IDatabaseConnection</a> абстрактный класс для активного подключения к базе данных. Используется для создания подключения к базе данных. Все активные подключения обслуживаются <a class="el" href="classenergy_1_1database_1_1_i_database_connections_provider.html" title="IDatabaseConnectionsProvider класс для обработки коллекции подключений к базе данных. Должен выполнять функции контроля &quot;подвисших&quot; подключений, распараллеливать запросы между подключениями. ">IDatabaseConnectionsProvider</a>. </p>
@@ -150,7 +162,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>isOpen используется для проверки открыто ли подключение </p>
 <dl class="section return"><dt>Returns</dt><dd>True, если подключение открыто и готово для использования. </dd></dl>
 
-<p>Implemented in <a class="el" href="classenergy_1_1database_1_1_postgre_sql_connection.html#ad1be86325d95e3db7fd3cdb48ad26e6b">energy::database::PostgreSqlConnection</a>.</p>
+<p>Implemented in <a class="el" href="classenergy_1_1database_1_1_postgre_sql_connection.html#a330bc75431d726ac4e1c69b2b32f879b">energy::database::PostgreSqlConnection</a>.</p>
 
 </div>
 </div>
@@ -181,11 +193,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_database_not_open_exception.html">energy::exceptions::DatabaseNotOpenException</a></td><td>Не удалось открыть подключение </td></tr>
+    <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_null_pointer_exception.html" title="Исключение вызывается всякий раз, когда происходит попытка использования нулевого указателя...">energy::exceptions::NullPointerException</a></td><td>Не заданы настройки для подключения к серверу </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classenergy_1_1database_1_1_postgre_sql_connection.html#a40f78093c77a3f8ec07c38cc27d12745">energy::database::PostgreSqlConnection</a>.</p>
+<p>Implemented in <a class="el" href="classenergy_1_1database_1_1_postgre_sql_connection.html#a0a207cce40336788d6d595e1c08562e5">energy::database::PostgreSqlConnection</a>.</p>
 
 </div>
 </div>

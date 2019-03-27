@@ -2,6 +2,7 @@
 #define ICLONEABLE_H
 
 #include <Sdk/export.h>
+#include <Sdk/singleton.h>
 
 namespace energy { namespace core { namespace types {
 
@@ -10,11 +11,11 @@ namespace energy { namespace core { namespace types {
  * T - тип, в который может быть клонирован исходный тип. Для типа T должен быть доступен конструктор копирования.
  */
 template<typename T>
-class ICloneable {
-public:
-    ICloneable() = default;
-    virtual ~ICloneable() = default;
+class ICloneable
+{
+    INTERFACE(ICloneable);
 
+public:
     /**
      * @brief clone создает копию объекта
      * @return копия объекта

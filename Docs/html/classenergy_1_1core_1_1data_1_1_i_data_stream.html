@@ -99,20 +99,30 @@ $(document).ready(function(){initNavTree('classenergy_1_1core_1_1data_1_1_i_data
  <a href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_data_stream_8h_source.html">IDataStream.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for energy::core::data::IDataStream:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classenergy_1_1core_1_1data_1_1_i_data_stream.png" usemap="#energy::core::data::IDataStream_map" alt=""/>
+  <map id="energy::core::data::IDataStream_map" name="energy::core::data::IDataStream_map">
+<area href="classenergy_1_1core_1_1data_1_1_file.html" title="Класс для работы с файлом. " alt="energy::core::data::File" shape="rect" coords="0,56,219,80"/>
+<area href="classenergy_1_1core_1_1data_1_1_buffered_write_file.html" title="Класс для работы с файлами через буфер в оперативной памяти для операций записи в файл..." alt="energy::core::data::BufferedWriteFile" shape="rect" coords="0,112,219,136"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a29d357ece5527b510fdf5712b43dc959"><td class="memItemLeft" align="right" valign="top"><a id="a29d357ece5527b510fdf5712b43dc959"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Mode</b> { <b>ReadOnly</b>, 
 <b>WriteOnly</b>, 
-<b>ReadWrite</b>
+<b>ReadWrite</b>, 
+<b>Append</b>
  }</td></tr>
 <tr class="separator:a29d357ece5527b510fdf5712b43dc959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1803d3c8c532ecf567783373c595404"><td class="memItemLeft" align="right" valign="top"><a id="ae1803d3c8c532ecf567783373c595404"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ae1803d3c8c532ecf567783373c595404">open</a> (IDataStream::Mode mode)=0</td></tr>
-<tr class="memdesc:ae1803d3c8c532ecf567783373c595404"><td class="mdescLeft">&#160;</td><td class="mdescRight">open открыть поток данных <br /></td></tr>
+<tr class="memitem:ae1803d3c8c532ecf567783373c595404"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ae1803d3c8c532ecf567783373c595404">open</a> (IDataStream::Mode mode)=0</td></tr>
+<tr class="memdesc:ae1803d3c8c532ecf567783373c595404"><td class="mdescLeft">&#160;</td><td class="mdescRight">open открыть поток данных  <a href="#ae1803d3c8c532ecf567783373c595404">More...</a><br /></td></tr>
 <tr class="separator:ae1803d3c8c532ecf567783373c595404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a445d33724841c043f3a03b89de18e7b4"><td class="memItemLeft" align="right" valign="top"><a id="a445d33724841c043f3a03b89de18e7b4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#a445d33724841c043f3a03b89de18e7b4">close</a> ()=0</td></tr>
@@ -121,13 +131,86 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ad187b2b188b66bf6cf56322896dc65cc"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ad187b2b188b66bf6cf56322896dc65cc">write</a> (const char *data, size_t size)=0</td></tr>
 <tr class="memdesc:ad187b2b188b66bf6cf56322896dc65cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">write записать данные в поток  <a href="#ad187b2b188b66bf6cf56322896dc65cc">More...</a><br /></td></tr>
 <tr class="separator:ad187b2b188b66bf6cf56322896dc65cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f5d1bc52c47c26604669ab9171255e"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#a04f5d1bc52c47c26604669ab9171255e">write</a> (const char *data)=0</td></tr>
+<tr class="memdesc:a04f5d1bc52c47c26604669ab9171255e"><td class="mdescLeft">&#160;</td><td class="mdescRight">write записать данные в поток  <a href="#a04f5d1bc52c47c26604669ab9171255e">More...</a><br /></td></tr>
+<tr class="separator:a04f5d1bc52c47c26604669ab9171255e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2059c856dafc51eb9555ce8fee6162d"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#ab2059c856dafc51eb9555ce8fee6162d">read</a> (char *buffer, size_t max_size)=0</td></tr>
 <tr class="memdesc:ab2059c856dafc51eb9555ce8fee6162d"><td class="mdescLeft">&#160;</td><td class="mdescRight">read прочитать данные из потока  <a href="#ab2059c856dafc51eb9555ce8fee6162d">More...</a><br /></td></tr>
 <tr class="separator:ab2059c856dafc51eb9555ce8fee6162d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51f2f8ee7f2940dfb824486beccd986"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html#af51f2f8ee7f2940dfb824486beccd986">isOpen</a> () const =0</td></tr>
+<tr class="memdesc:af51f2f8ee7f2940dfb824486beccd986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет открыт ли файл  <a href="#af51f2f8ee7f2940dfb824486beccd986">More...</a><br /></td></tr>
+<tr class="separator:af51f2f8ee7f2940dfb824486beccd986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classenergy_1_1core_1_1data_1_1_i_data_stream.html" title="IDataStream поток данных ">IDataStream</a> поток данных </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af51f2f8ee7f2940dfb824486beccd986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51f2f8ee7f2940dfb824486beccd986">&#9670;&nbsp;</a></span>isOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool energy::core::data::IDataStream::isOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет открыт ли файл </p>
+<dl class="section return"><dt>Returns</dt><dd>true, если файл открыт </dd></dl>
+
+<p>Implemented in <a class="el" href="classenergy_1_1core_1_1data_1_1_file.html#a0cd0ed9d8237337b35a52f9cfba26a3b">energy::core::data::File</a>.</p>
+
+</div>
+</div>
+<a id="ae1803d3c8c532ecf567783373c595404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1803d3c8c532ecf567783373c595404">&#9670;&nbsp;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void energy::core::data::IDataStream::open </td>
+          <td>(</td>
+          <td class="paramtype">IDataStream::Mode&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>open открыть поток данных </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_i_o_exception.html" title="Исключение ввода-вывода. Вызывается в следующих ситуациях: ">energy::exceptions::IOException</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_data_stream_already_open_exception.html">energy::exceptions::DataStreamAlreadyOpenException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classenergy_1_1core_1_1data_1_1_file.html#a07bfe143b59234b14b705953584580be">energy::core::data::File</a>.</p>
+
+</div>
+</div>
 <a id="ab2059c856dafc51eb9555ce8fee6162d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2059c856dafc51eb9555ce8fee6162d">&#9670;&nbsp;</a></span>read()</h2>
 
@@ -171,11 +254,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>количество прочитанных байт </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_data_stream_not_open_exception.html">energy::exceptions::DataStreamNotOpenException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classenergy_1_1core_1_1data_1_1_file.html#a2ceb42e03e27c50b0fbef3a3afd3ae84">energy::core::data::File</a>.</p>
 
 </div>
 </div>
 <a id="ad187b2b188b66bf6cf56322896dc65cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad187b2b188b66bf6cf56322896dc65cc">&#9670;&nbsp;</a></span>write()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad187b2b188b66bf6cf56322896dc65cc">&#9670;&nbsp;</a></span>write() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,6 +308,57 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>количество реально записанных байт информации </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_data_stream_not_open_exception.html">energy::exceptions::DataStreamNotOpenException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classenergy_1_1core_1_1data_1_1_buffered_write_file.html#a56c8103b921bb3bc88e381507d8dbba4">energy::core::data::BufferedWriteFile</a>, and <a class="el" href="classenergy_1_1core_1_1data_1_1_file.html#aaca9f4c753d4abef7a62fcedd87955ba">energy::core::data::File</a>.</p>
+
+</div>
+</div>
+<a id="a04f5d1bc52c47c26604669ab9171255e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f5d1bc52c47c26604669ab9171255e">&#9670;&nbsp;</a></span>write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t energy::core::data::IDataStream::write </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>write записать данные в поток </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>данные для записи </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>количество реально записанных байт информации </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classenergy_1_1exceptions_1_1_data_stream_not_open_exception.html">energy::exceptions::DataStreamNotOpenException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classenergy_1_1core_1_1data_1_1_buffered_write_file.html#a941ac9976272f4a560be2e9016689acd">energy::core::data::BufferedWriteFile</a>, and <a class="el" href="classenergy_1_1core_1_1data_1_1_file.html#ac722f0b66dbfe823b822b65259bd38ca">energy::core::data::File</a>.</p>
 
 </div>
 </div>

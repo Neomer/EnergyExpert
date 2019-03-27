@@ -1,13 +1,15 @@
 #ifndef IDRAWABLE_H
 #define IDRAWABLE_H
 
+#include <Sdk/singleton.h>
+
 namespace energy { namespace core { namespace types {
 
-class IDrawable {
-public:
-    IDrawable() = default;
-    virtual ~IDrawable() = default;
+class IDrawable
+{
+    INTERFACE(IDrawable);
 
+public:
     virtual void Draw() = 0;
 };
 

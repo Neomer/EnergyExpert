@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('classenergy_1_1core_1_1serialization_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">energy::core::serialization::xml::XmlNode Class Reference</div>  </div>
@@ -97,7 +98,7 @@ $(document).ready(function(){initNavTree('classenergy_1_1core_1_1serialization_1
 <p>Класс, представляющий каждый узел XML-объекта. Элемент XML-документа представляет из себя объект ограниченный тэгами &lt;{имя тэга} [{имя атрибута}={значение атрибута} ...]&gt;{данные}&lt;/{имя тэга}&gt;.<br />
  Имя тэга - обязательное свойство и задается через конструктор. Получить его можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a38e26eac662f687ae7daa4f22d714494" title="Имя тэга узла дерева ">XmlNode::getName()</a>, а изменить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ad53aabb4d5ad37494c0a85c3445676de" title="Установить имя тэга узла дерева ">XmlNode::setName(const char *)</a>.<br />
  Данными для элемента могут служить либо вложенные элементы, либо текст. При этом, если для узла одновременно установлен и текст, и имеются дочерние узлы, то текст отображен не будет.<br />
- Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
+ Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aae54572775374432b92af9fdd8540ee1" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
   
  <a href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#details">More...</a></p>
 
@@ -108,22 +109,27 @@ Inheritance diagram for energy::core::serialization::xml::XmlNode:</div>
  <div class="center">
   <img src="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.png" usemap="#energy::core::serialization::xml::XmlNode_map" alt=""/>
   <map id="energy::core::serialization::xml::XmlNode_map" name="energy::core::serialization::xml::XmlNode_map">
-<area href="classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_serializable.html" alt="energy::core::serialization::xml::IXmlSerializable" shape="rect" coords="0,56,277,80"/>
-<area href="classenergy_1_1core_1_1serialization_1_1_i_serializable.html" alt="energy::core::serialization::ISerializable" shape="rect" coords="0,0,277,24"/>
+<area href="classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_serializable.html" alt="energy::core::serialization::xml::IXmlSerializable" shape="rect" coords="0,56,364,80"/>
+<area href="classenergy_1_1core_1_1serialization_1_1xml_1_1_i_xml_attribute_destroying_listener.html" title="Интерфейс для классов, ожидающих начало уничтожения атрибута XML. Реализуется в XmlNode, чтобы контролировать уничтожение своих атрибутов. " alt="energy::core::serialization::xml::IXmlAttributeDestroyingListener" shape="rect" coords="374,56,738,80"/>
+<area href="classenergy_1_1core_1_1serialization_1_1_i_serializable.html" alt="energy::core::serialization::ISerializable" shape="rect" coords="0,0,364,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a733fd0d6e4299df5a080559bf14a16c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a733fd0d6e4299df5a080559bf14a16c2">XmlNode</a> (const char *name, const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *parent)</td></tr>
-<tr class="memdesc:a733fd0d6e4299df5a080559bf14a16c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел XML-дерева.  <a href="#a733fd0d6e4299df5a080559bf14a16c2">More...</a><br /></td></tr>
-<tr class="separator:a733fd0d6e4299df5a080559bf14a16c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe34485815b668d82a1b5a4fcff1808c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#abe34485815b668d82a1b5a4fcff1808c">XmlNode</a> (const char *name, <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *parent)</td></tr>
+<tr class="memdesc:abe34485815b668d82a1b5a4fcff1808c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел XML-дерева.  <a href="#abe34485815b668d82a1b5a4fcff1808c">More...</a><br /></td></tr>
+<tr class="separator:abe34485815b668d82a1b5a4fcff1808c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7a8c1fe6721d95c49fe83debd7f613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a3f7a8c1fe6721d95c49fe83debd7f613">XmlNode</a> (const char *name)</td></tr>
 <tr class="memdesc:a3f7a8c1fe6721d95c49fe83debd7f613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел XML-дерева.  <a href="#a3f7a8c1fe6721d95c49fe83debd7f613">More...</a><br /></td></tr>
 <tr class="separator:a3f7a8c1fe6721d95c49fe83debd7f613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4c033ecdb64b86375da41156fcb718f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#af4c033ecdb64b86375da41156fcb718f">XmlNode</a> (const char *name, const char *value)</td></tr>
 <tr class="memdesc:af4c033ecdb64b86375da41156fcb718f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел XML-дерева.  <a href="#af4c033ecdb64b86375da41156fcb718f">More...</a><br /></td></tr>
 <tr class="separator:af4c033ecdb64b86375da41156fcb718f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb56c137996e3dcd4085f60256275030"><td class="memItemLeft" align="right" valign="top"><a id="aeb56c137996e3dcd4085f60256275030"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeb56c137996e3dcd4085f60256275030">~XmlNode</a> () override</td></tr>
+<tr class="memdesc:aeb56c137996e3dcd4085f60256275030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уничтожает элемент дерева, удаляются все дочерние узлы и атрибуты. <br /></td></tr>
+<tr class="separator:aeb56c137996e3dcd4085f60256275030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7968493431f2849a7e804805cee16666"><td class="memItemLeft" align="right" valign="top"><a id="a7968493431f2849a7e804805cee16666"></a>
 const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a7968493431f2849a7e804805cee16666">getParentNode</a> () const</td></tr>
 <tr class="memdesc:a7968493431f2849a7e804805cee16666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на родительский узел. <br /></td></tr>
@@ -138,9 +144,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:aea78f7c3ad5af74feafe21d1238c6ea7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html">XmlAttribute</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aea78f7c3ad5af74feafe21d1238c6ea7">getAttribute</a> (const char *name) const</td></tr>
 <tr class="memdesc:aea78f7c3ad5af74feafe21d1238c6ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти атрибут по имени.  <a href="#aea78f7c3ad5af74feafe21d1238c6ea7">More...</a><br /></td></tr>
 <tr class="separator:aea78f7c3ad5af74feafe21d1238c6ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49ebbc5c99c3307bfe993cbf6a56e64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ae49ebbc5c99c3307bfe993cbf6a56e64">addAttribute</a> (<a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html">XmlAttribute</a> *attribute)</td></tr>
-<tr class="memdesc:ae49ebbc5c99c3307bfe993cbf6a56e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавить атрибут к узлу  <a href="#ae49ebbc5c99c3307bfe993cbf6a56e64">More...</a><br /></td></tr>
-<tr class="separator:ae49ebbc5c99c3307bfe993cbf6a56e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d513fbc4e99e3dc9a07f930e1eeac9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a4d513fbc4e99e3dc9a07f930e1eeac9d">appendAttribute</a> (<a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html">XmlAttribute</a> *attribute)</td></tr>
+<tr class="memdesc:a4d513fbc4e99e3dc9a07f930e1eeac9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавить атрибут к узлу  <a href="#a4d513fbc4e99e3dc9a07f930e1eeac9d">More...</a><br /></td></tr>
+<tr class="separator:a4d513fbc4e99e3dc9a07f930e1eeac9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7b8d786539b9714d01df4fbe95a8c6"><td class="memItemLeft" align="right" valign="top"><a id="abc7b8d786539b9714d01df4fbe95a8c6"></a>
 std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html">XmlAttribute</a> * &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#abc7b8d786539b9714d01df4fbe95a8c6">getAttributesBeginIterator</a> () const</td></tr>
 <tr class="memdesc:abc7b8d786539b9714d01df4fbe95a8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Итератор на начало списка атрибутов <br /></td></tr>
@@ -159,10 +165,10 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a697872a0ae7abaef5d167c8320db0fd2">hasAnyChild</a> () const</td></tr>
 <tr class="memdesc:a697872a0ae7abaef5d167c8320db0fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет есть ли у элемента дочерние элементы <br /></td></tr>
 <tr class="separator:a697872a0ae7abaef5d167c8320db0fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11a1047644b2680cf59303161529f956"><td class="memItemLeft" align="right" valign="top"><a id="a11a1047644b2680cf59303161529f956"></a>
-std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956">getChildren</a> ()</td></tr>
-<tr class="memdesc:a11a1047644b2680cf59303161529f956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список дочерних элементов <br /></td></tr>
-<tr class="separator:a11a1047644b2680cf59303161529f956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae54572775374432b92af9fdd8540ee1"><td class="memItemLeft" align="right" valign="top"><a id="aae54572775374432b92af9fdd8540ee1"></a>
+const std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aae54572775374432b92af9fdd8540ee1">getChildren</a> () const</td></tr>
+<tr class="memdesc:aae54572775374432b92af9fdd8540ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список дочерних элементов <br /></td></tr>
+<tr class="separator:aae54572775374432b92af9fdd8540ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ba3811f0aee36a940facfbc084a6b0"><td class="memItemLeft" align="right" valign="top"><a id="a54ba3811f0aee36a940facfbc084a6b0"></a>
 std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0">getChildrenBeginIterator</a> () const</td></tr>
 <tr class="memdesc:a54ba3811f0aee36a940facfbc084a6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Итератор на начало списка дочерних элементов <br /></td></tr>
@@ -181,7 +187,7 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 <tr class="memdesc:a5cee047615febb5cdb94a2138bb41d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Найти первый элемент с указанным именем тэга.  <a href="#a5cee047615febb5cdb94a2138bb41d46">More...</a><br /></td></tr>
 <tr class="separator:a5cee047615febb5cdb94a2138bb41d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51eceda9304c65a820caee8e1964b485"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a51eceda9304c65a820caee8e1964b485">getText_const</a> () const</td></tr>
-<tr class="memdesc:a51eceda9304c65a820caee8e1964b485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение элемента XML-документа. Вначале необходимо проверить есть ли у элемента дочерние элементы с помощью метода XmlNode::hasChildren(). Если у элемента есть дочерние элементы, то доступ к ним необходимо получить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>  <a href="#a51eceda9304c65a820caee8e1964b485">More...</a><br /></td></tr>
+<tr class="memdesc:a51eceda9304c65a820caee8e1964b485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение элемента XML-документа. Вначале необходимо проверить есть ли у элемента дочерние элементы с помощью метода XmlNode::hasChildren(). Если у элемента есть дочерние элементы, то доступ к ним необходимо получить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aae54572775374432b92af9fdd8540ee1" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>  <a href="#a51eceda9304c65a820caee8e1964b485">More...</a><br /></td></tr>
 <tr class="separator:a51eceda9304c65a820caee8e1964b485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06841215ee31d23e3945445dccf22ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6">setText</a> (const std::string &amp;data)</td></tr>
 <tr class="memdesc:a06841215ee31d23e3945445dccf22ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы.  <a href="#a06841215ee31d23e3945445dccf22ad6">More...</a><br /></td></tr>
@@ -195,16 +201,36 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 <tr class="memitem:aeaa6cb9e21214e94534bed71a17708cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeaa6cb9e21214e94534bed71a17708cd">isEmpty</a> () const</td></tr>
 <tr class="memdesc:aeaa6cb9e21214e94534bed71a17708cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет пустой ли элемент  <a href="#aeaa6cb9e21214e94534bed71a17708cd">More...</a><br /></td></tr>
 <tr class="separator:aeaa6cb9e21214e94534bed71a17708cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f50fb0ff1a34b4ff537749e826a23f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a6f50fb0ff1a34b4ff537749e826a23f3">appendChild</a> (<a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *node)</td></tr>
+<tr class="memdesc:a6f50fb0ff1a34b4ff537749e826a23f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет потомка в дереву, назначая родителя для нового узла.  <a href="#a6f50fb0ff1a34b4ff537749e826a23f3">More...</a><br /></td></tr>
+<tr class="separator:a6f50fb0ff1a34b4ff537749e826a23f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d56ead3d5b589504a5029eeaa01ff1"><td class="memItemLeft" align="right" valign="top"><a id="a84d56ead3d5b589504a5029eeaa01ff1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a84d56ead3d5b589504a5029eeaa01ff1">clearAttributes</a> ()</td></tr>
+<tr class="memdesc:a84d56ead3d5b589504a5029eeaa01ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет все атрибуты <br /></td></tr>
+<tr class="separator:a84d56ead3d5b589504a5029eeaa01ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f1c142637d1e043d52f8a65d85072e"><td class="memItemLeft" align="right" valign="top"><a id="a67f1c142637d1e043d52f8a65d85072e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a67f1c142637d1e043d52f8a65d85072e">clearChildren</a> ()</td></tr>
+<tr class="memdesc:a67f1c142637d1e043d52f8a65d85072e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет всех потомков <br /></td></tr>
+<tr class="separator:a67f1c142637d1e043d52f8a65d85072e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ef2cb1519e61fdac73f5e0cfa5c939"><td class="memItemLeft" align="right" valign="top"><a id="ad0ef2cb1519e61fdac73f5e0cfa5c939"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onXmlAttributeDestroying</b> (const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html">XmlAttribute</a> *xmlAttribute) override</td></tr>
+<tr class="separator:ad0ef2cb1519e61fdac73f5e0cfa5c939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a18e6276e23adc8197a7aa2768b0d4984"><td class="memItemLeft" align="right" valign="top"><a id="a18e6276e23adc8197a7aa2768b0d4984"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>XmlAttribute</b></td></tr>
+<tr class="separator:a18e6276e23adc8197a7aa2768b0d4984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Класс, представляющий каждый узел XML-объекта. Элемент XML-документа представляет из себя объект ограниченный тэгами &lt;{имя тэга} [{имя атрибута}={значение атрибута} ...]&gt;{данные}&lt;/{имя тэга}&gt;.<br />
  Имя тэга - обязательное свойство и задается через конструктор. Получить его можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a38e26eac662f687ae7daa4f22d714494" title="Имя тэга узла дерева ">XmlNode::getName()</a>, а изменить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ad53aabb4d5ad37494c0a85c3445676de" title="Установить имя тэга узла дерева ">XmlNode::setName(const char *)</a>.<br />
  Данными для элемента могут служить либо вложенные элементы, либо текст. При этом, если для узла одновременно установлен и текст, и имеются дочерние узлы, то текст отображен не будет.<br />
- Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
+ Установить текст можно с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6" title="Устанавливает текстовые данные для элемента. Не будет использоваться при сериализации, если у элемента есть дочерние узлы. ">XmlNode::setText</a>, а добавить/изменить дочерние элементы через получения указателя на вектор элементов с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aae54572775374432b92af9fdd8540ee1" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a>. Итерацию по потомкам можно производить через доступ к итераторам с помощью <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0" title="Итератор на начало списка дочерних элементов ">XmlNode::getChildrenBeginIterator()</a> и <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6" title="Итератор на конец списка дочерних элементов ">XmlNode::getChildrenEndIterator()</a>.<br />
  </p>
-<p>Например, код используемый в <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html" title="Базовый сериализатор для XML объектов. Позволяет производить сериализацию и десериализацию XML-докуме...">XmlSerializerImpl</a>. </p><div class="fragment"><div class="line">stream &lt;&lt; <span class="stringliteral">&quot;&lt;&quot;</span> &lt;&lt; node-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div><div class="line"><span class="keywordflow">if</span> (node-&gt;hasChildren()) {</div><div class="line">    std::for_each(node-&gt;getChildrenBeginIterator(), node-&gt;getChildrenEndIterator(), [<span class="keyword">this</span>, &amp;stream](<span class="keyword">const</span> <a class="code" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a733fd0d6e4299df5a080559bf14a16c2">XmlNode</a> *item) {</div><div class="line">       stream &lt;&lt; serialize(item);</div><div class="line">    });</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    stream &lt;&lt; node-&gt;getText_const();</div><div class="line">}</div><div class="line">stream &lt;&lt; <span class="stringliteral">&quot;&lt;/&quot;</span> &lt;&lt; node-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a733fd0d6e4299df5a080559bf14a16c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a733fd0d6e4299df5a080559bf14a16c2">&#9670;&nbsp;</a></span>XmlNode() <span class="overload">[1/3]</span></h2>
+<p>Например, код используемый в <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_serializer_impl.html" title="Базовый сериализатор для XML объектов. Позволяет производить сериализацию и десериализацию XML-докуме...">XmlSerializerImpl</a>. </p><div class="fragment"><div class="line">stream &lt;&lt; <span class="stringliteral">&quot;&lt;&quot;</span> &lt;&lt; node-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div><div class="line"><span class="keywordflow">if</span> (node-&gt;hasChildren()) {</div><div class="line">    std::for_each(node-&gt;getChildrenBeginIterator(), node-&gt;getChildrenEndIterator(), [<span class="keyword">this</span>, &amp;stream](<span class="keyword">const</span> <a class="code" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#abe34485815b668d82a1b5a4fcff1808c">XmlNode</a> *item) {</div><div class="line">       stream &lt;&lt; serialize(item);</div><div class="line">    });</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    stream &lt;&lt; node-&gt;getText_const();</div><div class="line">}</div><div class="line">stream &lt;&lt; <span class="stringliteral">&quot;&lt;/&quot;</span> &lt;&lt; node-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abe34485815b668d82a1b5a4fcff1808c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe34485815b668d82a1b5a4fcff1808c">&#9670;&nbsp;</a></span>XmlNode() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +244,7 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td>
           <td class="paramname"><em>parent</em>&#160;</td>
         </tr>
         <tr>
@@ -303,14 +329,14 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae49ebbc5c99c3307bfe993cbf6a56e64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae49ebbc5c99c3307bfe993cbf6a56e64">&#9670;&nbsp;</a></span>addAttribute()</h2>
+<a id="a4d513fbc4e99e3dc9a07f930e1eeac9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d513fbc4e99e3dc9a07f930e1eeac9d">&#9670;&nbsp;</a></span>appendAttribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void XmlNode::addAttribute </td>
+          <td class="memname">void XmlNode::appendAttribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_attribute.html">XmlAttribute</a> *&#160;</td>
           <td class="paramname"><em>attribute</em></td><td>)</td>
@@ -326,6 +352,33 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6f50fb0ff1a34b4ff537749e826a23f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f50fb0ff1a34b4ff537749e826a23f3">&#9670;&nbsp;</a></span>appendChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> * XmlNode::appendChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html">XmlNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет потомка в дереву, назначая родителя для нового узла. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Новый узел </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на новый узел </dd></dl>
 
 </div>
 </div>
@@ -474,7 +527,7 @@ std::vector&lt; <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_
       </table>
 </div><div class="memdoc">
 
-<p>Возвращает значение элемента XML-документа. Вначале необходимо проверить есть ли у элемента дочерние элементы с помощью метода XmlNode::hasChildren(). Если у элемента есть дочерние элементы, то доступ к ним необходимо получить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a> </p>
+<p>Возвращает значение элемента XML-документа. Вначале необходимо проверить есть ли у элемента дочерние элементы с помощью метода XmlNode::hasChildren(). Если у элемента есть дочерние элементы, то доступ к ним необходимо получить с помощью метода <a class="el" href="classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aae54572775374432b92af9fdd8540ee1" title="Возвращает список дочерних элементов ">XmlNode::getChildren()</a> </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>

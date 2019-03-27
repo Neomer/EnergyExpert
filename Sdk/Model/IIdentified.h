@@ -23,6 +23,8 @@ public:
      */
     IIdentified(const T &id) : _id { id }  { }
 
+    virtual ~IIdentified() = default;
+
     /**
      * @brief Возвращает идентификатор объекта.
      * @return Константная ссылка на идентификатор.
