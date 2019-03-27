@@ -11,7 +11,7 @@ void DatabaseCreationPatch::execute(IDatabaseTransaction *transaction)
 
 void DatabaseCreationPatch::createTableUsers(IDatabaseTransaction *transaction)
 {
-    transaction->exec("CREATE TABLE public.users " \
+    transaction->exec("CREATE TABLE public.SecurityUsers " \
                       "(" \
                       "    \"Id\" uuid NOT NULL, " \
                       "    \"Username\" character varying(256) NOT NULL, " \

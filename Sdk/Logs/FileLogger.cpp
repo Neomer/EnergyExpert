@@ -26,27 +26,27 @@ FileLogger::~FileLogger()
     delete _file;
 }
 
-void FileLogger::info(const char *message)
+void FileLogger::info(const char *message) const
 {
     writeToFile("INFO", message);
 }
 
-void FileLogger::debug(const char *message)
+void FileLogger::debug(const char *message) const
 {
     writeToFile("DEBUG", message);
 }
 
-void FileLogger::warning(const char *message)
+void FileLogger::warning(const char *message) const
 {
     writeToFile("WARNING", message);
 }
 
-void FileLogger::error(const char *message)
+void FileLogger::error(const char *message) const
 {
     writeToFile("ERROR", message);
 }
 
-void FileLogger::trace(const char *message)
+void FileLogger::trace(const char *message) const
 {
     writeToFile("TRACE", message);
 }

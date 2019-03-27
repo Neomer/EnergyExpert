@@ -10,27 +10,27 @@ ConsoleLogger::ConsoleLogger(const ILogMessageFormatter *messageFormatter) :
 
 }
 
-void ConsoleLogger::info(const char *message)
+void ConsoleLogger::info(const char *message) const
 {
     printMessage("INFO", message);
 }
 
-void ConsoleLogger::debug(const char *message)
+void ConsoleLogger::debug(const char *message) const
 {
     printMessage("DEBUG", message);
 }
 
-void ConsoleLogger::warning(const char *message)
+void ConsoleLogger::warning(const char *message) const
 {
     printMessage("WARNING", message);
 }
 
-void ConsoleLogger::error(const char *message)
+void ConsoleLogger::error(const char *message) const
 {
     printMessage("ERROR", message);
 }
 
-void ConsoleLogger::trace(const char *message)
+void ConsoleLogger::trace(const char *message) const
 {
     printMessage("TRACE", message);
 }

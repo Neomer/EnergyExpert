@@ -10,6 +10,7 @@ set(PostgreSQLSupport true)
 set(SOURCE_LIB export.h
                singleton.h
                property.h
+               Core/ApplicationContext.cpp Core/ApplicationContext.h
                Core/Collections/Collection.h
                Core/Collections/Iterator.h
                Core/Collections/Array.h Core/Collections/ArrayIterator.h
@@ -87,6 +88,7 @@ set(SOURCE_LIB export.h
                Model/Network/TransformerSubstation.cpp Model/Network/TransformerSubstation.h
                Model/Network/NetworkElementBuilder.cpp Model/Network/NetworkElementBuilder.h
                Model/Network/Wire.cpp Model/Network/Wire.h
+               Model/Security/SecurityUser.cpp Model/Security/SecurityUser.h
                Core/Metadata/TypeUids.txt
                )
 

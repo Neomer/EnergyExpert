@@ -8,27 +8,27 @@ ILogger::ILogger(const ILogMessageFormatter *messageFormatter) :
 
 }
 
-void ILogger::info(const energy::core::types::IStringable &stringable)
+void ILogger::info(const energy::core::types::IStringable &stringable) const
 {
     info(stringable.toString().c_str());
 }
 
-void ILogger::debug(const energy::core::types::IStringable &stringable)
+void ILogger::debug(const energy::core::types::IStringable &stringable) const
 {
     debug(stringable.toString().c_str());
 }
 
-void ILogger::warning(const energy::core::types::IStringable &stringable)
+void ILogger::warning(const energy::core::types::IStringable &stringable) const
 {
     warning(stringable.toString().c_str());
 }
 
-void ILogger::error(const energy::core::types::IStringable &stringable)
+void ILogger::error(const energy::core::types::IStringable &stringable) const
 {
     error(stringable.toString().c_str());
 }
 
-void ILogger::trace(const energy::core::types::IStringable &stringable)
+void ILogger::trace(const energy::core::types::IStringable &stringable) const
 {
     trace(stringable.toString().c_str());
 }

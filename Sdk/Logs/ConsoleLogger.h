@@ -18,11 +18,11 @@ public:
 
     // ILogger interface
 public:
-    virtual void info(const char *message) override;
-    virtual void debug(const char *message) override;
-    virtual void warning(const char *message) override;
-    virtual void error(const char *message) override;
-    virtual void trace(const char *message) override;
+    virtual void info(const char *message) const override;
+    virtual void debug(const char *message) const override;
+    virtual void warning(const char *message) const override;
+    virtual void error(const char *message) const override;
+    virtual void trace(const char *message) const override;
 
 private:
     void printMessage(const char *channel, const char *message) const;
