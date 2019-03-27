@@ -1,6 +1,7 @@
 #ifndef IDATABASECONNECTIONSETTINGS_H
 #define IDATABASECONNECTIONSETTINGS_H
 
+#include <Sdk/singleton.h>
 #include <Sdk/Core/Types/ICloneable.h>
 #include <Sdk/Core/Types/IStringable.h>
 
@@ -12,9 +13,7 @@ namespace energy { namespace database {
 class IDatabaseConnectionSettings :
         public energy::core::types::IStringable
 {
-public:
-    IDatabaseConnectionSettings() = default;
-    virtual ~IDatabaseConnectionSettings() override = default;
+    INTERFACE(IDatabaseConnectionSettings)
 };
 
 } }

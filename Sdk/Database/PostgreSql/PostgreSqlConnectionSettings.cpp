@@ -7,8 +7,8 @@
 using namespace energy::database;
 
 PostgreSqlConnectionSettings::PostgreSqlConnectionSettings() :
-    _Host{ "localhost" },
-    _Port{ 5432 }
+    _Port{ 5432 },
+    _Host{ "localhost" }
 {
 
 }

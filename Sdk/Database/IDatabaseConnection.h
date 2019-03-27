@@ -3,11 +3,12 @@
 
 #include <memory>
 
+#include <Sdk/singleton.h>
 #include <Sdk/export.h>
 #include <Sdk/Database/IDatabaseConnectionSettings.h>
 #include <Sdk/Database/IDatabaseTransaction.h>
 
-namespace energy { namespace database {
+namespace energy::database {
 
 /**
  * @brief IDatabaseConnection абстрактный класс для активного подключения к базе данных.
@@ -15,10 +16,9 @@ namespace energy { namespace database {
  */
 class SDKSHARED_EXPORT IDatabaseConnection
 {
-public:
-    IDatabaseConnection() = default;
-    virtual ~IDatabaseConnection() = default;
+    INTERFACE(IDatabaseConnection);
 
+public:
     /**
      * @brief open открывает подключение к базе данных.
      * @throw energy::exceptions::DatabaseNotOpenException Не удалось открыть подключение
@@ -48,5 +48,5 @@ public:
     virtual std::shared_ptr<IDatabaseTransaction> createTransaction() const = 0;
 };
 
-} }
+}
 #endif // IDATABASECONNECTION_H

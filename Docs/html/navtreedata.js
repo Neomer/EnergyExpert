@@ -29,8 +29,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -42,7 +42,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classenergy_1_1core_1_1serialization_1_1json_1_1_json_value.html#aed6be64fd94aad29b19d4942d89b1eae"
+"classenergy_1_1core_1_1serialization_1_1_i_serializable.html",
+"classenergy_1_1database_1_1_postgre_sql_connection_settings.html#af23ebfca407da3e1aecf55c5484fd180",
+"hierarchy.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -58,6 +58,8 @@ set(SOURCE_LIB export.h
                Database/IDatabaseConnection.h
                Database/IDatabaseConnectionSettings.h
                Database/IDatabaseQuery.cpp Database/IDatabaseQuery.h
+               Database/IDatabasePatch.h
+               Database/IDatabasePatcher.cpp Database/IDatabasePatcher.h
                Database/IDatabaseValue.cpp Database/IDatabaseValue.h
                Database/IDatabaseTransaction.cpp Database/IDatabaseTransaction.h
                Database/DatabaseConnectionsProviderImpl.cpp Database/IDatabaseConnectionsProvider.h
@@ -67,13 +69,16 @@ set(SOURCE_LIB export.h
                Database/PostgreSql/PostgreSqlConnection.cpp Database/PostgreSql/PostgreSqlConnection.h
                Database/PostgreSql/PostgreSqlConnectionSettings.cpp Database/PostgreSql/PostgreSqlConnectionSettings.h
                Database/PostgreSql/PostgreSqlQuery.cpp Database/PostgreSql/PostgreSqlQuery.h
+               Database/PostgreSql/PostgreSqlPatcher.cpp Database/PostgreSql/PostgreSqlPatcher.h
                Database/PostgreSql/PostgreSqlTransaction.cpp Database/PostgreSql/PostgreSqlTransaction.h
                Database/PostgreSql/PostgreSqlValue.cpp Database/PostgreSql/PostgreSqlValue.h
+               Database/PostgreSql/Patches/DatabaseCreationPatch.cpp Database/PostgreSql/Patches/DatabaseCreationPatch.h
                Logs/ConsoleLogger.cpp Logs/ConsoleLogger.h
                Logs/DefaultLogMessageFormatter.cpp Logs/DefaultLogMessageFormatter.h
                Logs/FileLogger.cpp Logs/FileLogger.h
                Logs/ILogger.h Logs/ILogger.cpp
                Logs/ILogMessageFormatter.h
+               Model/AbstractEntity.cpp Model/AbstractEntity.h
                Model/IIdentified.h
                Model/Network/AbstractNetworkElement.cpp Model/Network/AbstractNetworkElement.h
                Model/Network/Bus.cpp Model/Network/Bus.h

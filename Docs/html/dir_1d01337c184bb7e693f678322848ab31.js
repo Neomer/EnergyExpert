@@ -1,5 +1,6 @@
 var dir_1d01337c184bb7e693f678322848ab31 =
 [
+    [ "IXmlAttributeDestroyingListener.h", "_i_xml_attribute_destroying_listener_8h_source.html", null ],
     [ "IXmlDecorator.h", "_i_xml_decorator_8h_source.html", null ],
     [ "IXmlSerializable.h", "_i_xml_serializable_8h_source.html", null ],
     [ "XmlAttribute.h", "_xml_attribute_8h_source.html", null ],

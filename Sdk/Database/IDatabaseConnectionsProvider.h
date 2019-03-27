@@ -9,7 +9,7 @@
 namespace energy { namespace database {
 
 /**
- * @brief IDatabaseConnectionsProvider класс для обработки коллекции подключений к базе данных.
+ * @brief Класс для обработки коллекции подключений к базе данных.
  * Должен выполнять функции контроля "подвисших" подключений, распараллеливать запросы между подключениями.
  */
 class SDKSHARED_EXPORT IDatabaseConnectionsProvider
@@ -19,7 +19,7 @@ public:
     virtual ~IDatabaseConnectionsProvider();
 
     /**
-     * @brief registerConnection добавляет новое подключение к базе данных на контроль к провайдеру.
+     * @brief Добавляет новое подключение к базе данных на контроль к провайдеру.
      * @param connection подключение к базе данных
      * @throw std::bad_alloc Не удалось выделить память, для добавления элемента в коллекцию
      */

@@ -1,17 +1,20 @@
 var classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node =
 [
-    [ "XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a733fd0d6e4299df5a080559bf14a16c2", null ],
+    [ "XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#abe34485815b668d82a1b5a4fcff1808c", null ],
     [ "XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a3f7a8c1fe6721d95c49fe83debd7f613", null ],
     [ "XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#af4c033ecdb64b86375da41156fcb718f", null ],
-    [ "~XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a1584a23b1dfc8548fd5b915ff789e004", null ],
-    [ "addAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ae49ebbc5c99c3307bfe993cbf6a56e64", null ],
+    [ "~XmlNode", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeb56c137996e3dcd4085f60256275030", null ],
+    [ "appendAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a4d513fbc4e99e3dc9a07f930e1eeac9d", null ],
+    [ "appendChild", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a6f50fb0ff1a34b4ff537749e826a23f3", null ],
+    [ "clearAttributes", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a84d56ead3d5b589504a5029eeaa01ff1", null ],
+    [ "clearChildren", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a67f1c142637d1e043d52f8a65d85072e", null ],
     [ "findChildren", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeecbfca428a9f3b27117baf2036b9321", null ],
     [ "findFirstChild", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a5cee047615febb5cdb94a2138bb41d46", null ],
     [ "findFirstChild_const", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a20a10eb8ff669a49fafe282aa8b99f59", null ],
     [ "getAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aea78f7c3ad5af74feafe21d1238c6ea7", null ],
     [ "getAttributesBeginIterator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#abc7b8d786539b9714d01df4fbe95a8c6", null ],
     [ "getAttributesEndIterator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a64e9915812dbc9afd3cb402572610716", null ],
-    [ "getChildren", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a11a1047644b2680cf59303161529f956", null ],
+    [ "getChildren", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aae54572775374432b92af9fdd8540ee1", null ],
     [ "getChildrenBeginIterator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a54ba3811f0aee36a940facfbc084a6b0", null ],
     [ "getChildrenEndIterator", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ac6d8f15b6ee75e85416e8e69b41004b6", null ],
     [ "getName", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a38e26eac662f687ae7daa4f22d714494", null ],
@@ -21,8 +24,10 @@ var classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node =
     [ "hasAnyChild", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a697872a0ae7abaef5d167c8320db0fd2", null ],
     [ "hasAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aaa2acc68f54f2d0df9134fca72ab9448", null ],
     [ "isEmpty", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#aeaa6cb9e21214e94534bed71a17708cd", null ],
+    [ "onXmlAttributeDestroying", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ad0ef2cb1519e61fdac73f5e0cfa5c939", null ],
     [ "setName", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#ad53aabb4d5ad37494c0a85c3445676de", null ],
     [ "setText", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a06841215ee31d23e3945445dccf22ad6", null ],
     [ "setText", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a9425e21319a2ce0fbb2a7ec9621c348f", null ],
-    [ "setText", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a9880b786c75fe92b65238aff9c54d850", null ]
+    [ "setText", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a9880b786c75fe92b65238aff9c54d850", null ],
+    [ "XmlAttribute", "classenergy_1_1core_1_1serialization_1_1xml_1_1_xml_node.html#a18e6276e23adc8197a7aa2768b0d4984", null ]
 ];

@@ -5,6 +5,7 @@
 #include <mutex>
 #include <algorithm>
 
+#include <Sdk/singleton.h>
 #include <Sdk/export.h>
 
 namespace energy { namespace core { namespace types {
@@ -14,13 +15,14 @@ namespace energy { namespace core { namespace types {
  * Класс, ожидающий обновление данных.
  */
 template<typename T>
-class IObservable;
+class SDKSHARED_EXPORT IObservable;
 
 template<typename T>
 class IObserver
 {
+    INTERFACE(IObserver);
+
 public:
-    virtual ~IObserver() = default;
     virtual bool onUpdate(const T &value, const IObservable<T> *observable)
     {
         return false;
@@ -28,12 +30,11 @@ public:
 };
 
 template<typename T>
-class IObservable
+class SDKSHARED_EXPORT IObservable
 {
-public:
-    IObservable() = default;
-    virtual ~IObservable() = default;
+    INTERFACE(IObservable);
 
+public:
     void registerObserver(IObserver<T> *observer) {
         std::lock_guard<std::mutex> lock(_updateMtx);
         if (std::find(_observerList.begin(), _observerList.end(), observer) == _observerList.end()) {
