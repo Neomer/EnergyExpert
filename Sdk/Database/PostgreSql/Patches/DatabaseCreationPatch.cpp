@@ -17,12 +17,11 @@ void DatabaseCreationPatch::createTableUsers(IDatabaseTransaction *transaction)
                       "    \"Username\" character varying(256) NOT NULL, " \
                       "    PRIMARY KEY (\"Id\") " \
                       ") " \
-                      "WITH ( " \
+                      "WITH (" \
                       "    OIDS = FALSE " \
                       ");");
 
-    transaction->exec("ALTER TABLE public.users " \
-                      "    OWNER to postgres;");
+    transaction->exec("ALTER TABLE public.users OWNER to postgres;");
 
 } // createTableUsers
 
