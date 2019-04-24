@@ -6,6 +6,7 @@ set (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../cmake")
 
 # Настройка для включения компиляции классов работы с PostgreSQL
 set(PostgreSQLSupport true)
+set(PugixmlLinkingSupport true)
 
 set(SOURCE_LIB export.h
                singleton.h
@@ -94,6 +95,7 @@ set(SOURCE_LIB export.h
 add_library(Sdk SHARED ${SOURCE_LIB})
 
 include(PostgreSql)
+include(pugixml)
 
 include_directories("../")
 

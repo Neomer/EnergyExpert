@@ -1,6 +1,10 @@
 ﻿cmake_minimum_required(VERSION 3.8)
 
+set (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../cmake")
+
 project(Server VERSION 0.0.1 DESCRIPTION "EnergyExpert server application")
+
+include(pugixml)
 
 include_directories("../")
 include_directories("/")

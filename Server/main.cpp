@@ -4,10 +4,6 @@
 #include <Sdk/Model/Network/TransformerSubstation.h>
 #include <Sdk/Model/Network/NetworkElementBuilder.h>
 #include <Sdk/Core/Types/IObservable.h>
-#include <Sdk/Core/Serialization/Xml/XmlObject.h>
-#include <Sdk/Core/Serialization/Xml/XmlSerializerImpl.h>
-#include <Sdk/Core/Serialization/Xml/XmlTagNameDecorator.h>
-#include <Sdk/Core/Serialization/Xml/XmlAttributeNameDecorator.h>
 #include <Sdk/Logs/ConsoleLogger.h>
 #include <Sdk/Logs/FileLogger.h>
 #include <Sdk/Logs/DefaultLogMessageFormatter.h>
@@ -22,37 +18,46 @@
 #include <Sdk/Database/Exceptions/DatabaseNotOpenException.h>
 #include <Sdk/Database/Exceptions/DatabaseCommitFailedException.h>
 
+#include <Sdk/Core/Configuration/XmlConfiguration.h>
+
 using namespace energy::exceptions;
 using namespace energy::core::serialization::json;
-using namespace energy::core::serialization::xml;
 using namespace energy::model::network;
 using namespace energy::core::types;
 using namespace energy::core::serialization;
 using namespace energy::logs;
 using namespace energy::database;
 
+static DefaultLogMessageFormatter formatter;
+static ConsoleLogger consoleLogger(&formatter);
+
+void pugiTest() {
+    consoleLogger.info("pugixml test");
+    pugi::xml_document doc;
+    auto res = doc.load_file("C:/sites.xml");
+    if (res.status != pugi::status_ok) {
+        consoleLogger.error(res.description());
+        return;
+    }
+    auto child = doc.root().child("appcmd");
+    std::cout << "First child node: " << child.name() << std::endl;
+    std::cout << "Print attributes\n";
+    for (auto at : child.attributes()) {
+        std::cout << "Attribute " << at.name() << " = '" << at.value() << "'" << std::endl;
+    }
+    doc.reset();
+}
+
+
 int main()
 {
-    DefaultLogMessageFormatter formatter;
-    ConsoleLogger consoleLogger(&formatter);
     try {
-        consoleLogger.info("test to info");
-        consoleLogger.debug("test to debug");
-        consoleLogger.error("test to error");
-        consoleLogger.trace("test to trace");
-        consoleLogger.warning("test to warning");
 
         try {
             FileLogger fileLogger("c:\\test.log", 10, &formatter);
-            fileLogger.info("test to info");
-            fileLogger.debug("test to debug");
-            fileLogger.error("test to error");
-            fileLogger.trace("test to trace");
-            fileLogger.warning("test to warning");
         } catch (energy::exceptions::IOException &) {
             consoleLogger.error("Не удалось создать файл для логирования!");
         }
-
 
         JsonObject json;
         std::cout << "Object type: " << json.objectType() << std::endl;
@@ -76,29 +81,9 @@ int main()
         DateTime dt(306723825);
         std::cout << "Date time: " << dt.toString() << std::endl;
 
-        XmlNode xmlNode(static_cast<const char *>("test me"));
-        xmlNode.appendAttribute(new XmlAttribute("attribute name", "value of attribute"));
-        xmlNode.appendChild(new XmlNode(static_cast<const char *>("sub_item1"), static_cast<const char *>("sub_item1_value")));
-        xmlNode.appendChild(new XmlNode(static_cast<const char *>("sub_item2")));
-        xmlNode.appendChild(new XmlNode(static_cast<const char *>("sub_item3")));
 
-        std::cout << "Has attribute " << xmlNode.hasAttribute("attribute name") << std::endl;
 
-        std::cout << "XML node: " << xmlNode.getName() << std::endl;
-        auto attr = xmlNode.getAttribute("attribute name");
-        if (attr != nullptr) {
-            std::cout << "Attribute: " << attr->getTextValue() << std::endl;
-        } else {
-            std::cout << "Attribute not found!" << std::endl;
-        }
-
-        XmlTagNameDecorator tagNameDecorator;
-        XmlAttributeNameDecorator attributeNameDecorator;
-        ISerializer *serializer = new XmlSerializerImpl(&tagNameDecorator,
-                                                        &attributeNameDecorator);
-
-        XmlObject xml(&xmlNode);
-        std::cout << "XML document: " << serializer->serialize(&xml) << std::endl;
+        pugiTest();
 
         consoleLogger.debug("Initialize PostgreSql connection settings.");
         PostgreSqlConnectionSettings connectionSettings;
