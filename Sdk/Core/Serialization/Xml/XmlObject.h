@@ -4,12 +4,16 @@
 #include <Sdk/Core/Serialization/Xml/XmlNode.h>
 #include <Sdk/Core/Serialization/Xml/IXmlSerializable.h>
 
+#include <pugixml.hpp>
+
 namespace energy { namespace core { namespace serialization { namespace xml {
 
 /**
  * @brief XML объект.
  */
-class SDKSHARED_EXPORT XmlObject : public IXmlSerializable
+class SDKSHARED_EXPORT XmlObject :
+        public pugi::xml_document,
+        public IXmlSerializable
 {
 public:
     XmlObject();
